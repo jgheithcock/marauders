@@ -15,6 +15,12 @@
             <language>en</language>
             <group>Inform</group>
         </bibliographic>
+        <resources>
+            <auxiliary>
+                <leafname>Map</leafname>
+                <description>The Map</description>
+            </auxiliary>
+        </resources>
         <cover>
             <format>jpg</format>
             <height>960</height>
@@ -24,8 +30,8 @@
         <releases>
             <attached>
                 <release>
-                    <releasedate>2022-06-28</releasedate>
-                    <version>1</version>
+                    <releasedate>2022-07-22</releasedate>
+                    <version>2</version>
                     <compiler>Inform 7</compiler>
                     <compilerversion>6M62</compilerversion>
                 </release>
@@ -34,11 +40,11 @@
         <colophon>
             <generator>Inform 7</generator>
             <generatorversion>6M62</generatorversion>
-            <originated>2022-06-28</originated>
+            <originated>2022-07-22</originated>
         </colophon>
         <glulx>
-            <serial>220628</serial>
-            <release>1</release>
+            <serial>220722</serial>
+            <release>2</release>
             <compiler>Inform 7 build 6M62</compiler>
             <coverpicture>1</coverpicture>
         </glulx>

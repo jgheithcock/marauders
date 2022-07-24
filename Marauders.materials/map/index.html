@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>44 Westwind Marauder's  Map</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+    <style>
+      * {
+        margin:0;
+        padding: 0;
+      }
+      body {
+        background-color:black;
+        margin: 0;
+      }
+      .map {
+        display:none;
+      }
+      .book {
+        position:absolute;
+        perspective: 5000px;
+        transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+        z-index:1;
+      }
+      .left.book {  }
+      .right.book { left: 522px; }
+      img {
+        /*  width:25vw; 1vw is 1% of the viewing width. 100/4 panels = 25 vw*/
+      }
+      .page {
+        position: absolute;
+        top:0;
+        left: 261px;
+        transform-style: preserve-3d;
+        transform-origin:left;
+        transform: rotateY(0deg);
+        transition: transform 1.0s linear, z-index 0.5s step-end; /* need to change z-index at once, half way through */
+      }
+      /* Reverse ordering for unturned pages, otherwise last listed shows on top */
+      .page:nth-child(1) {z-index:999;}
+      .page:nth-child(2) {z-index:998;}
+      .page:nth-child(3) {z-index:997;}
+      .page:nth-child(4) {z-index:996;}
+      .page:nth-child(5) {z-index:995;}
+      .page.turned {
+        left: 262px; /* for Chrome */
+        transform: rotateY(-180deg);
+        z-index:1; /* Use natural ordering */
+        transition: transform 1.0s linear, z-index 0.5s step-end; /* need to change z-index at once, half way through */
+      }
+      .face {
+        position: absolute;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
+      .face.back {
+        transform: rotateY(180deg);
+      }
+      .windrose, .flaps {
+        position:absolute;
+        left: 261px;
+      }
+      .right_windrose {
+        position: absolute;
+        top:0;
+        left: 261px;
+      }
+      .snitch {
+        position: absolute;
+        width: 40px;
+      }
+      .nne.snitch {
+        top: 1240px;
+        left: 90px;
+      }
+      .sw.snitch { /* kitchen (flue network) */
+        top: 1150px;
+        left: 12px;
+      }
+      .west.snitch {
+        top: 740px;
+        left: 35px;
+      }
+      .sse.snitch {
+        top: 1140px !important;
+        left: 40px !important;
+      }
+      .clue {
+        position: absolute;
+        top: 551px;
+        left: 13px;
+      }
+    </style>
+    <script>
+      function initPage() {
+        var pages = document.getElementsByClassName("page");
+        Array.prototype.forEach.call(pages, function (page) { 
+          page.onclick = function() {
+            page.classList.toggle("turned"); 
+          };
+        });
+
+        $(".windrose").hide();
+        $(".snitch").hide(); /* until the riddle is read */
+        $(".clue").hide();
+        $(".clue.cover").show();
+        $(".map").fadeIn();
+      }
+      function toggle_windrose() {
+        $(".windrose").fadeToggle();
+        if (!window.riddle_is_read) {
+          window.riddle_is_read = true;
+          $(".snitch").fadeIn(); /* the riddle is read */
+        }
+        return false;
+      }
+      function find_snitch(e, snitch_direction) {
+        $(`.${snitch_direction}.snitch`).fadeOut();
+        $(`.${snitch_direction}.clue`).fadeIn();
+        e = e || window.event;
+        e.preventDefault();
+        e.cancelBubble = true;
+        if (e.stopPropagation) e.stopPropagation();
+        return false;
+      }
+    </script>
+  </head>
+  <body onload="initPage();">
+    <div class="map">
+      <div class="left book">
+        <div class="page">
+          <div class="front face"><img src="slices/0-Cover_02.jpg"></div>
+          <div class="back face"><img src="slices/1-Grounds_01.jpg"></div>
+        </div>
+        <div class="page">
+          <div class="front face"><img src="slices/1-Grounds_02.jpg"></div>
+          <div class="back face">
+            <img src="slices/2-Garden_01.jpg">
+          </div>
+        </div>
+        <div class="page">
+          <div class="front face"><img src="slices/2-Garden_02.jpg"></div>
+          <div class="back face"><img src="slices/3-Main_01.jpg"></div>
+        </div>
+        <div class="page">
+          <div class="front face"><img src="slices/3-Main_02.jpg"></div>
+          <div class="back face"><img src="slices/4-Upstairs_01.jpg"></div>
+        </div>
+        <div class="page">
+          <div class="front face"><img src="slices/4-Upstairs_02.jpg"></div>
+          <div class="back face"><img src="slices/5-Downstairs_01.jpg"></div>
+        </div>
+      </div>
+      <div class="flaps" onclick="toggle_windrose();">
+        <img src="slices/5-Downstairs_02.jpg">
+        <img src="snitches/garden_snitch.png" class="sse snitch" onclick="return find_snitch(event, 'sse');">
+        <img src="slices/5-Downstairs_03.jpg" style="position:absolute;">
+      </div>
+      <div class="windrose" onclick="toggle_windrose();">
+        <img src="slices/6-Windrose_03.jpg" class="right_windrose">
+        <img src="windrose/nne_wind.gif" class="nne clue">
+        <img src="windrose/sse_wind.gif" class="sse clue">
+        <img src="windrose/sw_wind.gif" class="sw clue">
+        <img src="windrose/west_wind.gif" class="west clue">
+        <img src="windrose/windrose-cover.gif" class="clue cover">
+        <img src="slices/6-Windrose_02.jpg">
+      </div>
+      <div class="right book">
+        <!-- For the right side, it is inside out and the pages start turned -->
+        <div class="page turned">
+          <div class="front face"><img src="slices/5-Downstairs_04.jpg"></div>
+          <div class="back face">
+            <img src="snitches/cauldron_snitch.png" class="nne snitch" onclick="return find_snitch(event, 'nne');">
+            <img src="slices/4-Upstairs_03.jpg">
+          </div>
+        </div>
+        <div class="page turned">
+          <div class="front face"><img src="slices/4-Upstairs_04.jpg"></div>
+          <div class="back face">
+            <img src="snitches/cauldron_snitch.png" class="sw snitch" onclick="return find_snitch(event, 'sw');">
+            <img src="slices/3-Main_03.jpg">
+          </div>
+        </div>
+        <div class="page turned">
+          <div class="front face"><img src="slices/3-Main_04.jpg"></div>
+          <div class="back face"><img src="slices/2-Garden_03.jpg"></div>
+        </div>
+        <div class="page turned">
+          <div class="front face">
+            <img src="snitches/garden_snitch.png" class="west snitch" onclick="return find_snitch(event, 'west');">
+            <img src="slices/2-Garden_04.jpg">
+          </div>
+          <div class="back face"><img src="slices/1-Grounds_03.jpg"></div>
+        </div>
+        <div class="page turned">
+          <div class="front face"><img src="slices/1-Grounds_04.jpg"></div>
+          <div class="back face"><img src="slices/0-Cover_03.jpg"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+  
+     

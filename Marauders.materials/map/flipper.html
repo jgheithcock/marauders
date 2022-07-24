@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>44 Westwind Marauder's  Map</title>
+    <style>
+      * {
+        margin:0;
+        padding:0;
+      }
+      body {
+        margin:1em;
+      }
+      .book {
+        z-index: 1;
+        perspective: 1000px;
+      }
+      img {width:25vw;}
+      .page {
+        position: absolute;
+        top:0;
+        left:25vw;
+        transform-style: preserve-3d;
+        transition: all 1.0s linear;
+        transform-origin:left;
+      }
+      .page.turned {
+        transform: rotate3d(0, 1, 0, -180deg); /* rotateY(-180deg); */
+      }
+      .face {
+        position: absolute;
+        backface-visibility: hidden;
+      }
+      .face.back {
+        transform: rotate3d(0, 1, 0, 180deg); /* rotateY(180deg);  */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="book">
+        <div id="test" class="page" onclick="document.querySelector('#test').classList.toggle('turned');">
+          <div class="front face">
+            <img src="slices/3-Main_02.jpg"/>
+          </div>
+          <div class="back face">
+            <img src="slices/4-Upstairs_01.jpg"/>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
+  
+     

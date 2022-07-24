@@ -1,17 +1,28 @@
 
 "The Last Christmas Present" by JG Heithcock
 
-The story genre is "Mystery". The release number is 1. The story creation year is 2018. The story headline is "A scavenger hunt in words". The story description is "There was one present left under the Christmas tree, a wooden box with a tag that said 'I open at the close'.
+The story genre is "Mystery". The release number is 2. The story creation year is 2018. The story headline is "A scavenger hunt in words". The story description is "There was one present left under the Christmas tree, a wooden box with a tag that said 'I open at the close'.
 
 This was a scavenger hunt I made for my daughter for Christmas in 2013. Explore the map I made for her - a Marauder's Map of our house. Find the clues and discover how to piece them together to learn the location of her last Christmas present."
 
 Release along with cover art,
-	[source text,]
+	[
+	the source text,
+	the introductory booklet,
+	the introductory postcard,
 	the library card,
+	]
 	a website, 
+	a file of "The Map" called "Map",
 	an interpreter.
 
 Include Basic Help Menu by Emily Short [### Not clear if I am going to go this route or have the map give hints on examining it.]
+
+When play begins:
+		choose row 1 in Table of Basic Help Options;
+		now description entry is "This was a scavenger hunt I made for my daughter for Christmas in 2013. Explore the map I made for her - a Marauder's Map of our house. Find the clues and discover how to piece them together to learn the location of her last Christmas present."
+		
+Include Secret Doors by Andrew Owen
 
 [Include Neutral Library Messages by Aaron Reed]
 
@@ -20,51 +31,57 @@ Rule for printing the banner text: say "There was one present left, a [wooden bo
 
 Rule for printing room description details: do nothing. [ Do not print (closed), (empty), etc. ]
 
+The description of the player is "Not quite thirteen, still looking adorable in your best Christmas pajamas."
+
 Volume 1 - The House
 
 Book 1 - The main floor
 
-The main area is a region.
+The main area is a region. The sound of the main area is "[one of]Christmas carols playing[or]one of your Christmas favorites playing[or]some of Mama's favorite Christmas songs playing[at random]".
 
 Chapter 1 - The Great Room
 
-The Great Room is a room in the main area. "A [great fir tree] stretches up to the [ceiling], covered in [ornaments] and twinkling with [lights]. [Wrapping paper] and [presents] are strewn about.[line break][line break]Behind you, to the south, is the [kitchen]."
+The Great Room is a room in the main area. "A [great fir tree] stretches up to the [ceiling], covered in [ornaments] and illuminated with [lights]. [Wrapping paper] and [presents] are strewn about.[line break][line break][if the location is the great room]Behind you, to the south is the [kitchen]."
+
+A ceiling is a backdrop. "High above you, painted to look like the walls, a kind of parchment yellow." The ceiling is everywhere.
+
+The slate floor is a backdrop. The description of it is "Made of rough, irregular slabs of [mariposa slate]". The slate floor is everywhere. Understand "slabs / floor" as slate floor. 
+
+Some mariposa slate is a backdrop. The description of it is "Large, irregular slabs of Mariposa slate, mottled blue gray with red and orange variegation. They form the floor inside and out." Some mariposa slate is everywhere.
+
 
 A great fir tree is scenery in the Great Room. "You can still make out the scent of the fir."
-A ceiling is scenery in the Great Room. "High above you, painted to look like the walls, a kind of parchment yellow."
+
 Some ornaments are scenery in the Great Room. "There must be a hundred of them. You look for your favorites, the ones you put up yourself."
 Some twinkling lights are scenery in the Great Room. "They twinkle on and off, red, yellow, green and blue."
 The Wrapping paper is scenery in the Great Room. "Yards and yards. Most of it has been rolled back up for another year." Instead of taking wrapping paper, say "How thoughtful! But first you should finish your scavenger hunt."
 Some presents is scenery in the Great Room. "[one of]So many![or]Well, first you should really finish this scavenger hunt.[stopping]". Instead of taking presents, say "Hmm, first you should finish your scavenger hunt."
 
-The archway is an open, unopenable door. The archway is below the Great Room. [The archway is east of the Great Room.] "[if the location is the great room]An archway leads east down to the [guest hall].[otherwise]The archway leads back up into the great room to the west.[end if]". Instead of going east, try going down.
+The archway is an open, unopenable door. The archway is east of the Great Room. "[if the location is the great room]An archway leads east down to the [guest hall].[otherwise]The archway leads back up into the great room to the west.[end if]". Instead of going down in the great room, try going east.
 
-The french doors is a door. "[if the location is the great room]Two glass [french doors] open up to the [front garden] to the west.[otherwise]The french doors lead back into the great room to the east.[end if]". The french doors is west of the Great Room.
+Some french doors are a door. "[if the location is the great room]Two glass [item described] open up to the entrance to the front garden to the west.[otherwise]The [item described] lead back into the great room to the [direction of the item described from the location].[end if]". The french doors is west of the Great Room.
 
-The stairs to the Balcony is an open, unopenable door. "[if the location is the great room]A curved set of stairs leads upwards to the balcony that runs around the Great Room.[otherwise]The stairs lead back down to the Great Room.[end if]". The Stairs to the Balcony is above the Great Room.
+The curving stairs is an open, unopenable door. "[if the location is the great room]A curved set of stairs leads upwards to [the balcony] that runs around the Great Room.[otherwise]The stairs lead back down to the Great Room.[end if]". The curving stairs is above the Great Room.
 
 Chapter 2 - The Kitchen (House Elves Only)
 
-The Kitchen is south of the Great Room. The Kitchen is in the main area. The description of the kitchen is "A long, sinuous marble counter is in front of you. Behind you, to the southeast, is the [Larder].
-
-Also behind you is a [refrigerator], [if pizza oven is open]an open[otherwise]a[end if] [pizza oven], made with the same [slate] as the [floor], a [regular oven] and [microwave] and other counters with [random kitchen ware]."
+The Kitchen is south of the Great Room. The Kitchen is in the main area. The description of the kitchen is "A long, sinuous [granite counter] is in the middle of the kitchen with other cabinets and counters running along the walls. Next to the [refrigerator] is [if pizza oven is open]an open[otherwise]a[end if] [pizza oven], made with the same [slate] as the [floor].[if location is the kitchen][paragraph break]To the north is the [great room]."
 
 Understand "room called the kitchen" as the Kitchen.
 Rule for printing the name of the Kitchen while asking which do you mean: say "room called the kitchen".
 
+The granite counter is a fixed in place supporter in the kitchen. "Made of dark marbled green granite, it has a [sink] and a lot of [random kitchenware] on it."
 The refrigerator is a fixed in place thing in the kitchen. The description of it is "Large, stainless steel, no ice or ice water however."
 The regular oven is a fixed in place container in the kitchen. The description of it is "Stainless steel, also there is a [microwave] over it."
 The microwave is a fixed in place thing in the kitchen. The description of it is "Stainless steel, nothing really special."
-Some random kitchen ware is a fixed in place thing in the kitchen. The description of it is "A [toaster oven], a [blender], lots and lots of [spatulas]...."
-The floor is scenery in the kitchen. The description of it is "Made of rough, irregular slabs of [slate]".
-The slate is scenery in the kitchen. The description of it is "Gray, irregular slabs of rock with streaks of red and orange. They form the floor inside and out as well as the pizza oven."
+Some random kitchenware is a fixed in place thing on the granite counter. The description of it is "A [toaster oven], a [blender], lots and lots of [spatulas]....". Instead of taking some random kitchenware, say "There is far too many for you to carry.".
 
 The toaster oven, the blender and some spatulas are undescribed things in the kitchen.
 
-The pizza oven is scenery. The Pizza oven is a fixed in place, closed, openable container in the Kitchen. The description of the pizza oven is "Made of the same [slate] as the [floor], there is a [dark iron door] [if the pizza oven is open]on the floor[otherwise]set in a small [alcove] at arm's height[end if]. At the bottom is a [recess] with [firewood]."
+The Pizza oven is a fixed in place, closed, openable container in the Kitchen. The description of the pizza oven is "Made of the same [slate] as the [floor], there is a [dark iron door] [if the pizza oven is open]on the floor[otherwise]set in a small [alcove] at arm's height[end if]. At the bottom is a [recess] with [firewood]."
 
-Understand "plate" as the dark iron door.
-Instead of taking the dark iron door, try opening the pizza oven. 
+Understand "plate / pizza door" as the dark iron door.
+Instead of taking the dark iron door, try opening the pizza oven instead.
 Understand "lift [something]" as taking.
 
 Does the player mean opening the regular oven: it is very unlikely. Does the player mean closing the regular oven: it is very unlikely.
@@ -75,129 +92,303 @@ The alcove is part of the pizza oven. The description of the alcove is "The open
 The dark iron door is part of the pizza oven. The description of the dark iron door is "Really just a big plate with feet to prop it up, the handle is a heavy curve you can use to lift the heavy plate away and set on the ground."
 
 Report opening the pizza oven:
-	say "You lift the heavy plate door of the oven and set it down on the floor.";
-	say "[First time][line break]You found a snitch![only]" instead.
+	say "You lift the heavy plate door of the oven and set it down on the floor." instead.
 Report closing the pizza oven:
 	say "You lift the heavy plate door up to the alcove and place it in front of the oven opening." instead.
 
 The recess is part of the Pizza Oven. The description of it is "Dark and dusty, with a bunch of [firewood] in it. Probably full of spiders."
 
-Some firewood is part of the Pizza Oven. The description of it is "A number of small to mid-sized logs amongst some kindling. Probably a home fors spiders." Instead of taking firewood, say "That doesn't seem to be something you would really want."
+Some firewood is part of the Pizza Oven. The description of it is "A number of small to mid-sized [logs] amongst some kindling. Probably a home for spiders." Instead of taking firewood, say "That doesn't seem to be something you would really want." Some logs is a part of the firewood.
+
+[Handle trying to go "up"]
+Instead of going up in the Kitchen, say "The stairs to the balcony are in the [great room]."
 
 Chapter 3 - The Larder (The Cauldron Cupboard)
 
-The Larder is southeast of the Kitchen. The larder is in the main area.[Not mentioning the door as there is no need to open or close it.]
-The description of the larder is "Shelves and shelves of [baking equipment], [food stores] and a growing [collection of mugs]."
+The Larder is a room. The description of the larder is "Shelves and shelves of [baking equipment], [food stores] and a growing [collection of mugs]." The larder is in the main area
 
+The door to the larder is a closed door."[if the location is the larder]Behind you is the larder door.[otherwise]There is a door to the larder in the corner.[end if]". It is inside of the Kitchen and outside of the Larder. The description of the larder door is "[one of]Like most of the doors in the house, solid wood, dark brown.[or]Nothing special - just a door.[stopping]".
+
+Understand "shelves" as baking equipment.
 Some baking equipment is a fixed in place thing in the larder. The description of it is "There is a big blender, and a food processor and .... frankly, I'm not sure what some of this is for."
 Some food stores is a fixed in place thing in the larder. The description of it is "How many different types of flour does a family need? Why so many types of pasta?"
 A collection of mugs is a fixed in place thing in the larder. The description of it is "Really, who needs so many mugs?"
 
-Book 2 - Upstairs
+Book 2 - Outside
 
-The upstairs area is a region.
+The outside area is a region.
 
-Chapter 1 - The Gallery
+Chapter 1 - Front Garden
 
-The Gallery is a room. "You can see the entire Great Room from here. Morgan's room is to the north. The master bedroom is off of the hall to the east. The upstairs study is to the west." It is in the upstairs area. The printed name of the Gallery is "Balcony". The Gallery is above the Stairs to the Balcony. Instead of going east when location is Gallery, say "The upstairs study isn't on the map." Instead of going west when location is Gallery, say "The master bedroom isn't on the map."
+The Front Garden is a region in the outside area.
 
-Instead of going south in the Gallery, say "That would take you into the attic closet."
+The steps, the arch, the road, the small alcove and some arched columns are backdrops in the Front Garden. Some plants are backdrops in the front garden. 
 
-Chapter 2 - Morgan's Study
+[Examining 'garden' or 'front garden' gives the "You can't see any such thing" output. Work around that.]
+The ActualGarden is a backdrop in the Front Garden."It isn't at its best in the winter, but there are still a lot of plants growing in it." The printed name of Actual Garden is "front garden". Understand "garden" as the ActualGarden.
 
-The Study is north of the Gallery. "Small, but with a [desk in the corner] and a [bookshelf by the door]. There is a bathroom to the east. [A small closet] is to the southeast. Your bedroom, labeled 'Morgan's Room' on the map, is west." It is in the upstairs area. The printed name of the study is "Morgan's Study".
+The Entrance to the Front Garden is a room in the front garden. "You are standing in a small alcove in the middle of two [arched columns]. The [slate floor] continues on to the edge of the [waterfall] in front of you, to the west. To the north and south are [alcoves] filled with wisteria.[one of][or] Also, to the south is a row of [bushes] with a [bench].[then purely at random]". It is east of the Edge of the Water. Understand "Front Garden" as Entrance to the Front Garden.
+
+Some alcoves are a backdrop in the front garden. "There are three, two small ones to the north and south and a slightly larger one that has an entrance to the [great room]."
+
+The South Alcove is a room in the front garden. "A small alcove to the south of the entrance to the garden. [one of]There is a row of [bushes] with a [bench] in front of them and random garden stuff.[or]A length of garden hose is coiled up in the [corner].[or][if pots is closed]There are also a [collection of pots] along the wall.[end if][then purely at random][if pots is open and pots contains a snitch] There are also some pots containing a snitch.[end if]". It is south of Entrance to the Front Garden. It is southeast of edge of the water.
+
+Some bushes, a garden hose, and a corner are scenery in the South Alcove.
+A bench is an undescribed enterable scenery supporter in the South Alcove. The description of it is "Made of concrete, quite dusty and a bit cold."
+
+A collection of pots is a closed, openable scenery container in the South Alcove. "[one of]Some old, cast iron pots.[or]They look like a stack of cauldrons.[stopping]". Instead of searching pots, try opening pots. 
+
+Instead of opening pots:
+	say "You find some dirt and old leaves."
+	
+The North Alcove is a room in the front garden. "A small alcove to the north of the entrance to the garden. The space is filled with a large pot of wisteria and a pot of geraniums.[one of][or][or]Likely, it is also filled with spiders.[or][stopping]". It is north of Entrance to the Front Garden. It is northeast of edge of the water. A large pot of wisteria and a pot of geraniums are scenery in the North Alcove.
+
+The Edge of the Water is a room in the front garden. "The [slate floor] leads up to a rock wall with a [waterfall] beyond. Steps made from the same rough slate are to the south and wind up and around the waterfall to an arch that exits onto the road." The printed name of it is "Edge of the waterfall".
+
+The waterfall is a backdrop in the Front Garden. "[one of]The water burbles cheerily over the large slate slabs.[or]The spray from the waterfall mists the plants around the garden.[or]The gurgle of water from the waterfall is occasionally overwhelmed by the croaking of some small frogs.[at random]". The printed name of the waterfall is "[one of]waterfall[or]magical waterfall[or]musical waterfall[or]waterfall[as decreasingly likely outcomes]". The sound of the waterfall is "[one of]water burbling cheerily over the large slate slabs[or]spray of the water misting the plants around the garden[or]croaking of some small frogs[at random]".
+
+The french doors is east of the Entrance to the Front Garden.
+
+Book 3 - Upstairs
+
+The upstairs area is a region. The sound of the upstairs area is " - just barely - [sound of the main area]".
+
+
+Chapter 1 - The Balcony
+
+The Balcony is a room in the upstairs area. "You can see the entire Great Room from here. [Morgan's room] is to the north. The [master bedroom] is off of the hall to the east. Mama's studio is to the west." It is in the upstairs area. The printed name of the Balcony is "Balcony". The Balcony is above the curving stairs. Understand "upstairs" as the balcony. The sound of the balcony is "[sound of the main area]".
+
+Chapter 2 - The Master Bedroom
+
+The Master Bedroom is east of the Balcony. "A big room, with a [comfy chair] and [steps leading down to the bathroom]." It is in the upstairs area. The large bed and the comfy chair are enterable scenery supporters in the Master Bedroom. The steps leading down to the bathroom are scenery in the Master Bedroom. Instead of going east when location is Balcony during the snitch hunt, say "The master bedroom isn't on the map."
+
+Chapter 3 - Mama's studio
+
+Mama's studio is west of the balcony. "Large windows and multiple skylights make this room a very good art studio for Mama." It is in the upstairs area. Instead of going west when location is Balcony during the snitch hunt, say "Mama's studio isn't on the map."
+
+Chapter 4 - The Attic closet
+
+The Attic closet is south of the Balcony. "Filled with boxes, luggage and wrapping paper." It is in the upstairs area. Instead of going south in the Balcony, say "That would take you into the attic closet."
+
+
+Chapter 5 - Morgan's Study
+
+The Study is north of the Balcony. "Small, but with a [desk in the corner] and a [bookshelf by the door]. There is a bathroom to the east. A [small closet] is to the southeast. Your bedroom, labeled '[Morgan's Room]' on the map, is west." It is in the upstairs area. The printed name of the study is "Morgan's Study".
+
+Understand "Morgan's" as The Study
 
 A desk in the corner, bookshelf by the door are scenery in the study.
 
 Instead of going east in the study, say "As the map says 'Peeves may lurk here', it seems an unlikely place to search."
 
-Chapter 3 - Morgan's closet
+Chapter 6 - Morgan's closet
 
-Small closet is southeast of the study. "Clothes surround you, this doesn't seem a very likely place to search." The printed name of small closet is "A Small Closet". It is in the upstairs area.
+A small closet is southeast of the study. "A small walk in closet, with far too many [clothes].[paragraph break]This doesn't seem a likely place to search." Clothes are undescribed scenery in small closet. Instead of going in when location is the study, try going southeast. Instead of going outside when location is small closet, try going northwest.
 
-Chapter 4 - Morgan's Room
+Chapter 7 - Morgan's Room
 
-Morgan's Room is west of the study. "Above you is a dark [violet ceiling] painted with stars. To the north is a [bedroom window] overlooking the garden. West is a [medium sized bed] and a small cabinet. In the southeast corner is a [tall mirror]. All along the southern side is a [mural] of an outdoor scene, with trees and animals. [if Morgan's secret door is closed]The map indicates a [room of requirement] beyond the mural.[otherwise]A secret door in the mural is open, leading to a room marked [room of requirement]." It is in the upstairs area. 
+Morgan's Room is west of the study. "Above you is a dark [violet ceiling] painted with stars. To the north is a [bedroom window] overlooking the garden. West is a [medium sized bed] and a small cabinet. In the southeast corner is a [tall mirror]. All along the southern side is a [mural] of an outdoor scene, with trees and animals.[if Morgan's secret door is closed and Morgan's secret door is unlocked] The secret door is closed.[else if Morgan's secret door is open] A secret door in the mural is open, leading to [room of requirement].[end if]". It is in the upstairs area.
 
-A violet ceiling is scenery in Morgan's room. "You can recognize many of the constellations. Your favorite is Pegasus."
+A violet ceiling is scenery in Morgan's room. "You can recognize many of the constellations. Your favorite is Pegasus." Understand "stars" as violet ceiling.
 
-A bedroom window, a medium sized bed, and a tall mirror are scenery in Morgan's room.
+A bedroom window and a tall mirror are scenery in Morgan's room.
+A medium sized bed is a fixed in place enterable supporter in Morgan's room. A cabinet is an undescribed, fixed in place closed, openable container in Morgan's room.
+Instead of searching the tall mirror, try examining player. Instead of examining the tall mirror, try examining player.
+Instead of examining the bedroom window, try searching the bedroom window instead.
+Instead of searching the bedroom window, say "Below, there is a small patio with a table and two chairs, beyond, the hills of Briones rise up. [one of]You look for the white horse but do not see it.[or]A white horse grazes on the winter grass by the skyline.[purely at random]"
 
-The mural is scenery in Morgan's room. "You can see a very thin crack near the corner of the mural, going from the floor to just over your head." Understand "crack" as mural.
+Section 1 - Morgan's Mural
 
-Check searching secret door:
-	if secret door is locked, try examining mural instead.
+The mural is scenery in Morgan's room. "[one of]The mural covers the entire wall on the south side, a [field] with a [large tree], and a [fox] and a [mouse].[or]You can see a very thin crack near the corner of the mural, going from the floor to just over your head.[or]The crack outlines what looks like a secret door.[stopping]". Understand "crack/south wall" as mural. Understand "crack" as mural. A field, a large tree, a fox and a mouse are undescribed, fixed in place things in Morgan's room.
 
-Morgan's secret door is an undescribed locked door. Morgan's secret door is south of Morgan's room.
+Morgan's secret door is an undescribed locked door.  It is inside of Morgan's room and outside of the Room of Requirement. The description of it is "[if Morgan's secret door is closed]You only see a crack in the mural.[otherwise]Such a clever mechanism![end if]".
 
-Instead of pushing secret door:
-	now Morgan's secret door is unlocked;
-	now Morgan's secret door is open;
-	now Morgan's secret door is described;
-	now Morgan's secret door is scenery;
-	say "A secret door pops open when you let go, revealing a small room, with a very curved back wall."
+Check searching Morgan's secret door:
+	if Morgan's secret door is locked, try examining mural instead.
 
-Instead of opening a door:
-	if the noun is locked, say "What door?";
-	otherwise continue the action.
+Check searching mural:
+	try examining mural instead.
+
+Instead of pushing Morgan's secret door:
+	If Morgan's secret door is closed:
+		now Morgan's secret door is unlocked;
+		now Morgan's secret door is open;
+		now Morgan's secret door is described;
+		now Morgan's secret door is scenery;
+		say "A secret door pops open when you let go, revealing a small room, with a very curved back wall.";
+	otherwise:
+		say "You push the door closed, revealing only a thin seam in the wall.";
+		now Morgan's secret door is closed.
+
+Instead of opening Morgan's secret door when the noun is locked:
+	say "There is no doorknob, so how to open it?".
+Instead of examining Morgan's secret door when the noun is locked:
+	say "What door?".
 	
-Instead of pushing mural, try pushing secret door.
+Instead of pushing mural, try pushing Morgan's secret door.
 
-Instead of going south when location is Morgan's room and Morgan's secret door is closed, say "There is a large mural to the south."
+Chapter 8 - The Room of Requirement
 
-Chapter 5 - The Room of Requirement
+The Room of Requirement is a room in the upstairs area. "A very oddly shaped, very small closet. The opposite wall curves sharply away from you.".
 
-The Room of Requirement is south of Morgan's secret door. "A very oddly shaped, very small closet. The opposite wall curves sharply away from you.[first time][paragraph break]You've found a [Nor East Snitch]![only]". It is in the upstairs area.
+Instead of going south when location is Morgan's room and Morgan's secret door is closed, say "There is a large mural to the south." Instead of going south when location is Morgan's room, try going inside.
+
+Before opening mural when Morgan's secret door is closed, say "How?" instead.
+
+Instead of going north when location is the Room of Requirement, try going outside.
 
 Book 3 - Downstairs
 
-The downstairs area is a region.
+The downstairs area is a region. The sound of the downstairs area is "[sound of the main area] softly".
 
 Chapter 1 - The Guest Hall
 
-The Guest Hall is a room in the downstairs area. "[if the location is the great room]An archway has steps going down to a hall to the east.[otherwise]The guest hall has steps going up to the great room, to the west, on the other end, steps going down to [Papa's Office] to the east. A guest room is to the south and a guest bathroom to the north.[end if]". Papa's office is east of the Guest Hall. The archway is above the Guest Hall. Instead of going west in the guest hall, try going up.
+The Guest Hall is a room in the downstairs area. "A short hallway with steps going back up to the [great room] to the west, a guest room to the south and a guest bathroom to the north. At the end of the hallway, to the east, [if Papa's secret door is open]are steps going down to [Papa's Office][otherwise]is a [floor to ceiling bookshelf][end if].". The archway is above the Guest Hall. Instead of going west in the guest hall, try going up. Instead of going down in the guest hall, try going east.
 Understand "guest hallway" as guest hall.
 
-[We will want to make the secret bookshelf/restricted section of the library]
+	
+Section 1 - The Secret Bookshelf (The Restricted Section)
 
-Chapter 2 - Papa's Office
+The floor to ceiling bookshelf is an undescribed scenery supporter in the guest hall. "[one of]Filled with books and odds and ends.[or]There must be over a hundred books here..[or]I bet it is a secret door....[stopping]". Understand "bookshelf / bookshelves" as the floor to ceiling bookshelf. The printed name of the bookshelf is "bookshelf".
 
-Papa's Office is a room. It is in the downstairs area.
+Papa's secret door is a locked secret door. It is east of the guest hall and west of Papa's Office.
 
-Book 4 - Outside
+Before facing east in the guest hall:
+	if Papa's secret door is unrevealed:
+		say "You see a bookshelf. [description of floor to ceiling bookshelf]" instead;
+	otherwise:
+		continue the action.
 
-The outside area is a region.
+Before going east in the guest hall:
+	if Papa's secret door is unrevealed:
+		say "There is a floor to ceiling bookshelf in the way." instead;
+	otherwise:
+		continue the action. 
 
-The Front Garden is a room. "The [slate floor] leads through the door and up to a rock wall with a [waterfall] beyond. [Steps] made from the same rough slate are to the left and wind up and around the [waterfall] to an [arch] that exits onto [the road]. You are in a [small alcove], made from two [arched columns]." It is in the outside area.
+Instead of going east in Guest Hall:
+	If Papa's secret door is unrevealed, try examining the floor to ceiling bookshelf instead;
+	otherwise continue the action.
 
-The slate floor, the waterfall, the Steps, the arch, the road, the small alcove and some arched columns are scenery in the front garden.
+Check searching Papa's secret door:
+	try examining the bookshelf instead.
 
-The french doors is east of the Front Garden.
+Instead of pulling the bookshelf when Papa's secret door is closed:
+	now Papa's secret door is unlocked;
+	now Papa's secret door is open;
+	now Papa's secret door is described;
+	now Papa's secret door is revealed;
+	say "The bookshelf slowly rotates open, revealing a short set of stairs and a very large room below.";
+	now the description of the bookshelf is "All that can be seen is a smooth panel of brown wood.".
+	
+Instead of pushing the bookshelf:
+	If Papa's secret door is open:
+		say "You push the secret bookshelf closed, revealing the books.";
+		now Papa's secret door is closed;
+		now the description of the bookshelf is "Filled with books and odds and ends.";
+	otherwise:
+		continue the action.
+
+Instead of searching the floor to ceiling bookshelf:
+	if there is nothing on the bookshelf:
+		say "There must be over a hundred books here!";
+	otherwise:
+		continue the action. [ report anything that is on the bookshelf, like the map ]
+
+
+Chapter 2 - Papa's Office (The Room of Secrets)
+
+Papa's Office is a room in the downstairs area. "A large spacious room, with [bookshelves] and [cabinets] around a [large desk]. To the north is [Papa's Bar]. On the east wall is a cabinet with a large [TV] with two [speakers] on either side.".
+
+Instead of going up in Papa's Office, try going west.
+Instead of going south in Papa's Office, say "The wall is covered with [cabinets] below and [bookshelves] above."
+The cabinets are scenery in Papa's office. "Dark brown, and filled with games and other things. 'Don't worry,' Papa says, 'nothing is hidden in any of these!'." Understand "Cabinet" as Cabinets.
+The bookshelves are scenery in Papa's office. "Dark brown, and filled with books but also a lot of other things. 'Don't worry,' Papa says, 'nothing is hidden in these bookshelves!'."
+A large desk is scenery in Papa's office. "Usually stacked with papers but today it is bare. 'Ha,' Papa says, 'I wouldn't hide anything in my desk!'."
+A TV is scenery in Papa's office. "Large, black and usually off, there doesn't seem to be anything behind or around it." Understand "large TV" as TV.
+Some speakers are scenery in Papa's office. "About three foot tall, they are more like little cabinets with a marble top. On one is a [statue] your mama made, on the other an [iron vase] with [dragons] going around the rim." Understand "speaker" as speakers.
+A statue is scenery in Papa's office. "[First time]Named 'Jamuna', it is a woman with her hand on her head. [only]Nothing to find here.". Understand "Jamuna" as statue.
+
+An iron vase is a closed, openable scenery container in Papa's Office. "[one of]A dark green vase with little iron [dragons] going around the rim.[or]Hunh, there are eight dragons![stopping]". Instead of searching iron vase, try opening iron vase. 
+
+Instead of opening iron vase:
+	say "You find some dust, but fortunately no spiders."
+	
+Some dragons are scenery in Papa's office. "Each one the same, there are eight of them going around the rim."
+
+Chapter 3 - Papa's Bar (The Potion's Room)
+
+Papa's Bar is north of Papa's Office. "A [large wooden bar] takes up the middle section. Along the east wall is a [dark green counter]. The west side has a number of [bar chairs] pulled up to the bar, which has a large [aquarium] bubbling along on the back wall. There is a [dark stairwell] going downstairs on the north side.". It is in the downstairs area.
+A large wooden bar is scenery in Papa's Bar. "Made out of dark, twisty walnut, it curves around in a semi-circle. There is a straight section at the north. There are many, many [tiki mugs] and other [bar glasses] on and under the counters.". 
+Tiki mugs are scenery in Papa's Bar. "Dozens and dozens of them, in all kinds of shapes and colors. 'Don't worry,' Papa says, 'nothing is hidden in any of them!'.".
+Bar glasses are scenery in Papa's Bar. "Dozens and dozens of them, in all kinds of shapes. They are clear, and you can see there is nothing in them.".
+A dark green counter is scenery in Papa's Bar. "A [sink] in one corner, a large brass and copper [espresso machine] in the middle and a set of [shelves] with [coffee cups] in the other corner.".
+A sink is scenery in Papa's Bar. "Nothing much to see here.".
+An espresso machine is scenery in Papa's Bar. "Made of brass and copper, there is a plaque that says 'Electra' with what looks like a hippogriff on it.".
+Some shelves are scenery in Papa's Bar. "Nothing much to see here.".
+Coffee cups are scenery in Papa's Bar. "'Nothing hidden in any of these', says Papa".
+Bar chairs are scenery in Papa's Bar. "[First time]Dark wood, almost black with leather seats.  [only]Nothing much to see here.".
+An aquarium is scenery in Papa's Bar. "[First time]A lot of pirate-themed ornaments bubble along inside. [only]Not much to see here.".
+A dark stairwell is scenery in Papa's Bar. "'No need to go downstairs this time!' says Papa".
+
 
 Book 5 - Going to rooms
 
-Understand "go to [any room]" as going directly
+Understand "go to [any room]" as going directly.
+Understand "go [any room]" as going directly.
 
 Going directly is an action applying to one visible thing.
 
-A Room can be mentioned or unmentioned. A room is usually unmentioned.
-After printing the name of a room (called the target):
-	now the target is mentioned.
-
-[We could make each room have a "known" state. Going normally to a room makes it 'known'. Trying to Go to an unknown room would print an error message 'You don't know where [the noun] is." or some such. This would make it so you couldn't "Go to room of requirement" ]
-
 Carry out going directly: 
+	let the room count be the number of moves from the location to the noun, using doors;
 	if the player is in the noun,
 		say "You are already in [the noun].";
-	otherwise if the noun is not mentioned:
-		say "You haven't seen [the noun] yet.";
+	otherwise if room count is 1:
+		now the player is in the noun;
+	otherwise if the noun is not listed in list of visited rooms:
+		say "You haven't been there yet.";
 	otherwise:
 		say "You run to [the noun] as fast as you can....";
 		now the player is in the noun.
 	
-Volume 2 - The Map
+Volume 2 - The Map in the Box
 
-The wooden box is a closed, openable, opaque container in the Great Room. The description of it is "Smaller than a bread box, it is made of [dark brown wood], with [scrollwork] around its edges[if box is closed] and a [metal clasp] holding it closed[end if]." Instead of taking the wooden box, say "You won't need the box." The dark brown wood, scrollwork and metal clasp are part of the box.
+Book 1 - The box
+
+The wooden box is a closed, openable, opaque container in the Great Room. "The wooden box sits amidst the wrapping papers, [if box is closed]closed[otherwise]open[end if]." The description of it is "Smaller than a bread box, it is made of [dark brown wood], with [scrollwork] around its edges[if box is closed] and a [metal clasp] holding it closed[end if]." Instead of taking the wooden box, say "You won't need the box." The dark brown wood, the scrollwork and the metal clasp are part of the box.
+
+Understand "the present" as the wooden box. Understand "present" as the wooden box.
+
+Book 2 - The snitches
+
+Wind direction is a kind of value. The wind directions are NNE, SW, SSE and W.
+
+A snitch is a kind of thing. A snitch has a wind direction. A snitch has a text called a clue. The printed name is usually "snitch". The description of a snitch is usually "A small piece of parchment paper, cut into a four-pointed star. It has been folded to look vaguely like a snitch. There are letters going around in a circle across the arms of the star, with a compass direction in its center labeled [wind direction].".
+
+After examining a snitch:
+	let the named direction be the wind direction of the noun;
+	now the printed name of the noun is "snitch that points [the named direction]".
+		
+Instead of opening a snitch:
+	if the printed name of noun is "snitch", try examining the noun;
+	say "You can make out the following letters:[line break][tab]'[the clue of the noun]'[line break]".
+Understand "read [a snitch]" as opening.
+
+Instead of taking a snitch:
+	if the printed name of noun is "snitch":
+		try opening the noun;
+		now the player carries the noun;
+	otherwise:
+		continue the action.
+
+The Nor East Snitch is a snitch. The wind direction of Nor East Snitch is NNE. The clue of Nor East Snitch is "Seek            n in t            d sec              brar  ". Understand "NNE snitch/ snitch that points NNE" as the Nor East Snitch.
+
+The Sou West Snitch is a snitch. The wind direction of Sou West Snitch is SW.  The clue of Sou West Snitch is "     illum           the re           ction             ry.". Understand "SW snitch / snitch that points SW" as the Sou West Snitch.
+
+The Sou Sou East Snitch is a snitch. The wind direction of Sou Sou East Snitch is SSE. The clue of Sou Sou East Snitch is "         mina            restr            n of th          ". Understand "SSE snitch/ snitch that points SSE" as the Sou Sou East Snitch.
+
+The Western Snitch is a snitch. The wind direction of Western Snitch is W. The clue of Western is "S           ation            ricted             he li      ". Understand "W snitch/ snitch that points W" as the Western Snitch.
+
+Book 3 - The Map
 
 The Map is a thing in the wooden box. The description of it is "[state of map]".
 
@@ -214,89 +405,50 @@ Page is a kind of value. first, second, third, fourth, fifth, and last are pages
 
 The map has a page. The page of the map is usually first.
 
+Some folds are part of the map. Instead of examining the folds, try unfolding the map. Instead of opening folds, try unfolding the map.
+
 Rule for printing the name of the map while taking inventory: 
-    say "Map[if page is not first], open to the [page] page[end if]" [ ### We could say what page it is folded to ]
+	say "Map[if page is not first], open to the [page] page[end if]";
+	let how many be number of snitches enclosed by wind rose;
+	if how many > 1:
+		say ", containing [number of snitches enclosed by wind rose in words] snitches";
+	else if how many is 1:
+		say ", containing a single snitch".
 
 To say state of map:
 	say "[bold type]The [page of the map] page of the map[roman type]";
 	say "[paragraph break]";
 	if the page is:
 		-- first:
-			say "Folded up like an accordian, it looks like the Maurauder's map, but instead of the castle of Hogwarts, you recognize your house. There is a tiny banner with [italic type]44 Westwind[roman type] on it, and a tree where the tree house would be, formed out of words like the whomping willow.";
+			say "Folded up like an accordion, it looks like the Maurauder's map, but instead of the castle of Hogwarts, you recognize your house. There is a tiny banner with [italic type]44 Westwind[roman type] on it. Where your tree house would be, there is a tree formed out of words like the whomping willow.";
 			say "[First time][line break]There are more folds underneath.[only]";
 		-- second:
-			say "The map shows what appears to be the grounds around the house. You can see a tiny version of the house, with its tiny banner, next to a miniature whomping willow.[paragraph break]Below the house are lines of words, flowing around a dark section labled [bold type]The Dark Forest[roman type] - clearly the Briones Hills behind your house.";
+			say "The map shows what appears to be the grounds around the house. You can see a tiny version of the house, with its tiny banner, next to a miniature whomping willow.[paragraph break]Below the house are lines of words, flowing around a dark section labeled [bold type]The Dark Forest[roman type] - clearly the Briones Hills behind your house.";
 			say "[First time][line break]There are more folds underneath.[only]";
 		-- third:
 			say "The lines are formed from words, some made up, some are the name of the object drawn. The center of the map has a drawing of the waterfall, with steps going to the left of it. The right side of the map has the edge of the house. The far left has the archway that goes to the road. The bottom shows the curved steps leading to the garage.[one of][or][line break]There is a star in the top right of the map, in the west.[stopping][if the location is front garden][line break]There is a tiny drawing of a snitch near the left column as you go out of the house.[end if]";
 			say "[First time][line break]There are more folds underneath.[only]";
 		-- fourth:
-			say "The lines of the fourth page show the [Great room], there is a large label saying so in fact, where the Christmas tree would be at the top of the map. Underneath is what looks like a paramecium made from the words 'Kitchen Island' repeated over and over. It is labeled 'House Elves Only'. To the left is the doors to the front garden, labeled 'Porticus Imago'. At the bottom left is a curved room labeled 'The Cauldron Cupboard' that looks like it would be the larder.[one of][or][line break]There is a star in the top left corner of the map, in the south-east.[stopping][if the location is the kitchen][line break]There is a tiny drawing of a snitch inside the Flue Network.[end if]";
+			say "The lines of the fourth page show the [Great room], there is a large label saying so in fact, where the Christmas tree would be at the top of the map. Underneath is what looks like a paramecium made from the words 'Kitchen Island' repeated over and over. It is labeled 'House Elves Only'. To the left is the doors to the front garden, labeled 'Porticus Imago'. At the bottom left is a curved room labeled 'The Cauldron Cupboard' that looks like it would be the larder.[one of][or][line break]There is a star in the top left corner of the map, in what would be the south-west.[stopping][if the location is the kitchen][line break]There is a tiny drawing of a snitch inside the Flue Network.[end if]";
 			say "[First time][line break]There are more folds underneath.[only]";
 		-- fifth:
-			say "The map shows part of the upstairs. The left side is a diagram of your bedroom, marked [Morgan's Room], along with your study and other rooms.[one of][or][line break]There is a star in the left side of the map, in what would be North-Northeast.[stopping][if the location is Morgan's room][line break]There is a tiny drawing of a snitch in an odd shaped room labeled[bold type]the Room of Requirement.[end if]";
+			say "The map shows part of the upstairs. The left side is a diagram of your bedroom, marked [Morgan's Room], along with your study and other rooms.[one of][or][line break]There is a star in the left side of the map, in what would be North-Northeast.[stopping][if the location is Morgan's room][line break]There is a tiny drawing of a snitch in an odd shaped room labeled [bold type]the Room of Requirement[roman type].[end if]";
 			say "[First time][line break]There are more folds underneath.[only]";
 		-- last:
-			say "The last page of the map seems to be Papa's office. The stairs going down has a label that reads [bold type]the Restricted Section[roman type]. The bar has the label [bold type]Potions Room[roman type] and his office is labeled [bold type]the Room of Secrets[roman type].";
-			say "[one of][or][line break]There is a star at the top of the map, in what would be South-Southeast.[stopping][if the location is Papa's office][line break]There is a tiny drawing of a snitch along the wall by the stairs.[end if]";
+			say "The last page of the map looks like your Papa's office. The stairs going down to it has a label that reads [bold type]the Restricted Section[roman type]. The bar has the label [bold type]Potions Room[roman type]. His office is labeled [bold type]the Room of Secrets[roman type].";
+			say "[one of][or][line break]There is a star at the top of the map, in what would be South-Southeast.[stopping][if the location is Papa's office][line break]There is a tiny drawing of a snitch in the area marked [bold type]the Room of Secrets[roman type].[end if]";
 			say "[line break]";
-			say "The middle of the map has a square made of two flaps. [description of the flaps]";
+			say "The middle of the map is a square made of two flaps. [description of the flaps]";
+			
+Book 4 - Riddle, Clues and advice
 
-Book 1 - The windrose
+[ Opening the flaps covering the wind rose shows a riddle on the top flap, clues on the bottom, and secret advice underneath the bottom flap.]
 
-Some flaps are part of the map. The description of it is "[state of flaps]".
-Some flaps have a page. The page of the flaps is usually first. Secret page is a page.
-
-Instead of opening the flaps, try unfolding the flaps. Instead of closing the flaps, try folding the flaps.
-
-To say state of flaps:
-	if the page is:
-		-- first:
-			say "The top says [bold type]Hogwarts School of[roman type], the bottom says [bold type]Witchcraft & Wizardry[roman type].";
-		-- last:
-			say "The top flap has what looks like [bold type][a riddle][roman type] written on it, the bottom has what appear to be [bold type][some clues][roman type], in the middle you see...[paragraph break][state of windrose]";
-		-- Secret page:
-			say "The top flap has what looks like [a riddle] written on it, underneath the bottom flap is what appears to be some [advice]."
-
-The windrose is an opaque container.
-The windrose is part of the map. The description of it is "[state of windrose]".
-The holder is a container. It is part of the map.
-
-To say state of windrose:
-	say "[First time]Sixteen paper arrows form a ring looking very much like a [bold type][windrose][roman type]. [only]";
-	if nothing is in the holder,
-		say "The center of the windroses has a single letter N with an arrow pointing up. It looks as if the actual rose is missing.";
-	otherwise:
-		let solution be indexed text;
-		repeat with item running through snitches in holder:
-			if solution is empty:
-				let solution be clue of item;
-			otherwise:
-				let the_count be number of characters in solution;
-				repeat with counter running from 1 to the_count: 
-					if (character number counter in clue of item) is not " ",
-						replace character number counter in solution with character number counter in clue of item;
-		say "a windrose with [if number of snitches in holder > 1][number of snitches in holder] snitches[otherwise]a single snitch[end if]. The text around the circle reads[paragraph break][italic type][solution][roman type]".
-
-Instead of inserting a snitch into the map, try inserting the noun into the windrose.
-
-Instead of inserting a snitch into the windrose:
-	if the player is not holding the map,
-		try silently taking the map;
-	now the noun is in the holder;
-	say "You insert the snitch into the windrose, orienting the snitch so that its arrow points to the [wind direction of the noun].";
-	say "In the middle of the map, now you see [state of windrose]".
-
-Test me with "open box / unfold map / unfold map / unfold map / unfold map / unfold map / unfold map / unfold flaps".
-
-Book 2 - Riddle, Clues and advice
-
-[ Opening the flaps covering the windrose shows a riddle on the top flap, clues on the bottom, and secret advice underneath the bottom flap.]
-
-A riddle, some clues and some advice is part of the windrose.
+A riddle, some clues and some advice is part of the flaps. A thing can be read or unread. A thing is usually unread. Understand "clue" as the clues.
 
 To say tab: say "[fixed letter spacing]	[variable letter spacing]".
 To say iTab: say "[fixed letter spacing]	[variable letter spacing][italic type]".
+To say read riddle: now the riddle is read.
 
 The description of a riddle is "[italic type]
 Four snitches hold the secret[line break]
@@ -306,7 +458,7 @@ Four winds blew them far away[line break]
 This map you hold will help you[line break]
 [itab]if you search on every grid.[line break]
 Assemble the clues below[line break]
-[itab] and always be intrepid.[line break][roman type]"
+[itab] and always be intrepid.[line break][roman type][read riddle]".
 
 The description of some clues is "[italic type]
 A stern north-northeaster blew your first clue up-and-away to hide.[line break]
@@ -320,29 +472,61 @@ For the second clue, Dobby would tell you to tickle a pear.[line break]
 For the third clue, Krum will tell you to not let the wind blow you in the wrong direction![line break]
 For the fourth clue, Mrs. Weaslely likes to listen to Celestina Warbeck for inspiration.[roman type]".
 
-Book 3 - The snitches
+Book 5 - The wind rose
 
-Wind direction is a kind of value. The wind directions are NNE, SW, SSE and W.
+Some flaps are part of the map. The description of it is "[state of flaps]".
+Some flaps have a page. The page of the flaps is usually first. Secret page is a page.
 
-A snitch is a kind of thing. A snitch has a wind direction. A snitch has a text called a clue. The printed name is usually "snitch[if handled] that points [wind direction][end if]". The description of a snitch is usually "A small piece of parchment paper, cut into a four-pointed star. It has been folded to look vaguely like a snitch. There are letters going around in a circle across the arms of the star, with a compass direction in its center pointing [wind direction].".
+Instead of opening the flaps when the page of the map is not last, try unfolding the map.
+Instead of opening the flaps, try unfolding the flaps. Instead of closing the flaps, try folding the flaps.
 
-Instead of opening the snitch:
-	say "You make out the following letters - '[the clue of the noun]'[line break]".
+To say state of flaps:
+	if the page is:
+		-- first:
+			say "The top says [bold type]Hogwarts School of[roman type], the bottom says [bold type]Witchcraft & Wizardry[roman type].";
+		-- last:
+			say "The top flap has what looks like [bold type][a riddle][roman type] written on it, the bottom has what appear to be [bold type][some clues][roman type], [one of]in the middle you see....[or]in the middle is a wind rose.[stopping][line break][state of wind rose]";
+		-- Secret page:
+			say "The top flap has what looks like [a riddle] written on it, underneath the bottom flap is what appears to be some [advice]."
 
-After examining the snitch:
-	now the noun is handled. [ So that we will now print its name with the direction. ]
+The wind rose is an open, unopenable container.
+The wind rose is part of the map. The description of it is "[state of wind rose]".
 
-Understand "read [snitch]" as opening.
+To say state of wind rose:
+	say "[First time]Sixteen paper arrows form a ring looking very much like a [bold type][wind rose][roman type]. [only]";
+	if nothing is in the wind rose,
+		say "The center of the wind rose has a single letter N with an arrow pointing up. It looks as if the actual rose is missing.";
+	otherwise:
+		let solution be indexed text;
+		repeat with item running through snitches in wind rose:
+			if solution is empty:
+				let solution be clue of item;
+			otherwise:
+				let the_count be number of characters in solution;
+				repeat with counter running from 1 to the_count: 
+					if (character number counter in clue of item) is not " ",
+						replace character number counter in solution with character number counter in clue of item;
+		say "The wind rose has [if number of snitches in wind rose > 1][number of snitches in wind rose in words] snitches[otherwise]a single snitch[end if]. The text around the circle reads[paragraph break][italic type][solution][roman type][paragraph break]".
 
-The Nor East Snitch is a snitch in the Room of Requirement. The wind direction of Nor East is NNE. The clue of Nor East is "Seek            n in t            d sec              brar  ". Understand "NNE / points NNE / snitch" as the Nor East.
+The examine containers rule does nothing when examining the wind rose.
 
-The Sou West Snitch is a snitch in the Pizza Oven. The wind direction of Sou West is SW.  The clue of Sou West is "     illum           the re           ction             ry.". Understand "SW / points SW / snitch" as the Sou West.
+Instead of inserting a snitch into the map, try inserting the noun into the wind rose.
+Before dropping a snitch, try silently taking the noun.
 
-The Sou Sou East Snitch is a snitch. Sou Sou East is in Papa's Office. The wind direction of Sou Sou East is SSE. The clue of Sou Sou East is "         mina            restr            n of th          ". Understand "SSE / points SSE / snitch" as the Sou Sou East.
+Instead of inserting a snitch into the wind rose:
+	if the player is not holding the map,
+		try silently taking the map;
+	now the noun is in the wind rose;
+	if the noun is handled:
+		say "You insert the snitch into the wind rose, orienting it so that its arrow points to the [wind direction of the noun].";
+	otherwise:
+		now the noun is handled;
+		say "As you insert the snitch into the wind rose, you see that it has an arrow in its center labeled [wind direction of the noun], so you orient it so that its arrow points in that direction.";
+		let the snitch name be "snitch that points [wind direction]";
+		now the printed name of the noun is the snitch name;
+	say "[paragraph break][state of wind rose]".
 
-The Western Snitch is a snitch in the Front Garden. The wind direction of Western is W. The clue of Western is "S           ation            ricted             he li      ". Understand "W / points W / West / snitch" as the Western.
-
-Book 4 - Unfolding and folding the map and the windrose
+Book 6 - Unfolding and folding the map and the wind rose
 
 A thing can be foldable or unfoldable. A thing is usually unfoldable.
 The map and some flaps are foldable.
@@ -407,7 +591,163 @@ Carry out folding some flaps:
 		say "You fold the advice flap back down.";
 	try examining the noun.
 
-Book 5 - Map effects
+Book 7 - The Snitch Hunt
+
+Snitch Hunt is a scene. Snitch Hunt begins when riddle is read.
+
+When Snitch Hunt begins:
+	now the Nor East Snitch is in the Room of Requirement;
+	now the Sou West Snitch is in the Pizza Oven;
+	now the Sou Sou East is in the iron vase;
+	now the Western Snitch is in the collection of pots;
+	say "Let the snitch hunt begin!".
+	
+Report an actor opening (this is the replacing the reveal any newly visible interior rule):
+	if the noun contains a snitch, say "You've found a snitch!" instead.
+
+Instead of opening the pizza oven: [replaces the normal 'report opening' rule]
+	if pizza oven contains a snitch:
+		say "You lift the heavy plate door of the oven and set it down on the floor.";
+		say "[line break]You've found a snitch!";
+		now the pizza oven is open;
+	otherwise:
+		continue the action.
+
+Instead of opening pots when pots contain a snitch:
+	say "You search the collection of pots and find a snitch!";
+	now pots are open.
+	
+Instead of opening iron vase when iron vase contains a snitch:
+	say "You found a snitch!";
+	now iron vase is open.
+
+Snitch Hunt ends when wind rose contains 4 snitches.
+
+Book 8 - The Search for Illumination
+
+The Search for Illumination is a scene. Search for Illumination begins when Snitch Hunt ends.
+
+When Search for Illumination begins:
+	say "The search for illumination has begun!";
+	now the description of the floor to ceiling bookshelf is "The bookshelf is marked [bold type]The Restricted Section[roman type] on the map.".
+
+The Book of Illumination is a closed, openable container. The printed name of it is "brown book". The description is "The binding is brown wood with no title on the edge or front. The pages have an odd plastic feel." Understand "brown book/book" as the book of illumination.
+
+Instead of examining the book of illumination, try opening the book of illumination.
+Instead of examining the book of illumination when the book is open, try searching the book.
+
+Instead of searching the floor to ceiling bookshelf during the Search for Illumination:
+	if Papa's secret door is open:
+		say "With the secret door open, you only see the back of the bookshelf.";
+	otherwise if there is something on the bookshelf:
+		continue the action;
+	otherwise if the Table of Restricted Books is empty:
+		say "[one of]Hmm, here is a brown book with no title?[or]You do not find anything else.[stopping]";
+		now the Book of Illumination is on the floor to ceiling bookshelf;
+		[try taking the Book of Illumination;]
+	otherwise:
+		say "[search results]".
+Instead of examining the floor to ceiling bookshelf during the Search for Illumination, try searching the noun
+
+Table of Restricted Books
+book
+"Ah, here are your Harry Potter books, seems obvious.....Hmm, nope, nothing."
+"Well, here are a bunch of books on how to build treehouses.... Sorry, nothing."
+"The 'Art of Computer...' Nope!"
+
+To say search results:
+	repeat through Table of Restricted Books:
+		say "[book entry][paragraph break]";
+		blank out the whole row;
+		rule succeeds;
+	say "Seems like you have gone through the lot."
+
+After opening the book of illumination during the Search for Illumination:
+	say "As you open the book of illumination, the pages begin to glow with a strong soft light. The entire hallway is now illuminated from the light from the book...[paragraph break]...and there is a little piece of paper inside - a final clue!"
+	
+The final clue is a container in the book of illumination. "A small scrap of paper with numbers on it." The final clue is closed. Understand "clue / number / paper" as the final clue.
+ 
+Instead of examining the final clue:
+	say "[one of]It looks like a phone number![or]You see a phone number.[stopping]";
+
+Search for Illumination ends when iPhone is ringing.
+
+Section 1 - Phones and Calling
+
+A phone is a kind of thing. The description of a phone is usually "One of those cordless things that sit in a base.".
+The kitchen phone is a phone on the granite counter.
+
+Calling is an action applying to one thing. Understand "call [something]" as calling.
+
+Carry out calling:
+	if the player does not carry a phone:
+		say "Call with what?";
+	otherwise if the noun is the final clue:
+		say "You call the phone number written on the final clue.";
+		now the iPhone is ringing;
+		now the ring count is 4;
+	otherwise:
+		say "I do not know how to do that.";
+		
+Section 2 - Ringing Phone Scene
+
+Ringing phone is a recurring scene. Ringing phone begins when the ring count is 4. Ringing phone ends when the ring count is 0.
+
+Every turn during ringing phone:
+	say "You hear a phone ringing [ringing volume] [ringing location].";
+	now the ring count is the ring count - 1;
+	if the ring count is 0:
+		now the iPhone is silent;
+		say "... and now there is silence.".
+
+To say ringing volume:
+	[let N be number of moves from the location to the iPhone;]
+	[Unfortunately, number of moves... cannot handle up/down (seemingly) so just wing it.]
+	let iPhone region be map region of the location of the iPhone;
+	let player region be map region of the location;
+	if location of iPhone is the location:
+		say "very loudly";
+	otherwise if iPhone region is player region:
+		say "loudly";
+	otherwise if player region is main area:
+		say "distinctly";
+	otherwise:
+		say "(just barely)".
+
+To say ringing location:
+	let iPhone region be map region of the location of the iPhone;
+	let player region be map region of the location;
+	[let direction be best route from the iPhone to the location; -> nothing]
+	if location of iPhone is the location:
+		say "in this room";
+ 	otherwise if iPhone region is player region:
+		say "from the [location of the iPhone]";
+	otherwise if player region is main area:
+		say "from the [iPhone region]";
+	otherwise:
+		say "from the main area"; [hack - hard coding main region as central]
+	
+Book 9 - The Final Search
+
+[ The Final Search is looking for the ringing iPhone. Each room has either louder or softer ringing. ]
+The Final Search is a scene. Final Search begins when Search for Illumination ends. Final Search ends when player carries iPhone.
+
+When Final Search begins:
+	now the iPhone is on the large bed;
+	say "And now for the final search....".
+
+When Final Search ends:
+	end the story saying "Merry Christmas!".
+
+The iPhone is a closed, openable container. "[one of]On the bed is your final present, your very first iPhone![or]The iPhone is on the bed, waiting for you to pick it up.[stopping]". The description of it is "Still in the box[if iPhone is ringing] and ringing quite loudly[otherwise], now silent[end if].". The iPhone can be ringing or silent. The iPhone is silent. Understand "box / phone" as the iPhone. Instead of opening iPhone, try taking the iPhone.
+
+Instead of taking the iPhone:
+	say "As you open the box, you see it is even in your favorite color!";
+	now the player carries the iPhone.
+
+Ring count is a number which varies. The ring count is usually 0.
+
+Book 10 - Map effects
 
 Chapter 1 - Label room names and objects using the map
 
@@ -417,29 +757,158 @@ Before printing the name of a room:
 	If the player is carrying the map:
 		now the printed name of the kitchen is "Kitchen (marked House Elves Only on the map)";
 		now the printed name of the larder is "Larder (marked Cauldron Cupboard on the map)";
+		now the printed name of the Room of Requirement is "a small room (marked Room of Requirement on the map)";
+		now the printed name of Papa's Office is "Papa's Office (marked The Room of Secrets on the map)";
+		now the printed name of Papa's Bar is "Papa's Bar (marked The Potion's Room on the map)";
+		now the printed name of the aquarium is "aquarium (marked Grindylow on the map)";
 	otherwise:
 		now the printed name of the kitchen is "Kitchen";
 		now the printed name of the larder is "Larder";
+		now the printed name of the Room of Requirement is "a small room";
+		now the printed name of Papa's Office is "Papa's Office";
+		now the printed name of Papa's Bar is "Papa's Bar";
+		now the printed name of the aquarium is "aquarium";
 
 Before printing the name of an object:
 	If the player is carrying the map:
 		now the printed name of the pizza oven is "Pizza Oven (marked Flue Network on the map)";
 		now the printed name of the french doors is "french doors (marked Porticus Imago on the map)";
+		now the printed name of the mural is "mural (there is a label 'Room of Requirement' by it on the map)";
 	otherwise:
 		now the printed name of the pizza oven is "Pizza Oven";
 		now the printed name of the french doors is "french doors";
+		now the printed name of the mural is "mural";
 
-Volume 3 - Miscelanea
-	
-Book 1 - Finishing
-
+[ The idea for this next section would be to add a map specific note, like noting the room of requirement or the restricted section of the library. But the following doesn't work for normal rooms, you need to replace it in its entirety. See Ant-sensitive sunglassses for this. One other note, probably good to do as they do and have a "A Room can have a map-description. etc and not need all the logic here. Then you can set the map-description in this section and make the rule simpler.]
 [
-After taking a snitch:
-	end the story finally;
-	say "Merry Christmas!".
+Rule for printing the description of a dark room when the player is carrying the map:
+	say "boo hoo hoo" instead.
+	]
+[
+	if the room is Morgan's Room:
+		say "[description of room] [if Morgan's secret door is closed]The map indicates a [room of requirement] beyond the mural.[otherwise]A secret door in the mural is open, leading to a room marked [room of requirement].";
+	otherwise:
+		continue action.
 ]
 
-[To show just the "one Christmas present" text and a prompt]
+Volume 3 - Miscelanea
+
+Book 1 - Looking at rooms and at directions
+
+Understand "look [direction]" as facing.
+
+Facing is an action applying to one visible thing.
+
+Carry out facing:
+	let the viewed item be the room-or-door noun from the location;
+	if the viewed item is nothing, say "You can't see anything promising that way." instead;
+	try looking toward the viewed item.
+
+Instead of facing up:
+	say "High above you is the ceiling, painted to look like the walls, a kind of parchment yellow."
+
+Instead of facing down:
+	say "You see the floor. [description of floor][line break]"
+
+Understand "look toward [any adjacent room]" as looking toward. Understand "examine [any adjacent room]" as looking toward. Understand "look at [any adjacent room]" as looking toward.
+
+Understand "look toward [any adjacent door]" as looking toward. Understand "examine [any adjacent door]" as looking toward. Understand "look at [any adjacent door]" as looking toward. 
+
+[Handle rooms too far away here.]
+Understand "look at [any room]" as looking beyond. Looking beyond is an action applying to one thing. Carry out looking beyond: say "You cannot see much of [the noun] from here."
+
+Looking toward is an action applying to one visible thing.
+
+Carry out looking toward:
+	let heading be the best route from the location to the noun, using doors; [do not use even locked doors as they are secret]
+	if heading is not a direction:
+		say "The [noun] is that way.";
+	otherwise:
+		say "The [noun] is to the [heading] of you.";
+	if description of the noun is not "":
+		say "[line break][description of the noun][paragraph break]".
+
+Book 2 - Listening Library
+
+[ Based of the example "Four Stars" - this adds the ability for rooms and regions to have sounds and to report on all hearable sounds during the 'look' phase as well as 'listen'. ]
+
+Part 1 - Use Options
+
+look-and-listen is a truth state that varies.
+
+A thing has some text called sound. The sound of a thing is usually "silence".
+A room has some text called sound. The sound of a room is usually "silence".
+A region has some text called sound. The sound of a region is usually "silence".
+
+Definition: a thing is audible if the sound of it is not "silence".
+Definition: a room is audible if the sound of it is not "silence".
+Definition: a region is audible if the sound of it is not "silence".
+
+The report listening rule is not listed in the report listening to rules.
+
+Carry out listening to something:
+	if the noun is audible:
+		say "From [the noun] you hear [the sound of the noun].";
+	otherwise:
+		say "You hear nothing."
+
+To decide if the location has sound:
+	if the map region of the location is audible:
+		decide on true;
+	if the location is audible:
+		decide on true;
+	if an audible thing can be touched by the player:
+		decide on true;
+	decide on false;
+
+Instead of listening to a room:
+	if the location has sound:
+		say "You hear [the sounds of the room].";
+	otherwise:
+		say "You hear nothing."
+	
+Before printing the name of something audible while listening to a room:
+	say "[sound] from the "
+
+[ First listen to the room, then any things around the player, then the region. ]
+To say the sounds of the room:
+	if sound of the location is not "silence":
+		say "[sound of the location]";
+	otherwise if the map region of the location is audible:
+		say "[sound of the map region of the location]";
+	otherwise if an audible thing can be touched by the player:
+		say "[the list of audible things which can be touched by the player]";
+
+After looking when look-and-listen is true:
+	if the location has sound, say "You hear [the sounds of the room]."
+
+Book 3 - Miscellanea
+
+Before attacking something, say "Nothing happened." instead.
+
+[Replace the "You can't go that way" rule]
+[c.f. https://intfiction.org/t/replacing-you-cant-go-that-way/3895]
+The can't go that way rule is not listed in any rulebook.
+Check an actor going (this is the new can't go that way rule):
+	if the room gone to is nothing:
+		if the door gone through is nothing:
+			if the actor is the player:
+				say "There doesn't seem to be a door that way." (A);
+			stop the action;
+		if the actor is the player:
+			say "[We] [can't], since [the door gone through] [lead] nowhere." (B);
+		stop the action.
+
+[ Replace the "You can’t see any thing." message ]
+[
+Rule for printing a parser error when the latest parser error is the can't see any such thing error:
+    say "You don't see anything special about that." instead.
+### The issue is that "You don't see anything special about that." is also bad.
+]
+[ "I don't know what to make of that." ]
+
+
+[To show just the "one Christmas present" text and a prompt. This was an alternative to showing the quote and then the room description]
 [
 When play begins:
      display the boxed quotation
@@ -451,10 +920,34 @@ When play begins:
 [From http://www.z-machine-matter.com/programming/page/2/]
 [After printing the banner text when not requesting the story file version : say "[line break]There was one Christmas present left, a wooden box with a note that said 'I open at the close....'" ]
 
-Book 2 - Testing
+Book 4 - Testing
 
-Test desc with "open box / x map"
+[ A simple magic trick to get all the snitches into the wooden box ]
+after closing the wooden box:
+	now the Nor East Snitch is in the wooden box;
+	now the Sou West Snitch is in the wooden box;
+	now the Sou Sou East is in the wooden box;
+	now the Western Snitch is in the wooden box;
+	now the player carries the kitchen phone;
 
-Test clues with "open box / take map / attack map"
+Test start with "open box / take map "
 
-Test steps with "open box / take map / x map / s / put snitch in map / n / w / put snitch in map".
+Test riddle with "go to great room / open box / take map / unfold map / g / g /  g / g / unfold flaps / read riddle"
+
+Test cheat with "open box / take map / unfold map / g / g /  g / g / unfold flaps / read riddle / close box / open box/ take snitches / put snitches in map"
+
+Test final with "test snitches / take final clue / down / search bookshelf / g/ g/ g / open book"
+
+Test morgan with "go to great room / up / n / w / search mural /x mural  / search door / x mural / x door / open door / push mural / l / go in"
+
+Test kitchen with "go to great room / s / x pizza oven / open pizza oven / l"
+
+Test garden with "go to great room / w / s / l / l / x pots / x pots / search pots"
+
+Test papa with "go to great room / e / e / look at bookshelf / g / g / pull bookshelf / l / e / look at speakers / look at iron vase / g / g / search iron vase"
+
+Test snitches with "test riddle / test morgan / put snitch in map / test garden / put snitch in map / test kitchen / put snitch in map / test papa / put snitch in map / read wind rose"
+
+Test almost with "test snitches / go to guest hall / search bookshelf / shut door / search bookshelf / g / g / g / open book / take book / call number / go to kitchen / take phone / call number / go up / n / up / call number / e / x iPhone"
+
+Test all with "test almost / open box"
