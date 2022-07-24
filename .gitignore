@@ -1,0 +1,10 @@
+# Mac specific
+.DS_Store
+
+
+# Inform
+index/
+build/
+Release/
+
+Skein.skein

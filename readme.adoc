@@ -1,0 +1,6 @@
+image:Marauders.materials/Cover.jpg[Cover Art,200,200,role=left]
+
+# The Last Christmas Present
+
+
+This is a text adventure game of a scavenger hunt I made for my daughter for Christmas in 2013 made using link:http://inform7.com/[Inform 7]. You can play it online at http://44westwind.com.

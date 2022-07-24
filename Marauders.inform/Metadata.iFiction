@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ifindex version="1.0" xmlns="http://babel.ifarchive.org/protocol/iFiction/">
+    <story>
+        <identification>
+            <ifid>AE305117-E5BA-4A08-80BF-7AAF02737F08</ifid>
+            <format>glulx</format>
+        </identification>
+        <bibliographic>
+            <title>The Last Christmas Present</title>
+            <author>JG Heithcock</author>
+            <headline>A scavenger hunt in words</headline>
+            <genre>Mystery</genre>
+            <firstpublished>2018</firstpublished>
+            <description>There was one present left under the Christmas tree, a wooden box with a tag that said 'I open at the close'.<br/>This was a scavenger hunt I made for my daughter for Christmas in 2013. Explore the map I made for her - a Marauder's Map of our house. Find the clues and discover how to piece them together to learn the location of her last Christmas present.</description>
+            <language>en</language>
+            <group>Inform</group>
+        </bibliographic>
+        <cover>
+            <format>jpg</format>
+            <height>960</height>
+            <width>960</width>
+            <description>The cover art.</description>
+        </cover>
+        <releases>
+            <attached>
+                <release>
+                    <releasedate>2022-06-28</releasedate>
+                    <version>1</version>
+                    <compiler>Inform 7</compiler>
+                    <compilerversion>6M62</compilerversion>
+                </release>
+            </attached>
+        </releases>
+        <colophon>
+            <generator>Inform 7</generator>
+            <generatorversion>6M62</generatorversion>
+            <originated>2022-06-28</originated>
+        </colophon>
+        <glulx>
+            <serial>220628</serial>
+            <release>1</release>
+            <compiler>Inform 7 build 6M62</compiler>
+            <coverpicture>1</coverpicture>
+        </glulx>
+    </story>
+</ifindex>
