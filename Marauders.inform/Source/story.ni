@@ -1,7 +1,7 @@
 
 "The Last Christmas Present" by JG Heithcock
 
-The story genre is "Mystery". The release number is 2. The story creation year is 2018. The story headline is "A scavenger hunt in words". The story description is "There was one present left under the Christmas tree, a wooden box with a tag that said 'I open at the close'.
+The story genre is "Mystery". The release number is 3. The story creation year is 2018. The story headline is "A scavenger hunt in words". The story description is "There was one present left under the Christmas tree, a wooden box with a tag that said 'I open at the close'.
 
 This was a scavenger hunt I made for my daughter for Christmas in 2013. Explore the map I made for her - a Marauder's Map of our house. Find the clues and discover how to piece them together to learn the location of her last Christmas present."
 

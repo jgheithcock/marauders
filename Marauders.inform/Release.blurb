@@ -1,25 +1,25 @@
 ! Blurb file created by Inform build 6M62
 
-status "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/CblorbModel.html" "/Users/jgheithcock/Documents/Inform/Marauders.inform/Build/StatusCblorb.html"
+status "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/CblorbModel.html" "/Users/jgheithcock/git/marauders/Marauders.inform/Build/StatusCblorb.html"
 
 
 ! Identification
 
-project folder "/Users/jgheithcock/Documents/Inform/Marauders.inform"
-release to "/Users/jgheithcock/Documents/Inform/Marauders.materials/Release"
+project folder "/Users/jgheithcock/git/marauders/Marauders.inform"
+release to "/Users/jgheithcock/git/marauders/Marauders.materials/Release"
 
 ! Blorb instructions
 
 storyfile leafname "The Last Christmas Present.gblorb"
-storyfile "/Users/jgheithcock/Documents/Inform/Marauders.inform/Build/output.ulx" include
-ifiction "/Users/jgheithcock/Documents/Inform/Marauders.inform/Metadata.iFiction" include
-cover "/Users/jgheithcock/Documents/Inform/Marauders.materials/Cover.jpg"
-picture 1 "/Users/jgheithcock/Documents/Inform/Marauders.materials/Cover.jpg"
+storyfile "/Users/jgheithcock/git/marauders/Marauders.inform/Build/output.ulx" include
+ifiction "/Users/jgheithcock/git/marauders/Marauders.inform/Metadata.iFiction" include
+cover "/Users/jgheithcock/git/marauders/Marauders.materials/Cover.jpg"
+picture 1 "/Users/jgheithcock/git/marauders/Marauders.materials/Cover.jpg"
 
 ! Placeholder variables
 
 placeholder [IFID] = "AE305117-E5BA-4A08-80BF-7AAF02737F08"
-placeholder [RELEASE] = "2"
+placeholder [RELEASE] = "3"
 placeholder [YEAR] = "2018"
 placeholder [TITLE] = "The Last Christmas Present"
 placeholder [AUTHOR] = "JG Heithcock"
@@ -27,21 +27,21 @@ placeholder [BLURB] = "There was one present left under the Christmas tree, a wo
 
 ! Other material to release
 
-auxiliary "/Users/jgheithcock/Documents/Inform/Marauders.materials/Map" "The Map" "--"
+auxiliary "/Users/jgheithcock/git/marauders/Marauders.materials/Map" "The Map" "--"
 
 ! Website instructions
 
 placeholder [ENCODEDSTORYFILE] = "The Last Christmas Present.gblorb.js"
-template path "/Users/jgheithcock/Documents/Inform/Marauders.materials/Templates"
+template path "/Users/jgheithcock/git/marauders/Marauders.materials/Templates"
 template path "/Users/jgheithcock/Library/Inform/Templates"
 template path "/Applications/Inform.app/Contents/Resources/Internal/Templates"
 placeholder [INTERPRETERSCRIPTS] = " "
 interpreter "Quixe" "g"
-base64 "/Users/jgheithcock/Documents/Inform/Marauders.inform/Build/output.ulx" to "/Users/jgheithcock/Documents/Inform/Marauders.materials/Release/interpreter/The Last Christmas Present.gblorb.js"
+base64 "/Users/jgheithcock/git/marauders/Marauders.inform/Build/output.ulx" to "/Users/jgheithcock/git/marauders/Marauders.materials/Release/interpreter/The Last Christmas Present.gblorb.js"
 
 ! Website instructions
 
-template path "/Users/jgheithcock/Documents/Inform/Marauders.materials/Templates"
+template path "/Users/jgheithcock/git/marauders/Marauders.materials/Templates"
 template path "/Users/jgheithcock/Library/Inform/Templates"
 template path "/Applications/Inform.app/Contents/Resources/Internal/Templates"
 css
