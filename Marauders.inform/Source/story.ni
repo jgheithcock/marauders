@@ -16,7 +16,7 @@ Release along with cover art,
 	a file of "The Map" called "Map",
 	an interpreter.
 
-Include Basic Help Menu by Emily Short [### Not clear if I am going to go this route or have the map give hints on examining it.]
+Include Basic Help Menu by Emily Short [ For general Help ]
 
 When play begins:
 		choose row 1 in Table of Basic Help Options;
@@ -45,7 +45,7 @@ The Great Room is a room in the main area. "A [great fir tree] stretches up to t
 
 A ceiling is a backdrop. "High above you, painted to look like the walls, a kind of parchment yellow." The ceiling is everywhere.
 
-The slate floor is a backdrop. The description of it is "Made of rough, irregular slabs of [mariposa slate]". The slate floor is everywhere. Understand "slabs / floor" as slate floor. 
+The slate floor is a backdrop. The description of it is "Made of rough, irregular slabs of [mariposa slate]". The slate floor is everywhere. Understand "slabs" or "floor" as slate floor. 
 
 Some mariposa slate is a backdrop. The description of it is "Large, irregular slabs of Mariposa slate, mottled blue gray with red and orange variegation. They form the floor inside and out." Some mariposa slate is everywhere.
 
@@ -80,12 +80,16 @@ The toaster oven, the blender and some spatulas are undescribed things in the ki
 
 The Pizza oven is a fixed in place, closed, openable container in the Kitchen. The description of the pizza oven is "Made of the same [slate] as the [floor], there is a [dark iron door] [if the pizza oven is open]on the floor[otherwise]set in a small [alcove] at arm's height[end if]. At the bottom is a [recess] with [firewood]."
 
-Understand "plate / pizza door" as the dark iron door.
+Understand "plate" or "pizza door" as the dark iron door.
 Instead of taking the dark iron door, try opening the pizza oven instead.
 Understand "lift [something]" as taking.
 
 Does the player mean opening the regular oven: it is very unlikely. Does the player mean closing the regular oven: it is very unlikely.
 Instead of opening the regular oven, say "You can see there is nothing in it."
+
+Does the player mean opening the Pizza oven: it is very likely.
+Does the player mean closing the Pizza oven: it is very likely.
+Does the player mean examining the Pizza oven: it is very likely.
 
 The alcove is part of the pizza oven. The description of the alcove is "The opening of the oven[if the pizza oven is open][otherwise], currently blocked by the [dark iron door].[end if]"
 
@@ -199,7 +203,7 @@ Instead of searching the bedroom window, say "Below, there is a small patio with
 
 Section 1 - Morgan's Mural
 
-The mural is scenery in Morgan's room. "[one of]The mural covers the entire wall on the south side, a [field] with a [large tree], and a [fox] and a [mouse].[or]You can see a very thin crack near the corner of the mural, going from the floor to just over your head.[or]The crack outlines what looks like a secret door.[stopping]". Understand "crack/south wall" as mural. Understand "crack" as mural. A field, a large tree, a fox and a mouse are undescribed, fixed in place things in Morgan's room.
+The mural is scenery in Morgan's room. "[one of]The mural covers the entire wall on the south side, a [field] with a [large tree], and a [fox] and a [mouse].[or]You can see a very thin crack near the corner of the mural, going from the floor to just over your head.[or]The crack outlines what looks like a secret door.[stopping]". Understand "crack" or "south wall" as mural. Understand "crack" as mural. A field, a large tree, a fox and a mouse are undescribed, fixed in place things in Morgan's room.
 
 Morgan's secret door is an undescribed locked door.  It is inside of Morgan's room and outside of the Room of Requirement. The description of it is "[if Morgan's secret door is closed]You only see a crack in the mural.[otherwise]Such a clever mechanism![end if]".
 
@@ -249,7 +253,7 @@ Understand "guest hallway" as guest hall.
 	
 Section 1 - The Secret Bookshelf (The Restricted Section)
 
-The floor to ceiling bookshelf is an undescribed scenery supporter in the guest hall. "[one of]Filled with books and odds and ends.[or]There must be over a hundred books here..[or]I bet it is a secret door....[stopping]". Understand "bookshelf / bookshelves" as the floor to ceiling bookshelf. The printed name of the bookshelf is "bookshelf".
+The floor to ceiling bookshelf is an undescribed scenery supporter in the guest hall. "[one of]Filled with books and odds and ends.[or]There must be over a hundred books here..[or]I bet it is a secret door....[stopping]". Understand "bookshelf" or "bookshelves" as the floor to ceiling bookshelf. The printed name of the bookshelf is "bookshelf".
 
 Papa's secret door is a locked secret door. It is east of the guest hall and west of Papa's Office.
 
@@ -297,7 +301,7 @@ Instead of searching the floor to ceiling bookshelf:
 
 Chapter 2 - Papa's Office (The Room of Secrets)
 
-Papa's Office is a room in the downstairs area. "A large spacious room, with [bookshelves] and [cabinets] around a [large desk]. To the north is [Papa's Bar]. On the east wall is a cabinet with a large [TV] with two [speakers] on either side.".
+Papa's Office is a room in the downstairs area. "A large spacious room, with [bookshelves] and [cabinets] around a [large desk]. To the north is [Papa's Bar]. On the east wall is a cabinet with a large [TV] with two [speakers] on either side.". Understand "east wall" as cabinet.
 
 Instead of going up in Papa's Office, try going west.
 Instead of going south in Papa's Office, say "The wall is covered with [cabinets] below and [bookshelves] above."
@@ -366,7 +370,8 @@ A snitch is a kind of thing. A snitch has a wind direction. A snitch has a text 
 
 After examining a snitch:
 	let the named direction be the wind direction of the noun;
-	now the printed name of the noun is "snitch that points [the named direction]".
+	now the printed name of the noun is "snitch that points [the named direction]";
+	now the noun is handled.
 		
 Instead of opening a snitch:
 	if the printed name of noun is "snitch", try examining the noun;
@@ -379,14 +384,19 @@ Instead of taking a snitch:
 		now the player carries the noun;
 	otherwise:
 		continue the action.
+		
+Does the player mean taking an thing that is not handled: it is very likely.
+Does the player mean doing something with a snitch that is enclosed by the player : it is unlikely.
+Does the player mean doing something with a snitch that is enclosed by the map : it is very unlikely.
 
-The Nor East Snitch is a snitch. The wind direction of Nor East Snitch is NNE. The clue of Nor East Snitch is "Seek            n in t            d sec              brar  ". Understand "NNE snitch/ snitch that points NNE" as the Nor East Snitch.
+The Nor East Snitch is a snitch. The wind direction of Nor East Snitch is NNE. The clue of Nor East Snitch is "Seek            n in t            d sec              brar  ". Understand "NNE snitch" or "snitch that points NNE" as the Nor East Snitch.
 
-The Sou West Snitch is a snitch. The wind direction of Sou West Snitch is SW.  The clue of Sou West Snitch is "     illum           the re           ction             ry.". Understand "SW snitch / snitch that points SW" as the Sou West Snitch.
+The Sou West Snitch is a snitch. The wind direction of Sou West Snitch is SW.  The clue of Sou West Snitch is "     illum           the re           ction             ry.". Understand "SW snitch" or "Southwest snitch" or "snitch that points SW" as the Sou West Snitch.
 
-The Sou Sou East Snitch is a snitch. The wind direction of Sou Sou East Snitch is SSE. The clue of Sou Sou East Snitch is "         mina            restr            n of th          ". Understand "SSE snitch/ snitch that points SSE" as the Sou Sou East Snitch.
+The Sou Sou East Snitch is a snitch. The wind direction of Sou Sou East Snitch is SSE. The clue of Sou Sou East Snitch is "         mina            restr            n of th          ". Understand "SSE snitch" or "snitch that points SSE" as the Sou Sou East Snitch.
 
-The Western Snitch is a snitch. The wind direction of Western Snitch is W. The clue of Western is "S           ation            ricted             he li      ". Understand "W snitch/ snitch that points W" as the Western Snitch.
+The Western Snitch is a snitch. The wind direction of Western Snitch is W. The clue of Western is "S           ation            ricted             he li      ". Understand "W snitch" or "snitch that points W" as the Western Snitch.
+
 
 Book 3 - The Map
 
@@ -491,6 +501,7 @@ To say state of flaps:
 
 The wind rose is an open, unopenable container.
 The wind rose is part of the map. The description of it is "[state of wind rose]".
+Understand "windrose" as the wind rose.
 
 To say state of wind rose:
 	say "[First time]Sixteen paper arrows form a ring looking very much like a [bold type][wind rose][roman type]. [only]";
@@ -631,7 +642,7 @@ When Search for Illumination begins:
 	say "The search for illumination has begun!";
 	now the description of the floor to ceiling bookshelf is "The bookshelf is marked [bold type]The Restricted Section[roman type] on the map.".
 
-The Book of Illumination is a closed, openable container. The printed name of it is "brown book". The description is "The binding is brown wood with no title on the edge or front. The pages have an odd plastic feel." Understand "brown book/book" as the book of illumination.
+The Book of Illumination is a closed, openable container. The printed name of it is "brown book". The description is "The binding is brown wood with no title on the edge or front. The pages have an odd plastic feel." Understand "brown book" or "book" as the book of illumination.
 
 Instead of examining the book of illumination, try opening the book of illumination.
 Instead of examining the book of illumination when the book is open, try searching the book.
@@ -665,7 +676,7 @@ To say search results:
 After opening the book of illumination during the Search for Illumination:
 	say "As you open the book of illumination, the pages begin to glow with a strong soft light. The entire hallway is now illuminated from the light from the book...[paragraph break]...and there is a little piece of paper inside - a final clue!"
 	
-The final clue is a container in the book of illumination. "A small scrap of paper with numbers on it." The final clue is closed. Understand "clue / number / paper" as the final clue.
+The final clue is a container in the book of illumination. "A small scrap of paper with numbers on it." The final clue is closed. Understand "clue" or "number" or "paper" as the final clue.
  
 Instead of examining the final clue:
 	say "[one of]It looks like a phone number![or]You see a phone number.[stopping]";
@@ -739,7 +750,7 @@ When Final Search begins:
 When Final Search ends:
 	end the story saying "Merry Christmas!".
 
-The iPhone is a closed, openable container. "[one of]On the bed is your final present, your very first iPhone![or]The iPhone is on the bed, waiting for you to pick it up.[stopping]". The description of it is "Still in the box[if iPhone is ringing] and ringing quite loudly[otherwise], now silent[end if].". The iPhone can be ringing or silent. The iPhone is silent. Understand "box / phone" as the iPhone. Instead of opening iPhone, try taking the iPhone.
+The iPhone is a closed, openable container. "[one of]On the bed is your final present, your very first iPhone![or]The iPhone is on the bed, waiting for you to pick it up.[stopping]". The description of it is "Still in the box[if iPhone is ringing] and ringing quite loudly[otherwise], now silent[end if].". The iPhone can be ringing or silent. The iPhone is silent. Understand "box" or "phone" as the iPhone. Instead of opening iPhone, try taking the iPhone.
 
 Instead of taking the iPhone:
 	say "As you open the box, you see it is even in your favorite color!";
