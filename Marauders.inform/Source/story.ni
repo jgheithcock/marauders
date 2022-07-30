@@ -18,6 +18,10 @@ Release along with cover art,
 
 Include Basic Help Menu by Emily Short [ For general Help ]
 
+Include Inanimate Listeners by Emily Short [ For Mama NPC ]
+
+Include Conversational Defaults by Eric Eve
+
 When play begins:
 		choose row 1 in Table of Basic Help Options;
 		now description entry is "This was a scavenger hunt I made for my daughter for Christmas in 2013. Explore the map I made for her - a Marauder's Map of our house. Find the clues and discover how to piece them together to learn the location of her last Christmas present."
@@ -892,8 +896,45 @@ To say the sounds of the room:
 
 After looking when look-and-listen is true:
 	if the location has sound, say "You hear [the sounds of the room]."
+	
+Book 3 - NPCs
 
-Book 3 - Miscellanea
+The block kissing rule is not listed in any rulebook.
+
+Section 1 - Faithful Companion
+
+A thing can be a faithful companion or an unfaithful companion. Things are usually an unfaithful companion.
+
+Every turn:
+	let L be the list of faithful companion things;
+	Repeat with companion running through L:
+		now companion is in the location.
+
+Section 2 - Mama
+
+[ Mama and Papa are undescribed so that they are not added in the room descriptions (as part of the you-can-also-see rule) ]
+
+Mama is an undescribed woman. Mama is a faithful companion. Instead of doing something with Mama, say "[one of]Mama is not here[or]Mama is somewhere else in the house[or]Mama doesn't seem to be here now[or]Mama has gone[at random]."
+
+To say Mama flits by:
+	say "[one of]Mama zips by and gives you a smile as she goes[or]Mama peeks in and offers you an encouraging smile and then leaves[or]Mama stops in for a moment to see how you are doing before dashing off[or]Mama looks in for a moment to see how things are going before continuing on[or]Mama gives you an encouraging look as she grabs something and leaves[or]Mama steps into view for a moment before leaving[or]Mama peeks in to see how you are doing and then steps out[or]Mama throws you a thumbs up as she walks in and out of [the location][purely at random]"
+
+mama-was-just-here is a truth state that varies. mama-was-just-here is usually false.
+To decide if Mama is around:
+	if mama-was-just-here is true:
+		let mama-was-just-here be false;
+		decide no;
+	let mama rooms be {Kitchen, Balcony, Study, Morgan's Room, Guest Hall, Papa's Office};
+	if a random number from 1 to 7 is 7:
+		if the location is listed in mama rooms:
+			let mama-was-just-here be true;
+			decide yes;
+		otherwise:
+			decide no.
+Every turn when Mama is around, say "[Mama flits by]."
+
+
+Book 4 - Miscellanea
 
 Before attacking something, say "Nothing happened." instead.
 
@@ -931,7 +972,7 @@ When play begins:
 [From http://www.z-machine-matter.com/programming/page/2/]
 [After printing the banner text when not requesting the story file version : say "[line break]There was one Christmas present left, a wooden box with a note that said 'I open at the close....'" ]
 
-Book 4 - Testing
+Book 5 - Testing
 
 [ A simple magic trick to get all the snitches into the wooden box ]
 after closing the wooden box:
