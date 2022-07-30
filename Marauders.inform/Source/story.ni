@@ -309,7 +309,7 @@ The cabinets are scenery in Papa's office. "Dark brown, and filled with games an
 The bookshelves are scenery in Papa's office. "Dark brown, and filled with books but also a lot of other things. 'Don't worry,' Papa says, 'nothing is hidden in these bookshelves!'."
 A large desk is scenery in Papa's office. "Usually stacked with papers but today it is bare. 'Ha,' Papa says, 'I wouldn't hide anything in my desk!'."
 A TV is scenery in Papa's office. "Large, black and usually off, there doesn't seem to be anything behind or around it." Understand "large TV" as TV.
-Some speakers are scenery in Papa's office. "About three foot tall, they are more like little cabinets with a marble top. On one is a [statue] your mama made, on the other an [iron vase] with [dragons] going around the rim." Understand "speaker" as speakers.
+Some speakers are scenery in Papa's office. "About three foot tall, they are more like little cabinets with a marble top. On one is a [statue] your Mama made, on the other an [iron vase] with [dragons] going around the rim." Understand "speaker" as speakers.
 A statue is scenery in Papa's office. "[First time]Named 'Jamuna', it is a woman with her hand on her head. [only]Nothing to find here.". Understand "Jamuna" as statue.
 
 An iron vase is a closed, openable scenery container in Papa's Office. "[one of]A dark green vase with little iron [dragons] going around the rim.[or]Hunh, there are eight dragons![stopping]". Instead of searching iron vase, try opening iron vase. 
@@ -430,7 +430,7 @@ To say state of map:
 	say "[paragraph break]";
 	if the page is:
 		-- first:
-			say "Folded up like an accordion, it looks like the Maurauder's map, but instead of the castle of Hogwarts, you recognize your house. There is a tiny banner with [italic type]44 Westwind[roman type] on it. Where your tree house would be, there is a tree formed out of words like the whomping willow.";
+			say "Folded up like an accordion, it looks like the Marauder's map, but instead of the castle of Hogwarts, you recognize your house. There is a tiny banner with [italic type]44 Westwind[roman type] on it. Where your tree house would be, there is a tree formed out of words like the whomping willow.";
 			say "[First time][line break]There are more folds underneath.[only]";
 		-- second:
 			say "The map shows what appears to be the grounds around the house. You can see a tiny version of the house, with its tiny banner, next to a miniature whomping willow.[paragraph break]Below the house are lines of words, flowing around a dark section labeled [bold type]The Dark Forest[roman type] - clearly the Briones Hills behind your house.";
@@ -529,10 +529,10 @@ Instead of inserting a snitch into the wind rose:
 		try silently taking the map;
 	now the noun is in the wind rose;
 	if the noun is handled:
-		say "You insert the snitch into the wind rose, orienting it so that its arrow points to the [wind direction of the noun].";
+		say "You insert the snitch into the wind rose, orienting it so that the arrow points to the [wind direction of the noun].";
 	otherwise:
 		now the noun is handled;
-		say "As you insert the snitch into the wind rose, you see that it has an arrow in its center labeled [wind direction of the noun], so you orient it so that its arrow points in that direction.";
+		say "As you insert the snitch into the wind rose, you see that it has an arrow in its center labeled [wind direction of the noun], so you orient it so that the arrow points in that direction.";
 		let the snitch name be "snitch that points [wind direction]";
 		now the printed name of the noun is the snitch name;
 	say "[paragraph break][state of wind rose]".
