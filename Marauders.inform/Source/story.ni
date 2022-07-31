@@ -7,24 +7,20 @@ This was a scavenger hunt I made for my daughter for Christmas in 2013. Explore 
 
 Release along with cover art,
 	[
-	the source text,
 	the introductory booklet,
 	the introductory postcard,
 	the library card,
 	]
+	the source text,
 	a website, 
 	a file of "The Map" called "Map",
 	an interpreter.
 
 Include Basic Help Menu by Emily Short [ For general Help ]
 
-Include Inanimate Listeners by Emily Short [ For Mama NPC ]
-
-Include Conversational Defaults by Eric Eve
-
 When play begins:
 		choose row 1 in Table of Basic Help Options;
-		now description entry is "This was a scavenger hunt I made for my daughter for Christmas in 2013. Explore the map I made for her - a Marauder's Map of our house. Find the clues and discover how to piece them together to learn the location of her last Christmas present."
+		now description entry is "This was a scavenger hunt I made for my daughter for Christmas in 2013. Explore the map I made for her - a Marauder's Map of our house. Find the clues and discover how to piece them together to learn the location of her last Christmas present.[paragraph break]If you get stuck, you can ask Papa for a hint (or just type HINT)."
 		
 Include Secret Doors by Andrew Owen
 
@@ -251,7 +247,7 @@ The downstairs area is a region. The sound of the downstairs area is "[sound of 
 
 Chapter 1 - The Guest Hall
 
-The Guest Hall is a room in the downstairs area. "A short hallway with steps going back up to the [great room] to the west, a guest room to the south and a guest bathroom to the north. At the end of the hallway, to the east, [if Papa's secret door is open]are steps going down to [Papa's Office][otherwise]is a [floor to ceiling bookshelf][end if].". The archway is above the Guest Hall. Instead of going west in the guest hall, try going up. Instead of going down in the guest hall, try going east.
+The Guest Hall is a room in the downstairs area. "A short hallway with steps going back up to the [great room] to the west, a guest room to the south and a guest bathroom to the north. At the end of the hallway, to the east, [if Papa's secret door is open]are steps going down to [Papa's Office][otherwise]is a [floor to ceiling bookshelf][one of][or] that goes from floor to ceiling[one of][or], filled with hundreds and hundreds of books[stopping][stopping][end if].". The archway is above the Guest Hall. Instead of going west in the guest hall, try going up. Instead of going down in the guest hall, try going east.
 Understand "guest hallway" as guest hall.
 
 	
@@ -294,7 +290,7 @@ Instead of pushing the bookshelf:
 		now Papa's secret door is closed;
 		now the description of the bookshelf is "Filled with books and odds and ends.";
 	otherwise:
-		continue the action.
+		say "It doesn't budge."
 
 Instead of searching the floor to ceiling bookshelf:
 	if there is nothing on the bookshelf:
@@ -483,7 +479,7 @@ The fourth escaped outside, following this house's namesake, the west wind.[line
 The description of some advice is "[italic type]
 For the first clue, you might need to ask Neville's help, he really gets it.[line break]
 For the second clue, Dobby would tell you to tickle a pear.[line break]
-For the third clue, Krum will tell you to not let the wind blow you in the wrong direction![line break]
+For the third clue, Krum will tell you to not let it get in your eye![line break]
 For the fourth clue, Mrs. Weaslely likes to listen to Celestina Warbeck for inspiration.[roman type]".
 
 Book 5 - The wind rose
@@ -493,6 +489,7 @@ Some flaps have a page. The page of the flaps is usually first. Secret page is a
 
 Instead of opening the flaps when the page of the map is not last, try unfolding the map.
 Instead of opening the flaps, try unfolding the flaps. Instead of closing the flaps, try folding the flaps.
+Instead of looking under the flaps when the page of the flaps are not the Secret page, try unfolding the flaps. Understand "Look underneath [something]" as looking under.
 
 To say state of flaps:
 	if the page is:
@@ -905,10 +902,16 @@ Section 1 - Faithful Companion
 
 A thing can be a faithful companion or an unfaithful companion. Things are usually an unfaithful companion.
 
-Every turn:
+To be faithful:
 	let L be the list of faithful companion things;
 	Repeat with companion running through L:
 		now companion is in the location.
+
+Every turn:
+	be faithful.
+
+When play begins:
+	be faithful.
 
 Section 2 - Mama
 
@@ -933,8 +936,87 @@ To decide if Mama is around:
 			decide no.
 Every turn when Mama is around, say "[Mama flits by]."
 
+Section 3 - Cats
 
-Book 4 - Miscellanea
+Section 4 - Papa
+
+Papa is an undescribed man. Papa is a faithful companion. The description of Papa is "He smiles and waits to see what you will do next."
+
+A hint is a kind of thing. Papa carries a hint. Some help is a kind of thing. Papa carries some help.
+
+Instead of asking Papa for a hint, say "[next available hint]".
+Instead of asking Papa for some help, say "[next available hint]".
+
+Instead of doing something with Papa, say "Oh no, I'm only here in case you need a hint!" 
+
+Book 4 - Contextual Hints
+
+The end hint is always "I think you know what you need to do here.";
+
+Table of Contextual Hints
+item (object)	location (room)	region (region)	tag (text)	hint (text)
+wooden box	--	--	"opening"	"[one of]Seems opening that box would be a good start.[or]You can do that by typing OPEN BOX.[stopping]"
+the map	--	--	"examining"	"[one of]Well, aren't you going to look at the Map?[or]You can do that by typing LOOK AT MAP or X MAP.[stopping]"
+the map	--	--	"unfolding"	"[one of]Didn't the map say something about more folds?[or]Maybe you can unfold them?[or]Try UNFOLD MAP.[stopping]"
+the map	--	--	"last-page-read"	"[one of]I think you need to keep going on that Map.[or][end hint][stopping]"
+the flaps	--	--	"unfolding"	"[one of]'a square made of flaps, eh?[or]Sounds like a job for more unfolding.[or][end hint][stopping]"
+the riddle	--	--	"examining"	"[one of]Did you read the riddle?[or]You can do that by typing READ RIDDLE[or][end hint][stopping]"
+the clues	--	--	"examining"	"[one of]Did you read the clues?[or][end hint][stopping]"
+the flaps	--	--	"last-page-read"	"[one of]I wonder if there is anything on the back of those flaps?[or]I bet you could try unfolding them?[or][end hint][stopping]"
+the advice	--	--	"examining"	"[one of]Did you read the advice?[or][end hint][stopping]"
+
+to say next available hint:
+	repeat through the Table of Contextual Hints:
+		say "[hint entry]";
+		[
+		say paragraph break;
+		showme item entry;
+		showme tag entry;
+		]
+		stop;
+	say "Hmm, I think you are on your own here.[run paragraph on]".
+
+Asking for hints is an action out of world.
+
+Understand the command "hint" as something new.
+Understand the command "hints" as something new.
+Understand "hint" or "hints" as asking for hints.
+
+Carry out asking for hints (this is the asking for hints rule):
+	say "Papa says '[next available hint]'";
+	say paragraph break;
+	
+Section 1 - Removing hints via action
+
+To remove hint for (first noun - an object) using (the tag - text):
+	if first noun is an item listed in Table of Contextual Hints:
+		if there is no tag entry or the tag entry is the tag:
+			blank out the whole row;
+			
+Before taking something:
+	remove hint for the noun using "taking";
+	continue the action;
+	
+Before opening something:
+	remove hint for the noun using "opening";
+	continue the action;
+	
+Before examining something:
+	remove hint for the noun using "examining";
+	continue the action;
+
+Section 2 - Removing hints via custom actions
+
+Before unfolding something:
+	remove hint for the noun using "unfolding";
+	if the noun is the map:
+		if the page of the noun is fifth: [unfolding next to the lst page]
+			remove hint for the noun using "last-page-read";
+	if the noun is flaps:
+		if the page of the noun is last: [unfolding next to last flap]
+			remove hint for the noun using "last-page-read";
+
+Book 5 - Miscellanea
 
 Before attacking something, say "Nothing happened." instead.
 
@@ -972,9 +1054,9 @@ When play begins:
 [From http://www.z-machine-matter.com/programming/page/2/]
 [After printing the banner text when not requesting the story file version : say "[line break]There was one Christmas present left, a wooden box with a note that said 'I open at the close....'" ]
 
-Book 5 - Testing
+Book 6 - Testing
 
-[ A simple magic trick to get all the snitches into the wooden box ]
+[ A simple magic trick to get all the snitches into the wooden box - this was before I knew about PURLOIN snitches]
 after closing the wooden box:
 	now the Nor East Snitch is in the wooden box;
 	now the Sou West Snitch is in the wooden box;
