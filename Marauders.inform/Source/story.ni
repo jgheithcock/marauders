@@ -6,11 +6,6 @@ The story genre is "Mystery". The release number is 3. The story creation year i
 This was a scavenger hunt I made for my daughter for Christmas in 2013. Explore the map I made for her - a Marauder's Map of our house. Find the clues and discover how to piece them together to learn the location of her last Christmas present."
 
 Release along with cover art,
-	[
-	the introductory booklet,
-	the introductory postcard,
-	the library card,
-	]
 	the source text,
 	a website, 
 	a file of "The Map" called "Map",
@@ -19,15 +14,20 @@ Release along with cover art,
 Include Basic Help Menu by Emily Short [ For general Help ]
 
 When play begins:
-		choose row 1 in Table of Basic Help Options;
-		now description entry is "This was a scavenger hunt I made for my daughter for Christmas in 2013. Explore the map I made for her - a Marauder's Map of our house. Find the clues and discover how to piece them together to learn the location of her last Christmas present.[paragraph break]If you get stuck, you can ask Papa for a hint (or just type HINT)."
+	choose row 1 in Table of Basic Help Options;
+	now description entry is "This was a scavenger hunt I made for my daughter for Christmas in 2013. Explore the map I made for her - a Marauder's Map of our house. Find the clues and discover how to piece them together to learn the location of her last Christmas present.[paragraph break]If you get stuck, you can ask Papa for a hint (or just type HINT)."
+
+Table of Basic Help Options (continued)
+title	description
+"Asking for Hints"	"If you get stuck, you can ask Papa for a hint anytime (or just type HINT)."
+
 		
 Include Secret Doors by Andrew Owen
 
-[Include Neutral Library Messages by Aaron Reed]
-
 [From p.34 of "Inform 7 Handbook" by Jim Aikin]
-Rule for printing the banner text: say "There was one present left, a [wooden box] with a tag that said [italic type]I open at the close....[roman type][line break]"
+[ Rule for printing the banner text: say "There was one present left, a [wooden box] with a tag that said [italic type]I open at the close....[roman type][line break]" ]
+When play begins:
+	say "There was one present left, a [wooden box] with a tag that said [italic type]I open at the close....[roman type][line break]";
 
 Rule for printing room description details: do nothing. [ Do not print (closed), (empty), etc. ]
 
@@ -220,6 +220,7 @@ Instead of pushing Morgan's secret door:
 		now Morgan's secret door is described;
 		now Morgan's secret door is scenery;
 		say "A secret door pops open when you let go, revealing a small room, with a very curved back wall.";
+		if Nor East Snitch is in Room of Requirement, remove hint for Nor East Snitch using "finding";
 	otherwise:
 		say "You push the door closed, revealing only a thin seam in the wall.";
 		now Morgan's secret door is closed.
@@ -277,6 +278,7 @@ Check searching Papa's secret door:
 	try examining the bookshelf instead.
 
 Instead of pulling the bookshelf when Papa's secret door is closed:
+	remove hint for Papa's secret door using "pulling";
 	now Papa's secret door is unlocked;
 	now Papa's secret door is open;
 	now Papa's secret door is described;
@@ -291,6 +293,8 @@ Instead of pushing the bookshelf:
 		now the description of the bookshelf is "Filled with books and odds and ends.";
 	otherwise:
 		say "It doesn't budge."
+
+Instead of closing floor to ceiling bookshelf, try pushing the bookshelf.
 
 Instead of searching the floor to ceiling bookshelf:
 	if there is nothing on the bookshelf:
@@ -312,6 +316,13 @@ A TV is scenery in Papa's office. "Large, black and usually off, there doesn't s
 Some speakers are scenery in Papa's office. "About three foot tall, they are more like little cabinets with a marble top. On one is a [statue] your Mama made, on the other an [iron vase] with [dragons] going around the rim." Understand "speaker" as speakers.
 A statue is scenery in Papa's office. "[First time]Named 'Jamuna', it is a woman with her hand on her head. [only]Nothing to find here.". Understand "Jamuna" as statue.
 
+Instead of searching something that is scenery in Papa's office:
+	[ Route 'search desk' to 'x desk' ]
+	if the noun is a container:
+		continue the action;
+	otherwise:
+		try examining the noun instead;
+
 An iron vase is a closed, openable scenery container in Papa's Office. "[one of]A dark green vase with little iron [dragons] going around the rim.[or]Hunh, there are eight dragons![stopping]". Instead of searching iron vase, try opening iron vase. 
 
 Instead of opening iron vase:
@@ -322,17 +333,22 @@ Some dragons are scenery in Papa's office. "Each one the same, there are eight o
 Chapter 3 - Papa's Bar (The Potion's Room)
 
 Papa's Bar is north of Papa's Office. "A [large wooden bar] takes up the middle section. Along the east wall is a [dark green counter]. The west side has a number of [bar chairs] pulled up to the bar, which has a large [aquarium] bubbling along on the back wall. There is a [dark stairwell] going downstairs on the north side.". It is in the downstairs area.
-A large wooden bar is scenery in Papa's Bar. "Made out of dark, twisty walnut, it curves around in a semi-circle. There is a straight section at the north. There are many, many [tiki mugs] and other [bar glasses] on and under the counters.". 
+A large wooden bar is scenery in Papa's Bar. "Made out of dark, twisty walnut, it curves around in a semi-circle. There is a straight section at the north. There are many, many [tiki mugs] and other [bar glasses] on and under the counters.". Understand "walnut" or "straight section" or "semi-circle" as the large wooden bar.
 Tiki mugs are scenery in Papa's Bar. "Dozens and dozens of them, in all kinds of shapes and colors. 'Don't worry,' Papa says, 'nothing is hidden in any of them!'.".
 Bar glasses are scenery in Papa's Bar. "Dozens and dozens of them, in all kinds of shapes. They are clear, and you can see there is nothing in them.".
-A dark green counter is scenery in Papa's Bar. "A [sink] in one corner, a large brass and copper [espresso machine] in the middle and a set of [shelves] with [coffee cups] in the other corner.".
+A dark green counter is scenery in Papa's Bar. "A [sink] in one corner, a large brass and copper [espresso machine] in the middle and a set of [shelves] with [coffee cups] in the other corner.". Understand "counters" as counter.
 A sink is scenery in Papa's Bar. "Nothing much to see here.".
-An espresso machine is scenery in Papa's Bar. "Made of brass and copper, there is a plaque that says 'Electra' with what looks like a hippogriff on it.".
+An espresso machine is scenery in Papa's Bar. "Made of brass and copper, there is a plaque that says 'Electra' with what looks like a hippogriff on it.". Understand "elektra" or "hippogriff" as espresso machine.
 Some shelves are scenery in Papa's Bar. "Nothing much to see here.".
 Coffee cups are scenery in Papa's Bar. "'Nothing hidden in any of these', says Papa".
 Bar chairs are scenery in Papa's Bar. "[First time]Dark wood, almost black with leather seats.  [only]Nothing much to see here.".
-An aquarium is scenery in Papa's Bar. "[First time]A lot of pirate-themed ornaments bubble along inside. [only]Not much to see here.".
-A dark stairwell is scenery in Papa's Bar. "'No need to go downstairs this time!' says Papa".
+An aquarium is scenery in Papa's Bar. "[First time]A lot of pirate-themed ornaments bubble along inside. [only]Not much to see here.". Understand "grindylow" as aquarium.
+
+Section 1 - The dark stairwell to the Wine Cellar
+
+The dark stairwell is an open, unopenable door. "A narrow set of stairs go down into darkness.". The dark stairwell is below Papa's Bar and above the Wine Cellar.
+
+Instead of going down in Papa's Bar, say "'No need to go downstairs this time!' says Papa.".
 
 
 Book 5 - Going to rooms
@@ -366,7 +382,13 @@ Book 2 - The snitches
 
 Wind direction is a kind of value. The wind directions are NNE, SW, SSE and W.
 
-A snitch is a kind of thing. A snitch has a wind direction. A snitch has a text called a clue. The printed name is usually "snitch". The description of a snitch is usually "A small piece of parchment paper, cut into a four-pointed star. It has been folded to look vaguely like a snitch. There are letters going around in a circle across the arms of the star, with a compass direction in its center labeled [wind direction].".
+A snitch is a kind of thing. A snitch has a wind direction. A snitch has a text called a clue. The description of a snitch is usually "A small piece of parchment paper, cut into a four-pointed star. It has been folded to look vaguely like a snitch. There are letters going around in a circle across the arms of the star, with a compass direction in its center labeled [wind direction].".
+
+Rule for printing the name of a snitch that is not handled: say "snitch";
+
+[ (called target):
+	if target is handled, say the printed name of the target;
+	otherwise, say "snitch".]
 
 After examining a snitch:
 	let the named direction be the wind direction of the noun;
@@ -413,6 +435,17 @@ Instead of opening the map, try unfolding the map. Instead of closing the map, t
 [Inform does not like for the pages to be the names of any of the rooms (or anything else)]
 Page is a kind of value. first, second, third, fourth, fifth, and last are pages.
 
+The page list is always {first, second, third, fourth, fifth, last}
+
+to decide if (p1 - a Page) is before (p2 - a Page):
+	repeat with pg running through the page list:
+		if pg is p1, decide yes;
+		if pg is p2, decide no;
+	decide no;
+to decide if (p1 - a Page) is after (p2 - a Page):
+	if p1 is before p2, decide no;
+	decide yes;
+
 The map has a page. The page of the map is usually first.
 
 Some folds are part of the map. Instead of examining the folds, try unfolding the map. Instead of opening folds, try unfolding the map.
@@ -425,6 +458,8 @@ Rule for printing the name of the map while taking inventory:
 	else if how many is 1:
 		say ", containing a single snitch".
 
+lb is always "[line break]";
+
 To say state of map:
 	say "[bold type]The [page of the map] page of the map[roman type]";
 	say "[paragraph break]";
@@ -436,17 +471,24 @@ To say state of map:
 			say "The map shows what appears to be the grounds around the house. You can see a tiny version of the house, with its tiny banner, next to a miniature whomping willow.[paragraph break]Below the house are lines of words, flowing around a dark section labeled [bold type]The Dark Forest[roman type] - clearly the Briones Hills behind your house.";
 			say "[First time][line break]There are more folds underneath.[only]";
 		-- third:
-			say "The lines are formed from words, some made up, some are the name of the object drawn. The center of the map has a drawing of the waterfall, with steps going to the left of it. The right side of the map has the edge of the house. The far left has the archway that goes to the road. The bottom shows the curved steps leading to the garage.[one of][or][line break]There is a star in the top right of the map, in the west.[stopping][if the location is front garden][line break]There is a tiny drawing of a snitch near the left column as you go out of the house.[end if]";
+			say "The lines are formed from words, some made up, some are the name of the object drawn. The center of the map has a drawing of the waterfall, with steps going up beside it. On the right side of the map is the edge of the house with the entrance to the garden and two alcoves, to the south and north. On the far left, to the east, is the archway that goes to the road. On the bottom, to the south, are the curved steps leading to the garage.";
+			say "[one of][or][line break]There is a star in the top right of the map, in the west.[stopping]";
+			say "[if the map region of the location is front garden][line break]There is a tiny drawing of a snitch near the southern column as you go out of the house.[end if]";
 			say "[First time][line break]There are more folds underneath.[only]";
 		-- fourth:
-			say "The lines of the fourth page show the [Great room], there is a large label saying so in fact, where the Christmas tree would be at the top of the map. Underneath is what looks like a paramecium made from the words 'Kitchen Island' repeated over and over. It is labeled 'House Elves Only'. To the left is the doors to the front garden, labeled 'Porticus Imago'. At the bottom left is a curved room labeled 'The Cauldron Cupboard' that looks like it would be the larder.[one of][or][line break]There is a star in the top left corner of the map, in what would be the south-west.[stopping][if the location is the kitchen][line break]There is a tiny drawing of a snitch inside the Flue Network.[end if]";
+			say "The lines of the fourth page show the [Great room] and the [Kitchen]. Where the Christmas tree would be, there is a large label with the words 'The Great Room'.[lb]Underneath that label, to the south, is what looks like a paramecium made from the words 'Kitchen Island' repeated over and over. It is labeled 'House Elves Only'. [lb]On the left, to the west is the doors to the front garden, labeled 'Porticus Imago'.[lb]On the right, to the east, are the steps leading down to what would be the Guest Hallway with the steps up to the Balcony beneath.[lb]In the bottom right corner of the Kitchen area is a curved room labeled 'The Cauldron Cupboard' that looks like it would be the larder. At the bottom is a round circle labeled 'Flue Network' where the Pizza Oven would be.[lb]In the bottom left corner is a label 'Way to the Forbidden Forest'.";
+			say "[one of][or][line break]There is a star in the top left corner of the map, in what would be the south-west.[stopping]";
+			say "[if the location is the kitchen][line break]There is a tiny drawing of a snitch inside the Flue Network.[end if]";
 			say "[First time][line break]There are more folds underneath.[only]";
 		-- fifth:
-			say "The map shows part of the upstairs. The left side is a diagram of your bedroom, marked [Morgan's Room], along with your study and other rooms.[one of][or][line break]There is a star in the left side of the map, in what would be North-Northeast.[stopping][if the location is Morgan's room][line break]There is a tiny drawing of a snitch in an odd shaped room labeled [bold type]the Room of Requirement[roman type].[end if]";
+			say "The map shows part of the upstairs. The left side is a diagram of your bedroom, marked [Morgan's Room]. The room next to it is labeled 'The Study'. There is also an odd shaped area marked 'The Room of Requirement' and some other smaller areas.";
+			say "[one of][or][line break]There is a star in the left side of the map, in what would be North-northeast.[stopping]";
+			say "[if the location is Morgan's room][line break]There is a tiny drawing of a snitch in the room labeled [bold type]the Room of Requirement[roman type].[end if]";
 			say "[First time][line break]There are more folds underneath.[only]";
 		-- last:
-			say "The last page of the map looks like your Papa's office. The stairs going down to it has a label that reads [bold type]the Restricted Section[roman type]. The bar has the label [bold type]Potions Room[roman type]. His office is labeled [bold type]the Room of Secrets[roman type].";
-			say "[one of][or][line break]There is a star at the top of the map, in what would be South-Southeast.[stopping][if the location is Papa's office][line break]There is a tiny drawing of a snitch in the area marked [bold type]the Room of Secrets[roman type].[end if]";
+			say "The last page of the map looks like your Papa's office. The stairs going down to it has a label that reads [bold type]the Restricted Section[roman type]. The bar has the label [bold type]Potions Room[roman type]. His office is labeled [bold type]the Room of Secrets[roman type]. In the corner, where the aquarium would be, is a label for the 'Grindylow'.";
+			say "[one of][or][line break]There is a star at the top of the map, in what would be South-Southeast.[stopping]";
+			say "[if the location is Papa's office][line break]There is a tiny drawing of a snitch in the area marked [bold type]the Room of Secrets[roman type].[end if]";
 			say "[line break]";
 			say "The middle of the map is a square made of two flaps. [description of the flaps]";
 			
@@ -479,8 +521,8 @@ The fourth escaped outside, following this house's namesake, the west wind.[line
 The description of some advice is "[italic type]
 For the first clue, you might need to ask Neville's help, he really gets it.[line break]
 For the second clue, Dobby would tell you to tickle a pear.[line break]
-For the third clue, Krum will tell you to not let it get in your eye![line break]
-For the fourth clue, Mrs. Weaslely likes to listen to Celestina Warbeck for inspiration.[roman type]".
+For the third clue, Fred and George point to someone [']Pacing in his study['].[line break]
+For the fourth clue, Mrs. Weasely likes to listen to Celestina Warbeck for inspiration.[roman type]".
 
 Book 5 - The wind rose
 
@@ -498,7 +540,7 @@ To say state of flaps:
 		-- last:
 			say "The top flap has what looks like [bold type][a riddle][roman type] written on it, the bottom has what appear to be [bold type][some clues][roman type], [one of]in the middle you see....[or]in the middle is a wind rose.[stopping][line break][state of wind rose]";
 		-- Secret page:
-			say "The top flap has what looks like [a riddle] written on it, underneath the bottom flap is what appears to be some [advice]."
+			say "The top flap has what looks like [a riddle] written on it, underneath the bottom flap is what appears to be some [advice].";
 
 The wind rose is an open, unopenable container.
 The wind rose is part of the map. The description of it is "[state of wind rose]".
@@ -622,16 +664,19 @@ Instead of opening the pizza oven: [replaces the normal 'report opening' rule]
 		say "You lift the heavy plate door of the oven and set it down on the floor.";
 		say "[line break]You've found a snitch!";
 		now the pizza oven is open;
+		remove hint for Sou West Snitch using "finding";
 	otherwise:
 		continue the action.
 
 Instead of opening pots when pots contain a snitch:
 	say "You search the collection of pots and find a snitch!";
-	now pots are open.
+	now pots are open;
+	remove hint for Western Snitch using "finding";
 	
 Instead of opening iron vase when iron vase contains a snitch:
 	say "You found a snitch!";
-	now iron vase is open.
+	now iron vase is open;
+	remove hint for Sou Sou East using "finding";
 
 Snitch Hunt ends when wind rose contains 4 snitches.
 
@@ -677,7 +722,7 @@ To say search results:
 After opening the book of illumination during the Search for Illumination:
 	say "As you open the book of illumination, the pages begin to glow with a strong soft light. The entire hallway is now illuminated from the light from the book...[paragraph break]...and there is a little piece of paper inside - a final clue!"
 	
-The final clue is a container in the book of illumination. "A small scrap of paper with numbers on it." The final clue is closed. Understand "clue" or "number" or "paper" as the final clue.
+The final clue is a container in the book of illumination. "A small scrap of paper with numbers on it." The final clue is closed. Understand "clue" or "number" or "paper" or "phone number" as the final clue.
  
 Instead of examining the final clue:
 	say "[one of]It looks like a phone number![or]You see a phone number.[stopping]";
@@ -772,7 +817,7 @@ Before printing the name of a room:
 		now the printed name of the Room of Requirement is "a small room (marked Room of Requirement on the map)";
 		now the printed name of Papa's Office is "Papa's Office (marked The Room of Secrets on the map)";
 		now the printed name of Papa's Bar is "Papa's Bar (marked The Potion's Room on the map)";
-		now the printed name of the aquarium is "aquarium (marked Grindylow on the map)";
+		now the printed name of the aquarium is "aquarium (marked [']Grindylow['] on the map)";
 	otherwise:
 		now the printed name of the kitchen is "Kitchen";
 		now the printed name of the larder is "Larder";
@@ -944,54 +989,140 @@ Papa is an undescribed man. Papa is a faithful companion. The description of Pap
 
 A hint is a kind of thing. Papa carries a hint. Some help is a kind of thing. Papa carries some help.
 
-Instead of asking Papa for a hint, say "[next available hint]".
-Instead of asking Papa for some help, say "[next available hint]".
+Instead of asking Papa for a hint, try asking for hints.
+Instead of asking Papa for some help, try asking for hints.
 
-Instead of doing something with Papa, say "Oh no, I'm only here in case you need a hint!" 
+Instead of doing something with Papa, say "Papa says 'Oh no, I'm only here in case you need a hint!'" 
 
 Book 4 - Contextual Hints
+
+Section 1 - Table of Contextual Hints
 
 The end hint is always "I think you know what you need to do here.";
 
 Table of Contextual Hints
 item (object)	location (room)	region (region)	tag (text)	hint (text)
-wooden box	--	--	"opening"	"[one of]Seems opening that box would be a good start.[or]You can do that by typing OPEN BOX.[stopping]"
-the map	--	--	"examining"	"[one of]Well, aren't you going to look at the Map?[or]You can do that by typing LOOK AT MAP or X MAP.[stopping]"
-the map	--	--	"unfolding"	"[one of]Didn't the map say something about more folds?[or]Maybe you can unfold them?[or]Try UNFOLD MAP.[stopping]"
+Papa's secret door	guest hall	--	"pulling"	"[one of]This is an interesting bookshelf, have you really looked at it?[or]Are you trying to get past this bookshelf? Have you tried just pushing?[or]I don't see any fancy switches or levers, what else could you try?[or]Have you tried pulling on it?[or]You can do that by typing PULL BOOKSHELF[or][end hint][stopping]"
+wooden box	great room	--	"opening"	"[one of]Seems opening that box would be a good start.[or]You can open the box by typing OPEN BOX.[or][end hint][stopping]"
+the map	--	--	"examining"	"[one of]Well, aren't you going to look at the Map?[or]You can look at the map by typing LOOK AT MAP or X MAP.[or][end hint][stopping]"
+the map	--	--	"unfolding"	"[one of]Didn't the map say something about more folds?[or]Maybe you can unfold them?[or]Try UNFOLD MAP.[or][end hint][stopping]"
 the map	--	--	"last-page-read"	"[one of]I think you need to keep going on that Map.[or][end hint][stopping]"
-the flaps	--	--	"unfolding"	"[one of]'a square made of flaps, eh?[or]Sounds like a job for more unfolding.[or][end hint][stopping]"
+the flaps	--	--	"unfolding"	"[one of]a square made of flaps, eh?[or]Sounds like a job for more unfolding.[or]Specifically, UNFOLD FLAPS[or][end hint][stopping]"
 the riddle	--	--	"examining"	"[one of]Did you read the riddle?[or]You can do that by typing READ RIDDLE[or][end hint][stopping]"
 the clues	--	--	"examining"	"[one of]Did you read the clues?[or][end hint][stopping]"
 the flaps	--	--	"last-page-read"	"[one of]I wonder if there is anything on the back of those flaps?[or]I bet you could try unfolding them?[or][end hint][stopping]"
 the advice	--	--	"examining"	"[one of]Did you read the advice?[or][end hint][stopping]"
+Nor East Snitch	Morgan's Room	--	"finding"	"[hint for finding the Nor East Snitch]"
+Nor East Snitch	--	upstairs area	"finding"	"[hint for finding room for Nor East Snitch]"
+Nor East Snitch	--	upstairs area	"going inside"	"Well, aren't you going to go in?"
+Nor East Snitch	--	--	"examining"	"[hint for examining snitch]"
+Nor East Snitch	--	--	"inserting"	"[hint for inserting snitch]"
+Sou West Snitch	Kitchen	--	"finding"	"[hint for finding the Sou West Snitch]"
+Sou West Snitch	--	main area	"finding"	"[hint for finding room for Sou West Snitch]"
+Sou West Snitch	--	--	"examining"	"[hint for examining snitch]"
+Sou West Snitch	--	--	"inserting"	"[hint for inserting snitch]"
+Sou Sou East	Papa's Office	--	"finding"	"[hint for finding the Sou Sou East]"
+Sou Sou East	--	downstairs area	"finding"	"[hint for finding room for Sou Sou East]"
+Sou Sou East	--	--	"examining"	"[hint for examining snitch]"
+Sou Sou East	--	--	"inserting"	"[hint for inserting snitch]"
+Western Snitch	South Alcove	--	"finding"	"[hint for finding the Western Snitch]"
+Western Snitch	--	Front Garden	"finding"	"[hint for finding room for Western Snitch]"
+Western Snitch	--	--	"examining"	"[hint for examining snitch]"
+Western Snitch	--	--	"inserting"	"[hint for inserting snitch]"
+Map	--	--	"solving NNE"	"[hint to go to a different region for Nor East Snitch]"
+Map	--	--	"solving SW"	"[hint to go to a different region for Sou West Snitch]"
+Map	--	--	"solving SSE"	"[hint to go to a different region for Sou Sou East]"
+Map	--	--	"solving W"	"[hint to go to a different region for Western Snitch]"
+Map	--	--	"searching"	"[hint for seeking illumination]"
+Final Clue	--	--	"examining"	"[hint for examing final clue]"
+Final Clue	--	--	"calling"	"[hint for calling final clue]"
+Final Clue	--	--	"finding"	"[hint for finding kitchen phone]"
+Final Clue	--	--	"phoning"	"[hint for phoning number]"
+
+[ Note: We put the room first as both get cleared on examining, so prefer hints for finding when *in* the room over finding what room to go to. ]
+
+Section 2 - Debugging
+
+Debugging hints is an action out of world. Understand "Debug hints" as debugging hints.
+Carry out debugging hints:
+	showme the contents of Table of Contextual Hints;
+	
+[
+Every turn:
+	try asking for hints;
+	try asking for hints;
+	try asking for hints;
+	try asking for hints;
+	try asking for hints;
+]
+
+Section 3 - Programatic 'One of - stopping'
+
+[ "one of" statements have the 'feature' that even if substituted text changes, they keep moving forward. This creates a version that will keep a separate list per object. ]
+
+Table of Counter-tracking [ Used by 'to say one of' below ]
+identifier (text)	counter (number)
+with 20 blank rows
+
+to say one of (phrase - phrase thing -> a list of texts) with (the thing - an object):
+	let counter-identifier be "[the printed name of the thing]-[phrase]";
+	let counter-index be 0;
+	unless counter-identifier is an identifier listed in the Table of Counter-tracking:
+		[ First time saying with this thing and phrase, create a new entry ]
+		choose a blank row in the Table of Counter-tracking;
+		now identifier entry is counter-identifier;
+		now counter entry is 0;
+	otherwise:
+		let counter-index be the counter corresponding to an identifier of counter-identifier in the Table of Counter-tracking;
+	now counter-index is counter-index + 1;
+	let result be "";
+	let results list be phrase applied to the thing;
+	if number of entries in results list <= counter-index:
+		now counter-index is number of entries in results list;
+	let result be "[entry counter-index of results list]";
+	now counter entry is counter-index;
+	say "[result]";
+
+[ syntactic sugar]
+to say hint to (accomplish task - phrase thing -> a list of texts) with (the thing - an object):
+	say "[one of accomplish task with the thing]";
+	
+to say hint to (accomplish task - phrase thing -> a list of texts) for (the thing - an object):
+	say "[one of accomplish task with the thing]";
+	
+to say hint to (accomplish task - phrase thing -> a list of texts) the (thing - an object):
+	say "[one of accomplish task with thing]";
+	
+Section 4 - Saying hints
 
 to say next available hint:
+	let player region be map region of the location;
 	repeat through the Table of Contextual Hints:
-		say "[hint entry]";
-		[
-		say paragraph break;
-		showme item entry;
-		showme tag entry;
-		]
-		stop;
+		if there is no location entry or the location entry is the location of the player:
+			if there is no region entry or the region entry is the player region:
+				if there is a location entry or there is a region entry or the item entry can be touched by the player:
+					say "[hint entry][run paragraph on]";
+					stop;
 	say "Hmm, I think you are on your own here.[run paragraph on]".
-
+	
 Asking for hints is an action out of world.
 
 Understand the command "hint" as something new.
 Understand the command "hints" as something new.
 Understand "hint" or "hints" as asking for hints.
+Understand "ask for help" or "ask for a hint" or "ask for hint" as asking for hints.
 
 Carry out asking for hints (this is the asking for hints rule):
-	say "Papa says '[next available hint]'";
+	say "Papa says '[next available hint][run paragraph on]'";
 	say paragraph break;
 	
-Section 1 - Removing hints via action
+Section 5 - Removing hints via action
 
 To remove hint for (first noun - an object) using (the tag - text):
-	if first noun is an item listed in Table of Contextual Hints:
-		if there is no tag entry or the tag entry is the tag:
-			blank out the whole row;
+	repeat through Table of Contextual Hints:
+		if item entry is first noun:
+			if there is no tag entry or the tag entry is the tag:
+				blank out the whole row;
 			
 Before taking something:
 	remove hint for the noun using "taking";
@@ -1004,9 +1135,26 @@ Before opening something:
 Before examining something:
 	remove hint for the noun using "examining";
 	continue the action;
+	
+Before inserting something into:
+	[ Note we could also specify the 'second noun' for hints in a future release. ]
+	remove hint for the noun using "inserting";
+	if the noun is a snitch:
+		remove hint for the noun using "examining"; [ as we no longer need to ]
+	continue the action;
 
-Section 2 - Removing hints via custom actions
+Before calling something:
+	remove hint for the noun using "calling";
+	continue the action;
 
+Section 6 - Removing hints via custom actions
+
+Before going inside:
+	[Special case for room of requirement ]
+	if the location is Morgan's room:
+		remove hint for the Nor East snitch using "going inside";
+	continue the action;
+	
 Before unfolding something:
 	remove hint for the noun using "unfolding";
 	if the noun is the map:
@@ -1015,6 +1163,283 @@ Before unfolding something:
 	if the noun is flaps:
 		if the page of the noun is last: [unfolding next to last flap]
 			remove hint for the noun using "last-page-read";
+
+Before inserting a snitch into the wind rose:
+	[Custom remove to deal with hint to go to a different region]
+	remove hint for the map using "solving [wind direction of the noun]";
+	
+Before examining book of illumination:
+	remove hint for the map using "searching";
+
+Before taking kitchen phone:
+	remove hint for the final clue using "finding";
+			
+Section 7 - Special case hints
+
+Check asking for hints when the player is not carrying the map:
+	if map is in the wooden box:
+		say "Papa says '[First time]For starters, [only]I think you need what is in that wooden box!'"; 
+	otherwise if the location of the map is not the location of the player:
+		say "Papa says 'I think you left something back in [the location of the map].'";
+	otherwise:
+		say "Papa says 'I think you will need that map!'";
+	stop the action;
+
+Check asking for hints during the Search for Illumination:
+	if final clue is nowhere:
+		continue the action;
+	otherwise if the location of the final clue is not the location of the player:
+		say "Papa says 'I think you left your final clue back in [the location of the final clue].'";
+		stop the action;
+	otherwise:
+		continue the action;
+	
+Check asking for hints during the Final Search:
+	if location of iPhone is the location:
+		say "Papa says 'Go on! Open the box!'";
+		stop the action;
+	otherwise if iPhone is ringing:
+		let player region be map region of the location;
+		let the direction be "upstairs";
+		if the player region is upstairs area:
+			now the direction is "to [the location of iPhone]";
+		say "Papa says '[one of]Seems like you should follow the sound.[or]Sounds like you should go [the direction][stopping]'";
+		stop the action;
+	
+Section 8 - Snitch hunt hints
+
+[ Helper methods for Snitch Hunt Hints ]
+
+to say without breaks (src - text):
+	replace the regular expression "\n" in src with "";
+	replace the regular expression "^\s*" in src with "";
+	replace the regular expression "\s*$" in src with "";
+	say src;
+	
+to say long wind direction of (snitch - a snitch):
+	if wind direction of snitch is NNE:
+		say "North-northeast";
+	otherwise if wind direction of snitch is SW:
+		say "south-west";
+	otherwise if wind direction of snitch is SSE:
+		say "South-southeast";
+	otherwise if wind direction of snitch is W:
+		say "West";
+		
+to decide what number is the line number of clue for (snitch - a snitch):
+	if wind direction of snitch is NNE:
+		decide on 1;
+	otherwise if wind direction of snitch is SW:
+		decide on 2;
+	otherwise if wind direction of snitch is SSE:
+		decide on 3;
+	otherwise if wind direction of snitch is W:
+		decide on 4;
+		
+to say clue for (snitch - a snitch):
+	let clue be "";
+	if wind direction of snitch is NNE:
+		let clue be "A stern north-northeaster blew your first clue up-and-away to hide.";
+	otherwise if wind direction of snitch is SW:
+		let clue be "Your second followed a strong southwester, hungry for adventure.";
+	otherwise if wind direction of snitch is SSE:
+		let clue be "Eight dragons guard your third, just south of southeast.";
+	otherwise if wind direction of snitch is W:
+		let clue be "The fourth escaped outside, following this house's namesake, the west wind.";
+	say "['][clue][']".
+
+to say advice for (snitch - a snitch):
+	let advice be "";
+	if wind direction of snitch is NNE:
+		let advice be "you might need to ask Neville's help, he really gets it";
+	otherwise if wind direction of snitch is SW:
+		let advice be "Dobby would tell you to tickle a pear";
+	otherwise if wind direction of snitch is SSE:
+		let advice be "Fred and George point to someone pacing in his study";
+	otherwise if wind direction of snitch is W:
+		let advice be "Mrs. Weaslely likes to listen to Celestina Warbeck for inspiration";
+	say "['][advice][']".
+
+to say answer to (snitch - a snitch):
+	if wind direction of snitch is NNE:
+		say "'Up-and-away' implies somewhere upstairs. And as a Harry Potter fan, the thing which Neville really 'gets' was the room of requirement. And I see there is a room of requirement marked on the map for the upstairs region";
+	otherwise if wind direction of snitch is SW:
+		say "Being a Harry Potter fan, you will recall that in 'The Goblet of Fire', that was how you got into the kitchens";
+	otherwise if wind direction of snitch is SSE:
+		say "I'm sure you remember that the first person Harry sees in the Marauders map is [']Dumbledore pacing his study[']";
+	otherwise if wind direction of snitch is W:
+		say "I see the map already has [']a tiny drawing of a snitch near the southern column..[']";
+		
+to decide which room is location for the clue to (snitch - a snitch):
+	if wind direction of snitch is NNE:
+		decide on Morgan's Room;
+	otherwise if wind direction of snitch is SW:
+		decide on Kitchen;
+	otherwise if wind direction of snitch is SSE:
+		decide on Papa's Office;
+	otherwise if wind direction of snitch is W:
+		decide on South Alcove;
+
+to decide which text is the direction to (snitch - a snitch):
+	let best room be location for the clue to snitch;
+	let best direction be best route from the location to the best room, using even locked doors;
+	let direction be "[best direction]";
+	if direction is "nothing" and wind direction of snitch is SSE or map region of the location is upstairs area:
+		decide on "DOWN";
+	otherwise if direction is "nothing" and wind direction of snitch is NNE or map region of the location is downstairs area:
+		decide on "UP";
+	otherwise:
+		decide on direction in upper case;
+	
+to decide which page is the page for (snitch - a snitch):
+	if wind direction of snitch is NNE:
+		decide on fifth;
+	otherwise if wind direction of snitch is SW:
+		decide on fourth;
+	otherwise if wind direction of snitch is SSE:
+		decide on last;
+	otherwise if wind direction of snitch is W:
+		decide on third;
+
+To decide which list of texts is reading map page for (snitch - a thing) (this is reading map page for):
+	let results be a list of some texts;
+	add "Have you tried looking at the map?" to results;
+	add "Can you find the page of the map that shows either [the location] or the area it is in?" to results;
+	add "The map is at the [page of the map] page but [the location] is on the [page for the snitch] page." to results;
+	add "You might have to fold or unfold the map a few times to get to the page of the map showing [the location]." to results;
+	let fold or unfold be "UNFOLD";
+	if page for snitch is before page of the map, let fold or unfold be "FOLD";
+	add "To have the map show [the location], you will need to type [fold or unfold] MAP." to results;
+	decide on results;
+	
+To decide which list of texts is finding-room-hints for (snitch - a thing) (this is find):
+	[ This hint is when we are in the 'location for the clue to snitch' above - which might not be the room the snitch is in. ]
+	let results be a list of some texts;
+	add "I think it is worth checking the map again, you might have missed something?" to results;
+	add "I see the [page for snitch] page of the map says something about 'a tiny drawing of a snitch...?" to results;
+	if snitch is Nor East Snitch: [Room of requirement]
+		add "I see the mural has a label [']Room of Requirement['] next to it?" to results;
+		add "Seems examining the mural is in order." to results;
+		add "To examine the mural, type EXAMINE MURAL (or just X MURAL)." to results;
+		add "Don't forget to be persistent!" to results;
+		add "Also, don't forget Dr. Dolittle's pushmi-pullyu. Sometimes you need to pull..." to results;
+		add "Sometimes you need to push!" to results;
+		add "To push the mural, just type PUSH MURAL" to results;
+	otherwise if snitch is Sou West Snitch: [Pizza Oven]
+		add "I see the Pizza oven is labeled 'Flue Network'." to results;
+		add "Seems that would be a good place to start." to results;
+		add "You can search by typing SEARCH PIZZA OVEN." to results;
+		add "I suppose you might first have to OPEN PIZZA OVEN" to results;
+	otherwise if snitch is Sou Sou East: [Iron vase]
+		add "Pretty clear you are in the right place, I think you should just start looking around" to results;
+		add "For example, there is a desk, some bookshelves, cabinets...." to results;
+		add "Hmm, what about those speakers?" to results;
+		add "I see there is a statue?" to results;
+		add "I see an iron vase with dragons on the other speaker, I recall that was part of a hint" to results;
+		add "Maybe you should search the vase?" to results;
+		add "Try typing SEARCH VASE" to results;
+	otherwise: [ cauldrons ]
+		add "I think you are in the right place, this is a simple matter of looking around" to results;
+		add "You can do that by typing LOOK." to results;
+		add "You can also look around by just typing L." to results;
+		add "You see something new each time you look around, don't you?" to results;
+		add "Quite a bunch of stuff here, are those pots I see?" to results;
+		add "Have you examined those pots?" to results;
+		add "You can do that by typing EXAMINE POTS" to results;
+		add "You can also examine the pots by just typing X POTS" to results;
+		add "Don't forget to be persistent!" to results;
+		add "[']look like a stack of cauldrons['] eh? Wasn't that in the clue?" to results;
+		add "Have you searched the pots?" to results;
+		add "You can do that by typing SEARCH POTS" to results;
+	decide on results;
+
+To decide which list of texts is finding room for (snitch - a thing) (this is find room for):
+	let results be a list of some texts;
+	add "Notice anything different from the first time you read the page of the map for this area?" to results;
+	add "For example, that star seems new." to results;
+	add "The map says there is a star in the [long wind direction of snitch]. I wonder if that means anything?" to results;
+	add "If I recall correctly, the clues on the map had a line about a [long wind direction of snitch] wind?" to results;
+	add "If you look at line [line number of clue for snitch in words] of the clues, it says [clue for snitch]." to results;
+	add "In the [']advice['] section, line [line number of clue for snitch in words]  says: [advice for snitch]." to results;
+	add "[answer to snitch]." to results;
+	add "Seems like a good idea to go to [the location for the clue to snitch]." to results;
+	add "To go towards [the location for the clue to snitch], type GO [direction to snitch] (or just [character number 1 in direction to snitch])" to results;
+	decide on results;
+	
+To say hint for finding (snitch - a snitch):
+	[ Hint for finding a snitch in the room you are in. Cleared when the snitch if found.]
+	If the page of the map is not page for the snitch:
+		say "[hint to reading map page for the snitch]";
+	otherwise:
+		say "[hint to find the snitch]";
+	
+to say hint for finding room for (snitch - a snitch):
+	[ Hint for finding a snitch in the region you are in. Cleared for each region when the snitch if found.]
+	If the page of the map is not page for the snitch:
+		say "[hint to reading map page for the snitch]";
+	otherwise:
+		say "[hint to find room for the snitch]";
+
+to say hint for examining snitch:
+	if wind rose is empty:
+		say "[one of]Congratulations! You found a snitch. What does it look like?[run paragraph on][or]Is there anything on it?[run paragraph on][or]Maybe you should examine it?[run paragraph on][or]You can do that by typing X SNITCH.[run paragraph on][stopping]";
+	otherwise:
+		say "Have you looked at the snitch yet?[run paragraph on]";
+	
+to say hint for inserting snitch:
+	if wind rose is empty:
+		say "[one of][']Cut into a four-pointed star?['] And with a compass direction? I wonder if that goes into the wind rose?[no line break][or]I suppose you could try putting it into the wind rose.[no line break][or]Try typing PUT SNITCH IN MAP[stopping]";
+	otherwise:
+		say "Have you put the snitch you just found in the map?[no line break]";
+
+To decide which list of texts is for going to a different region for (snitch - a thing) (this is go to a different region):
+	[ This handles the case where the player has inserted a snitch but hasn't moved on to the next region. ]
+	let number found be the number of snitches in the wind rose;
+	let pluralized snitches be "[if number found is 0 or number found > 1]snitches[otherwise]snitch[end if]";
+	let the next region be "downstairs";
+	let the next place be Papa's Office;
+	let snitch be Sou Sou East Snitch;
+	if the Sou West Snitch is not in the wind rose:
+		let the next region be "in the main area";
+		let the next place be Great Room;
+		let snitch be Sou West Snitch;
+	otherwise if the Western Snitch is not in the wind rose:
+		let the next region be "outside";
+		let the next place be Entrance to the Front Garden;
+		let snitch be Western Snitch;
+	otherwise if the Nor East Snitch is not in the wind rose:
+		let the next region be "upstairs";
+		let the next place be Balcony;
+		let snitch be Nor East Snitch;
+	let results be a list of some texts;
+	add "Good job, you have found [number found in words] [pluralized snitches], I think you should look somewhere else next." to results;
+	add "You could try looking [the next region]." to results;
+	add "For example, you could try going to [the next place]" to results;
+	add "To go toward [the next place], type GO [direction to snitch] (or just [character number 1 in direction to snitch])." to results;
+	decide on results;
+	
+To decide which text is the hint for seeking illumination: [ hint for finding and examining the final clue]
+	if the location is not the guest hall:
+		decide on "[one of]Seems I remember seeing ['] the restricted section of the library['] on one of the pages of the map?[or]Wasn't it the last page of the map?[or]Yes, that label was next to 'The stairs going down...' so seems you should go to the guest hall.[or]I think you know how to get to the guest hall by now![stopping]";
+	otherwise if Papa's secret door is open:
+		decide on "I think you will need to shut the door to reveal the bookshelf.";
+	otherwise if the Book of Illumination is nowhere:
+		decide on "I think there is nothing for it but to [one of]search[or]keep searching[stopping] the bookshelf.";
+	otherwise:
+		decide on "Seems a good idea to give that brown book a good looking over.";
+	
+To decide which text is the hint for examing final clue:
+	decide on "Seems like you should look at that final clue.";
+
+To decide which text is hint for calling final clue:
+	decide on "Seems like a good idea to call the number and see what happens.";
+
+To decide which text is hint for finding kitchen phone:
+	if location is not kitchen, decide on "[one of]Hmm, didn't we see a phone while we have been hunting these snitches?[or]Didn't I see a phone in the Kitchen?[or]I'm sure there is one in the Kitchen, and I know you know how to get there now.[or]You can just type GO TO KITCHEN[stopping]";
+	otherwise decide on "[one of]I think the answer is to keep looking around here.[or]In fact, you could probably just type TAKE PHONE[stopping]".
+
+To decide which text is hint for phoning number: [ This comes up after getting the final clue AND the kitchen phone]
+	decide on "[one of]Well, go ahead, call the number![or]You can do that by typing CALL NUMBER[stopping]";
 
 Book 5 - Miscellanea
 
@@ -1054,6 +1479,9 @@ When play begins:
 [From http://www.z-machine-matter.com/programming/page/2/]
 [After printing the banner text when not requesting the story file version : say "[line break]There was one Christmas present left, a wooden box with a note that said 'I open at the close....'" ]
 
+[To test if windrose is empty ]
+Definition: a container is empty rather than non-empty if the first thing held by it is nothing.
+
 Book 6 - Testing
 
 [ A simple magic trick to get all the snitches into the wooden box - this was before I knew about PURLOIN snitches]
@@ -1066,7 +1494,7 @@ after closing the wooden box:
 
 Test start with "open box / take map "
 
-Test riddle with "go to great room / open box / take map / unfold map / g / g /  g / g / unfold flaps / read riddle"
+Test riddle with "go to great room / open box / take map / unfold map / g / g /  g / g / unfold flaps / read riddle / read clues / look under flaps / read advice / fold flaps"
 
 Test cheat with "open box / take map / unfold map / g / g /  g / g / unfold flaps / read riddle / close box / open box/ take snitches / put snitches in map"
 
@@ -1080,8 +1508,10 @@ Test garden with "go to great room / w / s / l / l / x pots / x pots / search po
 
 Test papa with "go to great room / e / e / look at bookshelf / g / g / pull bookshelf / l / e / look at speakers / look at iron vase / g / g / search iron vase"
 
-Test snitches with "test riddle / test morgan / put snitch in map / test garden / put snitch in map / test kitchen / put snitch in map / test papa / put snitch in map / read wind rose"
+Test snitches with "test riddle / test kitchen / put snitch in map / test garden / put snitch in map /test morgan / put snitch in map / test papa / put snitch in map /  read wind rose"
 
 Test almost with "test snitches / go to guest hall / search bookshelf / shut door / search bookshelf / g / g / g / open book / take book / call number / go to kitchen / take phone / call number / go up / n / up / call number / e / x iPhone"
 
 Test all with "test almost / open box"
+
+Test hint with "open box / take map / hint"
