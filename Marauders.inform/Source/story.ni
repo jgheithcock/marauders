@@ -377,6 +377,7 @@ Book 1 - The box
 The wooden box is a closed, openable, opaque container in the Great Room. "The wooden box sits amidst the wrapping papers, [if box is closed]closed[otherwise]open[end if]." The description of it is "Smaller than a bread box, it is made of [dark brown wood], with [scrollwork] around its edges[if box is closed] and a [metal clasp] holding it closed[end if]." Instead of taking the wooden box, say "You won't need the box." The dark brown wood, the scrollwork and the metal clasp are part of the box.
 
 Understand "the present" as the wooden box. Understand "present" as the wooden box.
+Instead of opening metal clasp, try opening box.
 
 Book 2 - The snitches
 
@@ -722,7 +723,7 @@ To say search results:
 After opening the book of illumination during the Search for Illumination:
 	say "As you open the book of illumination, the pages begin to glow with a strong soft light. The entire hallway is now illuminated from the light from the book...[paragraph break]...and there is a little piece of paper inside - a final clue!"
 	
-The final clue is a container in the book of illumination. "A small scrap of paper with numbers on it." The final clue is closed. Understand "clue" or "number" or "paper" or "phone number" as the final clue.
+The final clue is a container in the book of illumination. "A small scrap of paper with numbers on it." The final clue is closed. Understand "clue" or "number" or "paper" or "phone number" as the final clue. Does the player mean examining the final clue: it is very likely.
  
 Instead of examining the final clue:
 	say "[one of]It looks like a phone number![or]You see a phone number.[stopping]";
@@ -965,7 +966,7 @@ Section 2 - Mama
 Mama is an undescribed woman. Mama is a faithful companion. Instead of doing something with Mama, say "[one of]Mama is not here[or]Mama is somewhere else in the house[or]Mama doesn't seem to be here now[or]Mama has gone[at random]."
 
 To say Mama flits by:
-	say "[one of]Mama zips by and gives you a smile as she goes[or]Mama peeks in and offers you an encouraging smile and then leaves[or]Mama stops in for a moment to see how you are doing before dashing off[or]Mama looks in for a moment to see how things are going before continuing on[or]Mama gives you an encouraging look as she grabs something and leaves[or]Mama steps into view for a moment before leaving[or]Mama peeks in to see how you are doing and then steps out[or]Mama throws you a thumbs up as she walks in and out of [the location][purely at random]"
+	say "[one of]Mama zips by and gives you a smile as she goes[or]Mama peeks in and offers you an encouraging smile and then leaves[or]Mama stops in for a moment to see how you are doing before dashing off[or]Mama looks in for a moment to see how things are going before continuing on[or]Mama gives you an encouraging look as she grabs something and leaves[or]Mama steps into view for a moment before leaving[or]Mama peeks in to see how you are doing and then steps out[or]Mama throws you a thumbs up as she walks in and out[purely at random]".
 
 mama-was-just-here is a truth state that varies. mama-was-just-here is usually false.
 To decide if Mama is around:
@@ -1043,9 +1044,14 @@ Final Clue	--	--	"phoning"	"[hint for phoning number]"
 
 Section 2 - Debugging
 
-Debugging hints is an action out of world. Understand "Debug hints" as debugging hints.
-Carry out debugging hints:
-	showme the contents of Table of Contextual Hints;
+Understand "debug [text]" as debugging. Debugging is an action applying to one topic. [c.f. §17.5. The text token]
+Carry out debugging:
+	if the topic is "hints":
+		showme the contents of Table of Contextual Hints;
+	otherwise if the topic is "tracking":
+		showme the contents of Table of Counter-tracking;
+	otherwise:
+		say "I do not know how to debug '[the topic understood]'.";
 	
 [
 Every turn:
@@ -1134,13 +1140,14 @@ Before opening something:
 	
 Before examining something:
 	remove hint for the noun using "examining";
+	remove hint for the noun using "finding"; [ no longer needed ]
 	continue the action;
 	
 Before inserting something into:
 	[ Note we could also specify the 'second noun' for hints in a future release. ]
 	remove hint for the noun using "inserting";
-	if the noun is a snitch:
-		remove hint for the noun using "examining"; [ as we no longer need to ]
+	remove hint for the noun using "finding"; [ no longer needed ]
+	remove hint for the noun using "examining"; [ no longer needed ]
 	continue the action;
 
 Before calling something:
@@ -1268,7 +1275,7 @@ to say answer to (snitch - a snitch):
 	otherwise if wind direction of snitch is SSE:
 		say "I'm sure you remember that the first person Harry sees in the Marauders map is [']Dumbledore pacing his study[']";
 	otherwise if wind direction of snitch is W:
-		say "I see the map already has [']a tiny drawing of a snitch near the southern column..[']";
+		say "I'm sure you remember her favorite, [']A Cauldron full of Hot, Strong Love[']. I see the map already has [']a tiny drawing of a snitch near the southern column.['] I bet we might find some [']cauldrons['] there";
 		
 to decide which room is location for the clue to (snitch - a snitch):
 	if wind direction of snitch is NNE:
@@ -1291,6 +1298,15 @@ to decide which text is the direction to (snitch - a snitch):
 	otherwise:
 		decide on direction in upper case;
 	
+to decide which text is the short direction to (something - a thing):
+	let short direction be character number 1 in direction to something;
+	if short direction is "O":
+		decide on "OUT";
+	otherwise if short direction is "I":
+		decide on "IN";
+	otherwise:
+		decide on short direction;
+	
 to decide which page is the page for (snitch - a snitch):
 	if wind direction of snitch is NNE:
 		decide on fifth;
@@ -1303,7 +1319,7 @@ to decide which page is the page for (snitch - a snitch):
 
 To decide which list of texts is reading map page for (snitch - a thing) (this is reading map page for):
 	let results be a list of some texts;
-	add "Have you tried looking at the map?" to results;
+	add "Can you find where you are on the map?" to results;
 	add "Can you find the page of the map that shows either [the location] or the area it is in?" to results;
 	add "The map is at the [page of the map] page but [the location] is on the [page for the snitch] page." to results;
 	add "You might have to fold or unfold the map a few times to get to the page of the map showing [the location]." to results;
@@ -1359,11 +1375,11 @@ To decide which list of texts is finding room for (snitch - a thing) (this is fi
 	add "For example, that star seems new." to results;
 	add "The map says there is a star in the [long wind direction of snitch]. I wonder if that means anything?" to results;
 	add "If I recall correctly, the clues on the map had a line about a [long wind direction of snitch] wind?" to results;
-	add "If you look at line [line number of clue for snitch in words] of the clues, it says [clue for snitch]." to results;
+	add "If you look at line [line number of clue for snitch in words] of the clues, it says [clue for snitch]" to results;
 	add "In the [']advice['] section, line [line number of clue for snitch in words]  says: [advice for snitch]." to results;
 	add "[answer to snitch]." to results;
 	add "Seems like a good idea to go to [the location for the clue to snitch]." to results;
-	add "To go towards [the location for the clue to snitch], type GO [direction to snitch] (or just [character number 1 in direction to snitch])" to results;
+	add "To go towards [the location for the clue to snitch], type GO [direction to snitch] (or just [short direction to snitch])" to results;
 	decide on results;
 	
 To say hint for finding (snitch - a snitch):
@@ -1394,33 +1410,33 @@ to say hint for inserting snitch:
 
 To decide which list of texts is for going to a different region for (snitch - a thing) (this is go to a different region):
 	[ This handles the case where the player has inserted a snitch but hasn't moved on to the next region. ]
-	let number found be the number of snitches in the wind rose;
-	let pluralized snitches be "[if number found is 0 or number found > 1]snitches[otherwise]snitch[end if]";
-	let the next region be "downstairs";
-	let the next place be Papa's Office;
-	let snitch be Sou Sou East Snitch;
-	if the Sou West Snitch is not in the wind rose:
+	let the next region be "";
+	let the next place be location;
+	if the Sou West Snitch is the snitch:
 		let the next region be "in the main area";
-		let the next place be Great Room;
-		let snitch be Sou West Snitch;
-	otherwise if the Western Snitch is not in the wind rose:
+		let the next place be the Great Room;
+	otherwise if the Nor East Snitch is the snitch:
+		let the next region be "upstairs";
+		let the next place be Balcony;
+	otherwise if the Western Snitch is the snitch:
 		let the next region be "outside";
 		let the next place be Entrance to the Front Garden;
 		let snitch be Western Snitch;
-	otherwise if the Nor East Snitch is not in the wind rose:
-		let the next region be "upstairs";
-		let the next place be Balcony;
-		let snitch be Nor East Snitch;
+	otherwise if the Sou Sou East Snitch is the snitch:
+		let the next region be "downstairs";
+		let the next place be Papa's Office;
+	let number found be the number of snitches in the wind rose;
+	let pluralized snitches be "[if number found is 0 or number found > 1]snitches[otherwise]snitch[end if]";
 	let results be a list of some texts;
 	add "Good job, you have found [number found in words] [pluralized snitches], I think you should look somewhere else next." to results;
 	add "You could try looking [the next region]." to results;
 	add "For example, you could try going to [the next place]" to results;
-	add "To go toward [the next place], type GO [direction to snitch] (or just [character number 1 in direction to snitch])." to results;
+	add "To go toward [the next place], type GO [direction to snitch] (or just [short direction to snitch])." to results;
 	decide on results;
 	
 To decide which text is the hint for seeking illumination: [ hint for finding and examining the final clue]
 	if the location is not the guest hall:
-		decide on "[one of]Seems I remember seeing ['] the restricted section of the library['] on one of the pages of the map?[or]Wasn't it the last page of the map?[or]Yes, that label was next to 'The stairs going down...' so seems you should go to the guest hall.[or]I think you know how to get to the guest hall by now![stopping]";
+		decide on "[one of]Seems I remember seeing [']the restricted section of the library['] on one of the pages of the map?[or]Wasn't it the last page of the map?[or]Yes, that label was next to 'The stairs going down...' so seems you should go to the guest hall.[or]I think you know how to get to the guest hall by now![stopping]";
 	otherwise if Papa's secret door is open:
 		decide on "I think you will need to shut the door to reveal the bookshelf.";
 	otherwise if the Book of Illumination is nowhere:
