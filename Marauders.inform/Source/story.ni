@@ -193,7 +193,7 @@ Chapter 7 - Morgan's Room
 
 Morgan's Room is west of the study. "Above you is a dark [violet ceiling] painted with stars. To the north is a [bedroom window] overlooking the garden. West is a [medium sized bed] and a small cabinet. In the southeast corner is a [tall mirror]. All along the southern side is a [mural] of an outdoor scene, with trees and animals.[if Morgan's secret door is closed and Morgan's secret door is unlocked] The secret door is closed.[else if Morgan's secret door is open] A secret door in the mural is open, leading to [room of requirement].[end if]". It is in the upstairs area.
 
-A violet ceiling is scenery in Morgan's room. "You can recognize many of the constellations. Your favorite is Pegasus." Understand "stars" as violet ceiling.
+A violet ceiling is scenery in Morgan's room. "You can recognize many of the constellations. Your favorite is Pegasus." Understand "stars" as violet ceiling. Does the player mean examining violet ceiling: it is very likely.
 
 A bedroom window and a tall mirror are scenery in Morgan's room.
 A medium sized bed is a fixed in place enterable supporter in Morgan's room. A cabinet is an undescribed, fixed in place closed, openable container in Morgan's room.
@@ -983,6 +983,17 @@ To decide if Mama is around:
 Every turn when Mama is around, say "[Mama flits by]."
 
 Section 3 - Cats
+
+A cat is a kind of animal. Dash is a cat in Morgan's room. "Dash is curled up on your bed." The description of Dash is "A beautiful Maine Coon." Sam is a cat in the Master Bedroom. The description of Sam is "Mostly siamese, only a little crazy, sometimes...." Luna is a cat in Mama's Studio. The description of Luna is "Like a small gray bear, very shy."
+
+Rule for writing a paragraph about a cat (called cat):
+	say "[cat] [one of]is curled up [if the location is Morgan's Room]on your bed, [end if]asleep[or]is giving themself a bath[or]is watching you expectantly[or]is batting a toy mouse[purely at random]."
+
+Every turn when a random number from 1 to 7 is 7:
+	let the cat be a random cat;
+	if the cat is not in the location:
+		now the cat is in the location;
+		say "[cat] [one of]struts[or]slinks[or]pads[or]walks[purely at random] in and sits down in a corner[one of], watching the proceedings[or] and proceeds to give themselves a bath[or], then curls up for a nap[purely at random].";
 
 Section 4 - Papa
 
