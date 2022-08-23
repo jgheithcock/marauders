@@ -451,6 +451,8 @@ The map has a page. The page of the map is usually first.
 
 Some folds are part of the map. Instead of examining the folds, try unfolding the map. Instead of opening folds, try unfolding the map.
 
+Instead of looking under the folds, try unfolding the map.
+
 Rule for printing the name of the map while taking inventory: 
 	say "Map[if page is not first], open to the [page] page[end if]";
 	let how many be number of snitches enclosed by wind rose;
