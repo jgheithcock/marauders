@@ -970,7 +970,7 @@ To say Mama flits by:
 
 mama-was-just-here is a truth state that varies. mama-was-just-here is usually false.
 To decide if Mama is around:
-	if mama-was-just-here is true:
+	if mama-was-just-here is true: [ Do not have Mama show up and show up right away]
 		let mama-was-just-here be false;
 		decide no;
 	let mama rooms be {Kitchen, Balcony, Study, Morgan's Room, Guest Hall, Papa's Office};
@@ -990,8 +990,9 @@ Rule for writing a paragraph about a cat (called cat):
 	say "[cat] [one of]is curled up [if the location is Morgan's Room]on your bed, [end if]asleep[or]is giving themself a bath[or]is watching you expectantly[or]is batting a toy mouse[purely at random]."
 
 Every turn when a random number from 1 to 7 is 7:
-	let the cat be a random cat;
-	if the cat is not in the location:
+	let some cat be a random cat in the location;
+	if some cat is nothing:
+		let the cat be a random cat;
 		now the cat is in the location;
 		say "[cat] [one of]struts[or]slinks[or]pads[or]walks[purely at random] in and sits down in a corner[one of], watching the proceedings[or] and proceeds to give themselves a bath[or], then curls up for a nap[purely at random].";
 
