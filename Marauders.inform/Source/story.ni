@@ -24,8 +24,6 @@ title	description
 		
 Include Secret Doors by Andrew Owen
 
-[From p.34 of "Inform 7 Handbook" by Jim Aikin]
-[ Rule for printing the banner text: say "There was one present left, a [wooden box] with a tag that said [italic type]I open at the close....[roman type][line break]" ]
 When play begins:
 	say "There was one present left, a [wooden box] with a tag that said [italic type]I open at the close....[roman type][line break]";
 
@@ -164,7 +162,7 @@ The Balcony is a room in the upstairs area. "You can see the entire Great Room f
 
 Chapter 2 - The Master Bedroom
 
-The Master Bedroom is east of the Balcony. "A big room, with a [comfy chair] and [steps leading down to the bathroom]." It is in the upstairs area. The large bed and the comfy chair are enterable scenery supporters in the Master Bedroom. The steps leading down to the bathroom are scenery in the Master Bedroom. Instead of going east when location is Balcony during the snitch hunt, say "The master bedroom isn't on the map."
+The Master Bedroom is east of the Balcony. "A big room, with a [comfy chair] and [steps] leading down to [the bathroom]." It is in the upstairs area. The large bed and the comfy chair are enterable scenery supporters in the Master Bedroom. The steps and the bathroom are scenery in the Master Bedroom. Instead of going east when location is Balcony during the snitch hunt, say "The master bedroom isn't on the map."
 
 Chapter 3 - Mama's studio
 
@@ -870,12 +868,27 @@ Instead of facing up:
 Instead of facing down:
 	say "You see the floor. [description of floor][line break]"
 
-Understand "look toward [any adjacent room]" as looking toward. Understand "examine [any adjacent room]" as looking toward. Understand "look at [any adjacent room]" as looking toward.
+Understand "look toward [any adjacent room]" or "examine [any adjacent room]" or "look at [any adjacent room]" as looking toward.
 
 Understand "look toward [any adjacent door]" as looking toward. Understand "examine [any adjacent door]" as looking toward. Understand "look at [any adjacent door]" as looking toward. 
 
 [Handle rooms too far away here.]
-Understand "look at [any room]" as looking beyond. Looking beyond is an action applying to one thing. Carry out looking beyond: say "You cannot see much of [the noun] from here."
+Understand "look toward [any room]" or "examine [any room]" or "look at [any room]" as looking beyond. Looking beyond is an action applying to one thing. Carry out looking beyond: say "You cannot see much of [the noun] from here."
+
+Understand "look toward [any thing]" or "examine [any thing]" or "look at [any thing]" as looking at. Looking at is an action applying to one thing.
+
+[Restore the default examine behavior if the noun is present]
+Before looking at:
+	if the noun is nothing:
+		say "You cannot see that." instead;
+	otherwise if the noun is not visible:
+		say "You cannot see [the noun]." instead;
+		
+Carry out looking at:
+	if the noun is nothing:
+		say "You cannot see that.";
+	otherwise:
+		try examining the noun;
 
 Looking toward is an action applying to one visible thing.
 
@@ -887,6 +900,14 @@ Carry out looking toward:
 		say "The [noun] is to the [heading] of you.";
 	if description of the noun is not "":
 		say "[line break][description of the noun][paragraph break]".
+		
+Rule for printing a parser error when the latest parser error is the noun did not make sense in that context error:
+	if the player's command includes "look":
+		say "You do not see any thing like that.";
+	otherwise:
+		continue the action;
+
+
 
 Book 2 - Listening Library
 
@@ -986,17 +1007,17 @@ Every turn when Mama is around, say "[Mama flits by]."
 
 Section 3 - Cats
 
-A cat is a kind of animal. Dash is a cat in Morgan's room. "Dash is curled up on your bed." The description of Dash is "A beautiful Maine Coon." Sam is a cat in the Master Bedroom. The description of Sam is "Mostly siamese, only a little crazy, sometimes...." Luna is a cat in Mama's Studio. The description of Luna is "Like a small gray bear, very shy."
+A cat is a kind of animal. Dash is a male cat in Morgan's room. "Dash is curled up on your bed." The description of Dash is "A beautiful Maine Coon." Sam is a female cat in the Master Bedroom. The description of Sam is "Mostly siamese, only a little crazy, sometimes...." Luna is a female cat in Mama's Studio. The description of Luna is "Like a small gray bear, very shy."
 
 Rule for writing a paragraph about a cat (called cat):
-	say "[cat] [one of]is curled up [if the location is Morgan's Room]on your bed, [end if]asleep[or]is giving themself a bath[or]is watching you expectantly[or]is batting a toy mouse[purely at random]."
+	say "[cat] [one of]is curled up [if the location is Morgan's Room]on your bed, [end if]asleep[or]is giving [themselves] a bath[or]is watching you expectantly[or]is batting a toy mouse[purely at random]."
 
 Every turn when a random number from 1 to 7 is 7:
 	let some cat be a random cat in the location;
 	if some cat is nothing:
 		let the cat be a random cat;
 		now the cat is in the location;
-		say "[cat] [one of]struts[or]slinks[or]pads[or]walks[purely at random] in and sits down in a corner[one of], watching the proceedings[or] and proceeds to give themselves a bath[or], then curls up for a nap[purely at random].";
+		say "[cat] [one of]struts[or]slinks[or]pads[or]walks[purely at random] in and sits down in a corner[one of], watching the proceedings[or] and proceeds to give [themselves] a bath[or], then curls up for a nap[purely at random].";
 
 Section 4 - Papa
 
@@ -1471,9 +1492,12 @@ To decide which text is hint for finding kitchen phone:
 To decide which text is hint for phoning number: [ This comes up after getting the final clue AND the kitchen phone]
 	decide on "[one of]Well, go ahead, call the number![or]You can do that by typing CALL NUMBER[stopping]";
 
-Book 5 - Miscellanea
+Book 5 - Odds and ends
 
 Before attacking something, say "Nothing happened." instead.
+
+[To test if windrose is empty ]
+Definition: a container is empty rather than non-empty if the first thing held by it is nothing.
 
 [Replace the "You can't go that way" rule]
 [c.f. https://intfiction.org/t/replacing-you-cant-go-that-way/3895]
@@ -1506,11 +1530,11 @@ When play begins:
      pause the game.
 ]
 
+[From p.34 of "Inform 7 Handbook" by Jim Aikin]
+[ Rule for printing the banner text: say "There was one present left, a [wooden box] with a tag that said [italic type]I open at the close....[roman type][line break]" ]
+
 [From http://www.z-machine-matter.com/programming/page/2/]
 [After printing the banner text when not requesting the story file version : say "[line break]There was one Christmas present left, a wooden box with a note that said 'I open at the close....'" ]
-
-[To test if windrose is empty ]
-Definition: a container is empty rather than non-empty if the first thing held by it is nothing.
 
 Book 6 - Testing
 
