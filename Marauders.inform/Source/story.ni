@@ -873,25 +873,9 @@ Understand "look toward [any adjacent room]" or "examine [any adjacent room]" or
 Understand "look toward [any adjacent door]" as looking toward. Understand "examine [any adjacent door]" as looking toward. Understand "look at [any adjacent door]" as looking toward. 
 
 [Handle rooms too far away here.]
-Understand "look toward [any room]" or "examine [any room]" or "look at [any room]" as looking beyond. Looking beyond is an action applying to one thing. Carry out looking beyond: say "You cannot see much of [the noun] from here."
-
-Understand "look toward [any thing]" or "examine [any thing]" or "look at [any thing]" as looking at. Looking at is an action applying to one thing.
-
-[Restore the default examine behavior if the noun is present]
-Before looking at:
-	if the noun is nothing:
-		say "You cannot see that." instead;
-	otherwise if the noun is not visible:
-		say "You cannot see [the noun]." instead;
-		
-Carry out looking at:
-	if the noun is nothing:
-		say "You cannot see that.";
-	otherwise:
-		try examining the noun;
+Understand "look toward [any room]" or "look at [any room]" as looking beyond. Looking beyond is an action applying to one thing. Carry out looking beyond: say "You cannot see much of [the noun] from here."
 
 Looking toward is an action applying to one visible thing.
-
 Carry out looking toward:
 	let heading be the best route from the location to the noun, using doors; [do not use even locked doors as they are secret]
 	if heading is not a direction:
@@ -900,7 +884,8 @@ Carry out looking toward:
 		say "The [noun] is to the [heading] of you.";
 	if description of the noun is not "":
 		say "[line break][description of the noun][paragraph break]".
-		
+	
+[The above causes a parser error when looking at something not in scope, catch that here]
 Rule for printing a parser error when the latest parser error is the noun did not make sense in that context error:
 	if the player's command includes "look":
 		say "You do not see any thing like that.";
