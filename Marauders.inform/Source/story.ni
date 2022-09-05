@@ -43,10 +43,7 @@ The Great Room is a room in the main area. "A [great fir tree] stretches up to t
 
 A ceiling is a backdrop. "High above you, painted to look like the walls, a kind of parchment yellow." The ceiling is everywhere.
 
-The slate floor is a backdrop. The description of it is "Made of rough, irregular slabs of [mariposa slate]". The slate floor is everywhere. Understand "slabs" or "floor" as slate floor. 
-
-Some mariposa slate is a backdrop. The description of it is "Large, irregular slabs of Mariposa slate, mottled blue gray with red and orange variegation. They form the floor inside and out." Some mariposa slate is everywhere.
-
+The slate floor is a backdrop. The description of it is "Made of rough, irregular slabs of mariposa slate, mottled blue gray with red and orange variegation. They form the floor inside and out." The slate floor is everywhere. Understand "slate slab" or "slab" or "slabs" or "floor" or "mariposa" as slate floor.
 
 A great fir tree is scenery in the Great Room. "You can still make out the scent of the fir."
 
@@ -124,18 +121,18 @@ Chapter 1 - Front Garden
 
 The Front Garden is a region in the outside area.
 
-The steps, the arch, the road, the small alcove and some arched columns are backdrops in the Front Garden. Some plants are backdrops in the front garden. 
+The steps, a rock wall, an arch, the road, the small alcove and some arched columns are backdrops in the Front Garden. Some plants are backdrops in the front garden.
 
 [Examining 'garden' or 'front garden' gives the "You can't see any such thing" output. Work around that.]
 The ActualGarden is a backdrop in the Front Garden."It isn't at its best in the winter, but there are still a lot of plants growing in it." The printed name of Actual Garden is "front garden". Understand "garden" as the ActualGarden.
 
-The Entrance to the Front Garden is a room in the front garden. "You are standing in a small alcove in the middle of two [arched columns]. The [slate floor] continues on to the edge of the [waterfall] in front of you, to the west. To the north and south are [alcoves] filled with wisteria.[one of][or] Also, to the south is a row of [bushes] with a [bench].[then purely at random]". It is east of the Edge of the Water. Understand "Front Garden" as Entrance to the Front Garden.
+The Entrance to the Front Garden is a room in the front garden. "[if location is Entrance to the Front garden]You are standing in a[otherwise]A[end if] small alcove in the middle of two [arched columns]. The [slate floor] continues on to the edge of the [waterfall] in front of you, to the west. To the north and south are [alcoves] filled with wisteria.[one of][or] Also, to the south is a row of [bushes] with a [bench].[then purely at random]". It is east of the Edge of the Water. Understand "Front Garden" as Entrance to the Front Garden.
 
 Some alcoves are a backdrop in the front garden. "There are three, two small ones to the north and south and a slightly larger one that has an entrance to the [great room]."
 
 The South Alcove is a room in the front garden. "A small alcove to the south of the entrance to the garden. [one of]There is a row of [bushes] with a [bench] in front of them and random garden stuff.[or]A length of garden hose is coiled up in the [corner].[or][if pots is closed]There are also a [collection of pots] along the wall.[end if][then purely at random][if pots is open and pots contains a snitch] There are also some pots containing a snitch.[end if]". It is south of Entrance to the Front Garden. It is southeast of edge of the water.
 
-Some bushes, a garden hose, and a corner are scenery in the South Alcove.
+Some bushes, a garden hose, some garden stuff, and a corner are scenery in the South Alcove.
 A bench is an undescribed enterable scenery supporter in the South Alcove. The description of it is "Made of concrete, quite dusty and a bit cold."
 
 A collection of pots is a closed, openable scenery container in the South Alcove. "[one of]Some old, cast iron pots.[or]They look like a stack of cauldrons.[stopping]". Instead of searching pots, try opening pots. 
@@ -143,9 +140,19 @@ A collection of pots is a closed, openable scenery container in the South Alcove
 Instead of opening pots:
 	say "You find some dirt and old leaves."
 	
-The North Alcove is a room in the front garden. "A small alcove to the north of the entrance to the garden. The space is filled with a large pot of wisteria and a pot of geraniums.[one of][or][or]Likely, it is also filled with spiders.[or][stopping]". It is north of Entrance to the Front Garden. It is northeast of edge of the water. A large pot of wisteria and a pot of geraniums are scenery in the North Alcove.
+The North Alcove is a room in the front garden. "A small alcove to the north of the entrance to the garden. The space is filled with [a large pot of wisteria] and [a pot of geraniums].[one of][or][or] Likely, it is also filled with spiders.[or][stopping]". It is north of Entrance to the Front Garden. It is northeast of edge of the water. A large pot of wisteria and a pot of geraniums are scenery in the North Alcove.
 
-The Edge of the Water is a room in the front garden. "The [slate floor] leads up to a rock wall with a [waterfall] beyond. Steps made from the same rough slate are to the south and wind up and around the waterfall to an arch that exits onto the road." The printed name of it is "Edge of the waterfall".
+Spiders are a backdrop. Spiders are everywhere. The description of Spiders is "Fortunately, you do not see any at the moment."
+
+The Edge of the Water is a room in the front garden. "The [slate floor] leads up to [a rock wall] with a [waterfall] beyond. Steps made from the same rough slate are to the south and wind up and around the waterfall to [an arch] that exits onto [the road]." The printed name of it is "Edge of the waterfall".
+
+The out of bounds message is always "Papa says 'You won't need to go there today.'"
+
+Instead of going south in Edge of the Water, say "[the out of bounds message][paragraph break]".
+
+Instead of going north in Edge of the Water, say "[the out of bounds message][paragraph break]".
+
+Instead of going west in Edge of the Water, say "Papa says 'I think you should stay out of the waterfall, eh?'"
 
 The waterfall is a backdrop in the Front Garden. "[one of]The water burbles cheerily over the large slate slabs.[or]The spray from the waterfall mists the plants around the garden.[or]The gurgle of water from the waterfall is occasionally overwhelmed by the croaking of some small frogs.[at random]". The printed name of the waterfall is "[one of]waterfall[or]magical waterfall[or]musical waterfall[or]waterfall[as decreasingly likely outcomes]". The sound of the waterfall is "[one of]water burbling cheerily over the large slate slabs[or]spray of the water misting the plants around the garden[or]croaking of some small frogs[at random]".
 
@@ -175,21 +182,19 @@ The Attic closet is south of the Balcony. "Filled with boxes, luggage and wrappi
 
 Chapter 5 - Morgan's Study
 
-The Study is north of the Balcony. "Small, but with a [desk in the corner] and a [bookshelf by the door]. There is a bathroom to the east. A [small closet] is to the southeast. Your bedroom, labeled '[Morgan's Room]' on the map, is west." It is in the upstairs area. The printed name of the study is "Morgan's Study".
+Morgan's Study is north of the Balcony. "Small, but with a [desk in the corner] and a [bookshelf by the door]. There is a bathroom to the east. A [small closet] is to the southeast. Your bedroom, labeled '[Morgan's Room]' on the map, is west." It is in the upstairs area.
 
-Understand "Morgan's" as The Study
+A desk in the corner, bookshelf by the door are scenery in Morgan's study.
 
-A desk in the corner, bookshelf by the door are scenery in the study.
-
-Instead of going east in the study, say "As the map says 'Peeves may lurk here', it seems an unlikely place to search."
+Morgan's Bathroom is east of Morgan's Study. "As Papa stays out in the Guest Hall, it seems pretty clear there is not much to do in this room."
 
 Chapter 6 - Morgan's closet
 
-A small closet is southeast of the study. "A small walk in closet, with far too many [clothes].[paragraph break]This doesn't seem a likely place to search." Clothes are undescribed scenery in small closet. Instead of going in when location is the study, try going southeast. Instead of going outside when location is small closet, try going northwest.
+A Small closet is southeast of Morgan's study. "A small walk in closet, with far too many [clothes].[paragraph break]This doesn't seem a likely place to search." Clothes are undescribed scenery in small closet. Instead of going inside when location is Morgan's study, try going southeast. Instead of going outside when location is small closet, try going northwest. Instead of exiting when location is small closet, try going northwest.
 
 Chapter 7 - Morgan's Room
 
-Morgan's Room is west of the study. "Above you is a dark [violet ceiling] painted with stars. To the north is a [bedroom window] overlooking the garden. West is a [medium sized bed] and a small cabinet. In the southeast corner is a [tall mirror]. All along the southern side is a [mural] of an outdoor scene, with trees and animals.[if Morgan's secret door is closed and Morgan's secret door is unlocked] The secret door is closed.[else if Morgan's secret door is open] A secret door in the mural is open, leading to [room of requirement].[end if]". It is in the upstairs area.
+Morgan's Room is west of Morgan's study. "Above you is a dark [violet ceiling] painted with stars. To the north is a [bedroom window] overlooking the garden. West is a [medium sized bed] and a small cabinet. In the southeast corner is a [tall mirror]. All along the southern side is a [mural] of an outdoor scene, with trees and animals.[if Morgan's secret door is closed and Morgan's secret door is unlocked] The secret door is closed.[else if Morgan's secret door is open] A secret door in the mural is open, leading to [room of requirement].[end if]". It is in the upstairs area.
 
 A violet ceiling is scenery in Morgan's room. "You can recognize many of the constellations. Your favorite is Pegasus." Understand "stars" as violet ceiling. Does the player mean examining violet ceiling: it is very likely.
 
@@ -249,6 +254,9 @@ Chapter 1 - The Guest Hall
 The Guest Hall is a room in the downstairs area. "A short hallway with steps going back up to the [great room] to the west, a guest room to the south and a guest bathroom to the north. At the end of the hallway, to the east, [if Papa's secret door is open]are steps going down to [Papa's Office][otherwise]is a [floor to ceiling bookshelf][one of][or] that goes from floor to ceiling[one of][or], filled with hundreds and hundreds of books[stopping][stopping][end if].". The archway is above the Guest Hall. Instead of going west in the guest hall, try going up. Instead of going down in the guest hall, try going east.
 Understand "guest hallway" as guest hall.
 
+The Guest Room is south of the Guest Hall. "As Papa stays out in the Guest Hall, it seems pretty clear there is not much to do in this room."
+
+The Guest Bathroom is north of the Guest Hall. "As Papa stays out in the Guest Hall, it seems pretty clear there is not much to do in this room."
 	
 Section 1 - The Secret Bookshelf (The Restricted Section)
 
