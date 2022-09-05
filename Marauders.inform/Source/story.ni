@@ -1485,6 +1485,46 @@ To decide which text is hint for finding kitchen phone:
 To decide which text is hint for phoning number: [ This comes up after getting the final clue AND the kitchen phone]
 	decide on "[one of]Well, go ahead, call the number![or]You can do that by typing CALL NUMBER[stopping]";
 
+
+Book 4 - Exit listing
+[ This is an alternative to Eric Eve's 'Exit Lister in that it lists the visible exits at the end of the room description. ]
+
+[ By commenting out the list exits rule, we can use it in the 'There doesn't seem to be a door that way.' error message. ]
+
+The canonical directions list is always {north, northeast, east, southeast, south, southwest, west, northwest, up, down, inside, outside}.
+The weird directions list is always {up, down, inside, outside}.
+
+To decide which text is capitalize (t - some text):
+	let r be t;
+	replace character number 1 in r with "[character number 1 in r in sentence case]";
+	decide on r.
+
+To decide which text is the room exits for (r - a room):
+	let d be "";
+	repeat with dir running through the canonical directions list:
+		let adj be room-or-door dir from the location;
+		let instructions be "";
+		if adj is not nothing and adj is described:
+			if dir is listed in the weird directions list:
+				let instructions be "[dir] is [the adj]";
+			otherwise:
+				let instructions be "to the [dir] is [the adj]";
+			if d is "":
+				let d be "[capitalize instructions]";
+			otherwise:
+				let d be "[d], [instructions]";
+	if d is "":
+		decide on d;
+	otherwise:
+		decide on "[d].[paragraph break]";
+		
+[
+The list exits rule is listed before the you-can-also-see rule in the for printing the locale description rules.
+
+This is the list exits rule:
+	say the room exits for the location of the player.
+]
+
 Book 5 - Odds and ends
 
 Before attacking something, say "Nothing happened." instead.
@@ -1499,7 +1539,7 @@ Check an actor going (this is the new can't go that way rule):
 	if the room gone to is nothing:
 		if the door gone through is nothing:
 			if the actor is the player:
-				say "There doesn't seem to be a door that way." (A);
+				say "There doesn't seem to be a door that way.[paragraph break][italic type]Exits:[roman type][line break][room exits for the location]" (A);
 			stop the action;
 		if the actor is the player:
 			say "[We] [can't], since [the door gone through] [lead] nowhere." (B);
