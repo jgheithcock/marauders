@@ -186,7 +186,7 @@ Morgan's Study is north of the Balcony. "Small, but with a [desk in the corner] 
 
 A desk in the corner, bookshelf by the door are scenery in Morgan's study.
 
-Morgan's Bathroom is east of Morgan's Study. "As Papa stays out in the Guest Hall, it seems pretty clear there is not much to do in this room."
+Morgan's Bathroom is east of Morgan's Study. "As Papa stays in your study, it seems pretty clear there is not much to do in this room."
 
 Chapter 6 - Morgan's closet
 
@@ -206,7 +206,7 @@ Instead of searching the bedroom window, say "Below, there is a small patio with
 
 Section 1 - Morgan's Mural
 
-The mural is scenery in Morgan's room. "[one of]The mural covers the entire wall on the south side, a [field] with a [large tree], and a [fox] and a [mouse].[or]You can see a very thin crack near the corner of the mural, going from the floor to just over your head.[or]The crack outlines what looks like a secret door.[stopping]". Understand "crack" or "south wall" as mural. Understand "crack" as mural. A field, a large tree, a fox and a mouse are undescribed, fixed in place things in Morgan's room.
+The mural is scenery in Morgan's room. "[one of]The mural covers the entire wall on the south side, a [field] with a [large tree], a [fox] and a [mouse].[or]You can see a very thin crack near the corner of the mural, going from the floor to just over your head.[or]The crack outlines what looks like a secret door.[stopping]". Understand "crack" or "south wall" as mural. Understand "crack" as mural. A field, a large tree, a fox and a mouse are undescribed, fixed in place things in Morgan's room.
 
 Morgan's secret door is an undescribed locked door.  It is inside of Morgan's room and outside of the Room of Requirement. The description of it is "[if Morgan's secret door is closed]You only see a crack in the mural.[otherwise]Such a clever mechanism![end if]".
 
@@ -215,6 +215,9 @@ Check searching Morgan's secret door:
 
 Check searching mural:
 	try examining mural instead.
+
+Instead of entering mural:
+	say "Papa says 'Ha, did you think this was Narnia?'".
 
 Instead of pushing Morgan's secret door:
 	If Morgan's secret door is closed:
@@ -254,7 +257,7 @@ Chapter 1 - The Guest Hall
 The Guest Hall is a room in the downstairs area. "A short hallway with steps going back up to the [great room] to the west, a guest room to the south and a guest bathroom to the north. At the end of the hallway, to the east, [if Papa's secret door is open]are steps going down to [Papa's Office][otherwise]is a [floor to ceiling bookshelf][one of][or] that goes from floor to ceiling[one of][or], filled with hundreds and hundreds of books[stopping][stopping][end if].". The archway is above the Guest Hall. Instead of going west in the guest hall, try going up. Instead of going down in the guest hall, try going east.
 Understand "guest hallway" as guest hall.
 
-The Guest Room is south of the Guest Hall. "As Papa stays out in the Guest Hall, it seems pretty clear there is not much to do in this room."
+The Guest Room is south of the Guest Hall. "As Papa stays in the Guest Hall, it seems pretty clear there is not much to do in this room."
 
 The Guest Bathroom is north of the Guest Hall. "As Papa stays out in the Guest Hall, it seems pretty clear there is not much to do in this room."
 	
@@ -1004,11 +1007,33 @@ A cat is a kind of animal. Dash is a male cat in Morgan's room. "Dash is curled 
 
 Rule for writing a paragraph about a cat (called cat):
 	say "[cat] [one of]is curled up [if the location is Morgan's Room]on your bed, [end if]asleep[or]is giving [themselves] a bath[or]is watching you expectantly[or]is batting a toy mouse[purely at random]."
+	
+Petting is an action applying to one visible thing. Understand "pet [something]" as petting.
 
-Every turn when a random number from 1 to 7 is 7:
+Check petting:
+	if the noun is not an animal, say "You can't pet an inanimate object! That would be a bit odd."
+	
+Carry out petting:
+	say "You [one of]pet [the noun][or]rub [the noun]'s belly[or]scritch [the noun] behind the ears[purely at random].[run paragraph on][if the noun is a cat] [They] purrs contentedly.";
+	
+Instead of petting Luna:
+	say "Before you can get close, she jumps up and runs off.";
+	now Luna is in the Small Closet.
+	
+Kicking is an action applying to one visible thing. Understand "kick [something]" as kicking.
+
+Check kicking:
+	if the noun is not an animal, say "That might hurt your feet."
+	
+Carry out kicking:
+	say "[the noun] hisses and runs off.";
+	now the noun is nowhere. [ ...and will hide for the rest of the game]
+	
+Every turn when a random number from 1 to 7 is 7 and the map region of the location is not Front Garden:
 	let some cat be a random cat in the location;
 	if some cat is nothing:
-		let the cat be a random cat;
+		let the cat be a random cat that is not nowhere;
+		if the cat is nothing, stop;
 		now the cat is in the location;
 		say "[cat] [one of]struts[or]slinks[or]pads[or]walks[purely at random] in and sits down in a corner[one of], watching the proceedings[or] and proceeds to give [themselves] a bath[or], then curls up for a nap[purely at random].";
 
