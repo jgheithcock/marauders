@@ -578,6 +578,7 @@ The examine containers rule does nothing when examining the wind rose.
 
 Instead of inserting a snitch into the map, try inserting the noun into the wind rose.
 Before dropping a snitch, try silently taking the noun.
+Instead of putting a snitch on the map, try inserting the noun into the wind rose.
 
 Instead of inserting a snitch into the wind rose:
 	if the player is not holding the map,
@@ -1061,20 +1062,18 @@ Book 4 - Contextual Hints
 
 Section 1 - Table of Contextual Hints
 
-The end hint is always "I think you know what you need to do here.";
-
 Table of Contextual Hints
 item (object)	location (room)	region (region)	tag (text)	hint (text)
-Papa's secret door	guest hall	--	"pulling"	"[one of]This is an interesting bookshelf, have you really looked at it?[or]Are you trying to get past this bookshelf? Have you tried just pushing?[or]I don't see any fancy switches or levers, what else could you try?[or]Have you tried pulling on it?[or]You can do that by typing PULL BOOKSHELF[or][end hint][stopping]"
-wooden box	great room	--	"opening"	"[one of]Seems opening that box would be a good start.[or]You can open the box by typing OPEN BOX.[or][end hint][stopping]"
-the map	--	--	"examining"	"[one of]Well, aren't you going to look at the Map?[or]You can look at the map by typing LOOK AT MAP or X MAP.[or][end hint][stopping]"
-the map	--	--	"unfolding"	"[one of]Didn't the map say something about more folds?[or]Maybe you can unfold them?[or]Try UNFOLD MAP.[or][end hint][stopping]"
-the map	--	--	"last-page-read"	"[one of]I think you need to keep going on that Map.[or][end hint][stopping]"
-the flaps	--	--	"unfolding"	"[one of]What's that on the last page of the map - a couple of flaps, eh?[or]Maybe there is something inside them.[or]You could try unfolding or opening them.[or]Specifically, type UNFOLD FLAPS[or][end hint][stopping]"
-the riddle	--	--	"examining"	"[one of]Did you read the riddle?[or]You can do that by typing READ RIDDLE[or][end hint][stopping]"
-the clues	--	--	"examining"	"[one of]Did you read the clues?[or][end hint][stopping]"
-the flaps	--	--	"last-page-read"	"[one of]I wonder if there is anything on the back of those flaps?[or]I bet you could try unfolding them?[or][end hint][stopping]"
-the advice	--	--	"examining"	"[one of]Did you read the advice?[or][end hint][stopping]"
+Papa's secret door	guest hall	--	"pulling"	"[one of]This is an interesting bookshelf, have you really looked at it?[or]Are you trying to get past this bookshelf? Have you tried just pushing?[or]I don't see any fancy switches or levers, what else could you try?[or]Have you tried pulling on it?[or]You can pull the bookcase by typing PULL BOOKSHELF[stopping]"
+wooden box	great room	--	"opening"	"[one of]Seems opening that box would be a good start.[or]You can open the box by typing OPEN BOX.[stopping]"
+the map	--	--	"examining"	"[one of]Well, aren't you going to look at the Map?[or]You can look at the map by typing LOOK AT MAP or X MAP.[stopping]"
+the map	--	--	"unfolding"	"[one of]Didn't the map say something about more folds?[or]Maybe you can unfold them?[or]Try UNFOLD MAP.[stopping]"
+the map	--	--	"last-page-read"	"[one of]I think you need to keep going on that Map.[or]Type UNFOLD MAP.[stopping]"
+the flaps	--	--	"unfolding"	"[one of]What's that on the last page of the map - a couple of flaps, eh?[or]Maybe there is something inside them.[or]You could try unfolding or opening them.[or]Type UNFOLD FLAPS[stopping]"
+the riddle	--	--	"examining"	"[one of]Did you read the riddle?[or]You can read the riddle by typing READ RIDDLE.[stopping]"
+the clues	--	--	"examining"	"[one of]Did you read the clues?[or]You can read the clues by typing READ CLUES.[stopping]"
+the flaps	--	--	"last-page-read"	"[one of]I wonder if there is anything on the back of those flaps?[or]I bet you could try unfolding them?[or]Type UNFOLD FLAPS.[stopping]"
+the advice	--	--	"examining"	"[one of]Did you read the advice?[or]Type READ ADVICE.[stopping]"
 Nor East Snitch	Morgan's Room	--	"finding"	"[hint for finding the Nor East Snitch]"
 Nor East Snitch	--	upstairs area	"finding"	"[hint for finding room for Nor East Snitch]"
 Nor East Snitch	--	upstairs area	"going inside"	"Well, aren't you going to go in?"
