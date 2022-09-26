@@ -135,7 +135,7 @@ The South Alcove is a room in the front garden. "A small alcove to the south of 
 Some bushes, a garden hose, some garden stuff, and a corner are scenery in the South Alcove.
 A bench is an undescribed enterable scenery supporter in the South Alcove. The description of it is "Made of concrete, quite dusty and a bit cold."
 
-A collection of pots is a closed, openable scenery container in the South Alcove. "[one of]Some old, cast iron pots.[or]They look like a stack of cauldrons.[stopping]". Instead of searching pots, try opening pots. 
+A collection of pots is a closed, openable scenery container in the South Alcove. "[one of]Some old, cast iron pots.[or]They look like a stack of cauldrons.[stopping]". Instead of searching pots, try opening pots. Understand "pot" as a collection of pots.
 
 Instead of opening pots:
 	say "You find some dirt and old leaves."
@@ -609,7 +609,7 @@ Check unfolding:
 Carry out unfolding the map:
 	let opened be page of the noun;
 	if opened is last:
-		say "You are at the last page.";
+		say "You are at the last page. There are two flaps on the last page, [if the page of the flaps is first]closed[otherwise]open[end if].";
 	otherwise:
 		now the page of the noun is the page after opened;
 		say "You unfold the left and right sides of [the noun] and see...";
@@ -874,7 +874,10 @@ Carry out facing:
 	try looking toward the viewed item.
 
 Instead of facing up:
-	say "High above you is the ceiling, painted to look like the walls, a kind of parchment yellow."
+	if the map region of the location is Front Garden:
+		say "It is a clear sky for December, the branches of the trees are clear of leaves at this time of year.";
+	otherwise:
+		say "High above you is the ceiling, painted to look like the walls, a kind of parchment yellow."
 
 Instead of facing down:
 	say "You see the floor. [description of floor][line break]"
@@ -884,12 +887,18 @@ Understand "look toward [any adjacent room]" or "examine [any adjacent room]" or
 Understand "look toward [any adjacent door]" as looking toward. Understand "examine [any adjacent door]" as looking toward. Understand "look at [any adjacent door]" as looking toward. 
 
 [Handle rooms too far away here.]
-Understand "look toward [any room]" or "look at [any room]" as looking beyond. Looking beyond is an action applying to one thing. Carry out looking beyond: say "You cannot see much of [the noun] from here."
+Understand "look toward [any room]" or "look at [any room]" as looking beyond. Looking beyond is an action applying to one thing.
+Carry out looking beyond:
+	if the noun is the location, try looking instead;
+	say "You cannot see much of [the noun] from here."
 
 Looking toward is an action applying to one visible thing.
 Carry out looking toward:
 	let heading be the best route from the location to the noun, using doors; [do not use even locked doors as they are secret]
-	if heading is not a direction:
+	if the noun is a door:
+		let the next room be other side of the noun;
+		say "The [next room] is that way.";
+	otherwise if heading is not a direction:
 		say "The [noun] is that way.";
 	otherwise:
 		say "The [noun] is to the [heading] of you.";
@@ -1023,7 +1032,7 @@ Instead of petting Luna:
 Kicking is an action applying to one visible thing. Understand "kick [something]" as kicking.
 
 Check kicking:
-	if the noun is not an animal, say "That might hurt your feet."
+	if the noun is not an animal, say "That might hurt your feet." instead.
 	
 Carry out kicking:
 	say "[the noun] hisses and runs off.";
@@ -1061,7 +1070,7 @@ wooden box	great room	--	"opening"	"[one of]Seems opening that box would be a go
 the map	--	--	"examining"	"[one of]Well, aren't you going to look at the Map?[or]You can look at the map by typing LOOK AT MAP or X MAP.[or][end hint][stopping]"
 the map	--	--	"unfolding"	"[one of]Didn't the map say something about more folds?[or]Maybe you can unfold them?[or]Try UNFOLD MAP.[or][end hint][stopping]"
 the map	--	--	"last-page-read"	"[one of]I think you need to keep going on that Map.[or][end hint][stopping]"
-the flaps	--	--	"unfolding"	"[one of]a square made of flaps, eh?[or]Sounds like a job for more unfolding.[or]Specifically, UNFOLD FLAPS[or][end hint][stopping]"
+the flaps	--	--	"unfolding"	"[one of]What's that on the last page of the map - a couple of flaps, eh?[or]Maybe there is something inside them.[or]You could try unfolding or opening them.[or]Specifically, type UNFOLD FLAPS[or][end hint][stopping]"
 the riddle	--	--	"examining"	"[one of]Did you read the riddle?[or]You can do that by typing READ RIDDLE[or][end hint][stopping]"
 the clues	--	--	"examining"	"[one of]Did you read the clues?[or][end hint][stopping]"
 the flaps	--	--	"last-page-read"	"[one of]I wonder if there is anything on the back of those flaps?[or]I bet you could try unfolding them?[or][end hint][stopping]"
