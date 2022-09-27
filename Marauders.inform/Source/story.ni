@@ -1577,6 +1577,13 @@ This is the list exits rule:
 
 Book 5 - Odds and ends
 
+Section 1 - Other verbs
+
+[Just for Brian]
+Twirling is an action applying to nothing. Understand "twirl" as twirling. Carry out twirling: say "[We] twirl on the spot."
+
+Section 2 - The rest
+
 Before attacking something, say "Nothing happened." instead.
 
 [To test if windrose is empty ]
