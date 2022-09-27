@@ -104,14 +104,22 @@ Instead of going up in the Kitchen, say "The stairs to the balcony are in the [g
 
 Chapter 3 - The Larder (The Cauldron Cupboard)
 
-The Larder is a room. The description of the larder is "Shelves and shelves of [baking equipment], [food stores] and a growing [collection of mugs]." The larder is in the main area
+The Larder is a room. The description of the larder is "Shelves and shelves of [baking equipment], [food stores] and a growing collection of [mugs]." The larder is in the main area
 
 The door to the larder is a closed door."[if the location is the larder]Behind you is the larder door.[otherwise]There is a door to the larder in the corner.[end if]". It is inside of the Kitchen and outside of the Larder. The description of the larder door is "[one of]Like most of the doors in the house, solid wood, dark brown.[or]Nothing special - just a door.[stopping]".
 
 Understand "shelves" as baking equipment.
-Some baking equipment is a fixed in place thing in the larder. The description of it is "There is a big blender, and a food processor and .... frankly, I'm not sure what some of this is for."
+Some baking equipment is a fixed in place thing in the larder. The description of it is "There is a [big blender], and a [food processor] and .... frankly, I'm not sure what some of this is for."
 Some food stores is a fixed in place thing in the larder. The description of it is "How many different types of flour does a family need? Why so many types of pasta?"
-A collection of mugs is a fixed in place thing in the larder. The description of it is "Really, who needs so many mugs?"
+Some mugs is a fixed in place thing in the larder. The description of it is "Really, who needs so many mugs?"
+A big blender is an undescribed fixed in place thing in the larder. The description of the big blender is "Big and bulky."
+A food processor is an undescribed fixed in place thing in the larder. The description of the food processor is "Even bigger than the big blender."
+Instead of taking a big blender, say "Nope, far too big."
+Instead of taking the food processor, say "Nope, way too big."
+Instead of taking the mugs, say "Papa says, 'I think you should focus on your task'." instead. Understand "mug" as mugs.
+Instead of taking food stores, say "That doesn't seem very helpful.".
+Does the player mean examining food stores: it is very likely.
+Does the player mean taking food stores: it is very likely.
 
 Book 2 - Outside
 
@@ -129,6 +137,8 @@ The ActualGarden is a backdrop in the Front Garden."It isn't at its best in the 
 The Entrance to the Front Garden is a room in the front garden. "[if location is Entrance to the Front garden]You are standing in a[otherwise]A[end if] small alcove in the middle of two [arched columns]. The [slate floor] continues on to the edge of the [waterfall] in front of you, to the west. To the north and south are [alcoves] filled with wisteria.[one of][or] Also, to the south is a row of [bushes] with a [bench].[then purely at random]". It is east of the Edge of the Water. Understand "Front Garden" as Entrance to the Front Garden.
 
 Some alcoves are a backdrop in the front garden. "There are three, two small ones to the north and south and a slightly larger one that has an entrance to the [great room]."
+
+Understand "column" as arched columns.
 
 The South Alcove is a room in the front garden. "A small alcove to the south of the entrance to the garden. [one of]There is a row of [bushes] with a [bench] in front of them and random garden stuff.[or]A length of garden hose is coiled up in the [corner].[or][if pots is closed]There are also a [collection of pots] along the wall.[end if][then purely at random][if pots is open and pots contains a snitch] There are also some pots containing a snitch.[end if]". It is south of Entrance to the Front Garden. It is southeast of edge of the water.
 
@@ -169,7 +179,7 @@ The Balcony is a room in the upstairs area. "You can see the entire Great Room f
 
 Chapter 2 - The Master Bedroom
 
-The Master Bedroom is east of the Balcony. "A big room, with a [comfy chair] and [steps] leading down to [the bathroom]." It is in the upstairs area. The large bed and the comfy chair are enterable scenery supporters in the Master Bedroom. The steps and the bathroom are scenery in the Master Bedroom. Instead of going east when location is Balcony during the snitch hunt, say "The master bedroom isn't on the map."
+The Master Bedroom is east of the Balcony. "A big room, with a [comfy chair] and [steps] leading down to [the bathroom]." It is in the upstairs area. The large bed and the comfy chair are enterable scenery supporters in the Master Bedroom. The steps and the bathroom are scenery in the Master Bedroom. Instead of going east when location is Balcony during the snitch hunt, say "Papa says 'The master bedroom isn't on the map.'"
 
 Chapter 3 - Mama's studio
 
@@ -186,23 +196,25 @@ Morgan's Study is north of the Balcony. "Small, but with a [desk in the corner] 
 
 A desk in the corner, bookshelf by the door are scenery in Morgan's study.
 
-Morgan's Bathroom is east of Morgan's Study. "As Papa stays in your study, it seems pretty clear there is not much to do in this room."
+Morgan's Bathroom is east of Morgan's Study. "As Papa stays in your study, it seems pretty clear there is not much to do in this room." It is in the upstairs area.
 
 Chapter 6 - Morgan's closet
 
-A Small closet is southeast of Morgan's study. "A small walk in closet, with far too many [clothes].[paragraph break]This doesn't seem a likely place to search." Clothes are undescribed scenery in small closet. Instead of going inside when location is Morgan's study, try going southeast. Instead of going outside when location is small closet, try going northwest. Instead of exiting when location is small closet, try going northwest.
+A Small closet is southeast of Morgan's study. "A small walk in closet, with far too many [clothes].[paragraph break]This doesn't seem a likely place to search." It is in the upstairs area. Clothes are undescribed scenery in small closet. Instead of going inside when location is Morgan's study, try going southeast. Instead of going outside when location is small closet, try going northwest. Instead of exiting when location is small closet, try going northwest.
 
 Chapter 7 - Morgan's Room
 
-Morgan's Room is west of Morgan's study. "Above you is a dark [violet ceiling] painted with stars. To the north is a [bedroom window] overlooking the garden. West is a [medium sized bed] and a small cabinet. In the southeast corner is a [tall mirror]. All along the southern side is a [mural] of an outdoor scene, with trees and animals.[if Morgan's secret door is closed and Morgan's secret door is unlocked] The secret door is closed.[else if Morgan's secret door is open] A secret door in the mural is open, leading to [room of requirement].[end if]". It is in the upstairs area.
+Morgan's Room is west of Morgan's study. "Above you is a dark [violet ceiling] painted with stars. To the north is a [bedroom window] overlooking the [patio garden]. West is a [medium sized bed] and a small cabinet. In the southeast corner is a [tall mirror]. All along the southern side is a [mural] of an outdoor scene, with trees and animals.[if Morgan's secret door is closed and Morgan's secret door is unlocked] The secret door is closed.[else if Morgan's secret door is open] A secret door in the mural is open, leading to [room of requirement].[end if]". It is in the upstairs area.
 
 A violet ceiling is scenery in Morgan's room. "You can recognize many of the constellations. Your favorite is Pegasus." Understand "stars" as violet ceiling. Does the player mean examining violet ceiling: it is very likely.
 
 A bedroom window and a tall mirror are scenery in Morgan's room.
 A medium sized bed is a fixed in place enterable supporter in Morgan's room. A cabinet is an undescribed, fixed in place closed, openable container in Morgan's room.
 Instead of searching the tall mirror, try examining player. Instead of examining the tall mirror, try examining player.
+The patio garden is scenery in Morgan's room. "Below, there is a small patio with a table and two chairs, beyond, the hills of Briones rise up. [one of]You look for the white horse but do not see it.[or]A white horse grazes on the winter grass by the skyline.[purely at random]". The printed name of patio garden is "garden".
 Instead of examining the bedroom window, try searching the bedroom window instead.
-Instead of searching the bedroom window, say "Below, there is a small patio with a table and two chairs, beyond, the hills of Briones rise up. [one of]You look for the white horse but do not see it.[or]A white horse grazes on the winter grass by the skyline.[purely at random]"
+Instead of searching the bedroom window, say "[description of patio garden]".
+Instead of facing outside, say description of patio garden.
 
 Section 1 - Morgan's Mural
 
@@ -257,9 +269,9 @@ Chapter 1 - The Guest Hall
 The Guest Hall is a room in the downstairs area. "A short hallway with steps going back up to the [great room] to the west, a guest room to the south and a guest bathroom to the north. At the end of the hallway, to the east, [if Papa's secret door is open]are steps going down to [Papa's Office][otherwise]is a [floor to ceiling bookshelf][one of][or] that goes from floor to ceiling[one of][or], filled with hundreds and hundreds of books[stopping][stopping][end if].". The archway is above the Guest Hall. Instead of going west in the guest hall, try going up. Instead of going down in the guest hall, try going east.
 Understand "guest hallway" as guest hall.
 
-The Guest Room is south of the Guest Hall. "As Papa stays in the Guest Hall, it seems pretty clear there is not much to do in this room."
+The Guest Room is south of the Guest Hall. "As Papa stays in the Guest Hall, it seems pretty clear there is not much to do in this room." It is in the downstairs area.
 
-The Guest Bathroom is north of the Guest Hall. "As Papa stays out in the Guest Hall, it seems pretty clear there is not much to do in this room."
+The Guest Bathroom is north of the Guest Hall. "As Papa stays out in the Guest Hall, it seems pretty clear there is not much to do in this room." It is in the downstairs area.
 	
 Section 1 - The Secret Bookshelf (The Restricted Section)
 
@@ -355,9 +367,13 @@ An aquarium is scenery in Papa's Bar. "[First time]A lot of pirate-themed orname
 
 Section 1 - The dark stairwell to the Wine Cellar
 
-The dark stairwell is an open, unopenable door. "A narrow set of stairs go down into darkness.". The dark stairwell is below Papa's Bar and above the Wine Cellar.
+The dark stairwell is an open, unopenable door. "A narrow set of stairs go [if location is Entrance to the Wine Cellar]up to [Papa's bar][otherwise]down into darkness[end if].". The dark stairwell is below Papa's Bar and above the Entrance to the Wine Cellar.
 
 Instead of going down in Papa's Bar, say "'No need to go downstairs this time!' says Papa.".
+
+The basement is a region. The sound of the basement is "[sound of the main area] very softly". The Entrance to the Wine Cellar is in the basement. "It is quite dark down here, there is a large wine barrel in the corner."
+
+The wine cellar door is a locked door. "There is also a dark brown door that has a brass plaque that says 'Wine Cellar'." It is south of the entrance to the wine cellar.
 
 
 Book 5 - Going to rooms
@@ -493,7 +509,7 @@ To say state of map:
 			say "[if the location is the kitchen][line break]There is a tiny drawing of a snitch inside the Flue Network.[end if]";
 			say "[First time][line break]There are more folds underneath.[only]";
 		-- fifth:
-			say "The map shows part of the upstairs. The left side is a diagram of your bedroom, marked [Morgan's Room]. The room next to it is labeled 'The Study'. There is also an odd shaped area marked 'The Room of Requirement' and some other smaller areas.";
+			say "The map shows part of the upstairs. The left side, to the north, is a diagram of a room labeled [bold type]The Study[roman type]. Next to it is a diagram of your bedroom, marked [bold type]Morgan's Room[roman type]. There is also an odd shaped area next to your bedroom marked [bold type]The Room of Requirement[roman type] and some other smaller areas.";
 			say "[one of][or][line break]There is a star in the left side of the map, in what would be North-northeast.[stopping]";
 			say "[if the location is Morgan's room][line break]There is a tiny drawing of a snitch in the room labeled [bold type]the Room of Requirement[roman type].[end if]";
 			say "[First time][line break]There are more folds underneath.[only]";
@@ -892,6 +908,7 @@ Understand "look toward [any room]" or "look at [any room]" as looking beyond. L
 Carry out looking beyond:
 	if the noun is the location, try looking instead;
 	say "You cannot see much of [the noun] from here."
+Understand "look around" as looking.
 
 Looking toward is an action applying to one visible thing.
 Carry out looking toward:
@@ -1271,7 +1288,7 @@ Check asking for hints during the Final Search:
 		let the direction be "upstairs";
 		if the player region is upstairs area:
 			now the direction is "to [the location of iPhone]";
-		say "Papa says '[one of]Seems like you should follow the sound.[or]Sounds like you should go [the direction][stopping]'";
+		say "Papa says [one of]'Seems like you should follow the sound.'[or]'Sounds like you should go [the direction].'[stopping]";
 		stop the action;
 	
 Section 8 - Snitch hunt hints
@@ -1412,7 +1429,7 @@ To decide which list of texts is finding-room-hints for (snitch - a thing) (this
 		add "For example, there is a desk, some bookshelves, cabinets...." to results;
 		add "Hmm, what about those speakers?" to results;
 		add "I see there is a statue?" to results;
-		add "I see an iron vase with dragons on the other speaker, I recall that was part of a hint" to results;
+		add "I see an iron vase with dragons on the other speaker, I recall that was in one of the clues?" to results;
 		add "Maybe you should search the vase?" to results;
 		add "Try typing SEARCH VASE" to results;
 	otherwise: [ cauldrons ]
@@ -1491,7 +1508,7 @@ To decide which list of texts is for going to a different region for (snitch - a
 	let results be a list of some texts;
 	add "Good job, you have found [number found in words] [pluralized snitches], I think you should look somewhere else next." to results;
 	add "You could try looking [the next region]." to results;
-	add "For example, you could try going to [the next place]" to results;
+	add "You could try going to [the next place]" to results;
 	add "To go toward [the next place], type GO [direction to snitch] (or just [short direction to snitch])." to results;
 	decide on results;
 	
