@@ -20,6 +20,15 @@ When play begins:
 Table of Basic Help Options (continued)
 title	description
 "Asking for Hints"	"If you get stuck, you can ask Papa for a hint anytime (or just type HINT)."
+"Credits"	"Many thanks to my Beta testers:[paragraph break]
+	[tab]Morgan Heithcock[line break]
+	[tab]Yitzchak Luster[line break]
+	[tab]Lindsay Mantzel[line break]
+	[tab]Sydney Rhude[line break]
+	[tab]Brian Dunagan[paragraph break]
+Please, feel free to twirl on the spot, ask Papa for a hint, or pet the cat."
+
+Understand "credits" as asking for help.
 
 		
 Include Secret Doors by Andrew Owen
