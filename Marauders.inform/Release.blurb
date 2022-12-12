@@ -23,7 +23,7 @@ placeholder [RELEASE] = "3"
 placeholder [YEAR] = "2018"
 placeholder [TITLE] = "The Last Christmas Present"
 placeholder [AUTHOR] = "JG Heithcock"
-placeholder [BLURB] = "There was one present left under the Christmas tree, a wooden box with a tag that said 'I open at the close'.<br/>This was a scavenger hunt I made for my daughter for Christmas in 2013. Explore the map I made for her - a Marauder's Map of our house. Find the clues and discover how to piece them together to learn the location of her last Christmas present."
+placeholder [BLURB] = "There was one present left under the Christmas tree, a wooden box with a tag that said 'I open at the close'.<br/>When my daughter turned thirteen, I made a scavenger hunt for her last Christmas present using a Marauder's Map of our house. Use the map to find the clues and discover how to piece them together to find her present."
 
 ! Other material to release
 
