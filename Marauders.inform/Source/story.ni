@@ -52,7 +52,7 @@ The Great Room is a room in the main area. "A [great fir tree] stretches up to t
 
 A ceiling is a backdrop. "High above you, painted to look like the walls, a kind of parchment yellow." The ceiling is everywhere.
 
-The slate floor is a backdrop. The description of it is "Made of rough, irregular slabs of mariposa slate, mottled blue gray with red and orange variegation. They form the floor inside and out." The slate floor is everywhere. Understand "slate slab" or "slab" or "slabs" or "floor" or "mariposa" as slate floor.
+The slate floor is a backdrop. The description is "Made of rough, irregular slabs of mariposa slate, mottled blue gray with red and orange variegation. They form the floor inside and out." The slate floor is everywhere. Understand "slate slab" or "slab" or "slabs" or "floor" or "mariposa" as slate floor.
 
 A great fir tree is scenery in the Great Room. "You can still make out the scent of the fir."
 
@@ -75,10 +75,10 @@ Understand "room called the kitchen" as the Kitchen.
 Rule for printing the name of the Kitchen while asking which do you mean: say "room called the kitchen".
 
 The granite counter is a fixed in place supporter in the kitchen. "Made of dark marbled green granite, it has a [sink] and a lot of [random kitchenware] on it."
-The refrigerator is a fixed in place thing in the kitchen. The description of it is "Large, stainless steel, no ice or ice water however."
-The regular oven is a fixed in place container in the kitchen. The description of it is "Stainless steel, also there is a [microwave] over it."
-The microwave is a fixed in place thing in the kitchen. The description of it is "Stainless steel, nothing really special."
-Some random kitchenware is a fixed in place thing on the granite counter. The description of it is "A [toaster oven], a [blender], lots and lots of [spatulas]....". Instead of taking some random kitchenware, say "There is far too many for you to carry.".
+The refrigerator is a fixed in place thing in the kitchen. The description is "Large, stainless steel, no ice or ice water however."
+The regular oven is a fixed in place container in the kitchen. The description is "Stainless steel, also there is a [microwave] over it."
+The microwave is a fixed in place thing in the kitchen. The description is "Stainless steel, nothing really special."
+Some random kitchenware is a fixed in place thing on the granite counter. The description is "A [toaster oven], a [blender], lots and lots of [spatulas]....". Instead of taking some random kitchenware, say "There is far too many for you to carry.".
 
 The toaster oven, the blender and some spatulas are undescribed things in the kitchen.
 
@@ -104,9 +104,9 @@ Report opening the pizza oven:
 Report closing the pizza oven:
 	say "You lift the heavy plate door up to the alcove and place it in front of the oven opening." instead.
 
-The recess is part of the Pizza Oven. The description of it is "Dark and dusty, with a bunch of [firewood] in it. Probably full of spiders."
+The recess is part of the Pizza Oven. The description is "Dark and dusty, with a bunch of [firewood] in it. Probably full of spiders."
 
-Some firewood is part of the Pizza Oven. The description of it is "A number of small to mid-sized [logs] amongst some kindling. Probably a home for spiders." Instead of taking firewood, say "That doesn't seem to be something you would really want." Some logs is a part of the firewood.
+Some firewood is part of the Pizza Oven. The description is "A number of small to mid-sized [logs] amongst some kindling. Probably a home for spiders." Instead of taking firewood, say "That doesn't seem to be something you would really want." Some logs is a part of the firewood.
 
 [Handle trying to go "up"]
 Instead of going up in the Kitchen, say "The stairs to the balcony are in the [great room]."
@@ -118,9 +118,9 @@ The Larder is a room. The description of the larder is "Shelves and shelves of [
 The door to the larder is a closed door."[if the location is the larder]Behind you is the larder door.[otherwise]There is a door to the larder in the corner.[end if]". It is inside of the Kitchen and outside of the Larder. The description of the larder door is "[one of]Like most of the doors in the house, solid wood, dark brown.[or]Nothing special - just a door.[stopping]".
 
 Understand "shelves" as baking equipment.
-Some baking equipment is a fixed in place thing in the larder. The description of it is "There is a [big blender], and a [food processor] and .... frankly, I'm not sure what some of this is for."
-Some food stores is a fixed in place thing in the larder. The description of it is "How many different types of flour does a family need? Why so many types of pasta?"
-Some mugs is a fixed in place thing in the larder. The description of it is "Really, who needs so many mugs?"
+Some baking equipment is a fixed in place thing in the larder. The description is "There is a [big blender], and a [food processor] and .... frankly, I'm not sure what some of this is for."
+Some food stores is a fixed in place thing in the larder. The description is "How many different types of flour does a family need? Why so many types of pasta?"
+Some mugs is a fixed in place thing in the larder. The description is "Really, who needs so many mugs?"
 A big blender is an undescribed fixed in place thing in the larder. The description of the big blender is "Big and bulky."
 A food processor is an undescribed fixed in place thing in the larder. The description of the food processor is "Even bigger than the big blender."
 Instead of taking a big blender, say "Nope, far too big."
@@ -152,7 +152,7 @@ Understand "column" as arched columns.
 The South Alcove is a room in the front garden. "A small alcove to the south of the entrance to the garden. [one of]There is a row of [bushes] with a [bench] in front of them and random garden stuff.[or]A length of garden hose is coiled up in the [corner].[or][if pots is closed]There are also a [collection of pots] along the wall.[end if][then purely at random][if pots is open and pots contains a snitch] There are also some pots containing a snitch.[end if]". It is south of Entrance to the Front Garden. It is southeast of edge of the water.
 
 Some bushes, a garden hose, some garden stuff, and a corner are scenery in the South Alcove.
-A bench is an undescribed enterable scenery supporter in the South Alcove. The description of it is "Made of concrete, quite dusty and a bit cold."
+A bench is an undescribed enterable scenery supporter in the South Alcove. The description is "Made of concrete, quite dusty and a bit cold."
 
 A collection of pots is a closed, openable scenery container in the South Alcove. "[one of]Some old, cast iron pots.[or]They look like a stack of cauldrons.[stopping]". Instead of searching pots, try opening pots. Understand "pot" as a collection of pots.
 
@@ -229,7 +229,7 @@ Section 1 - Morgan's Mural
 
 The mural is scenery in Morgan's room. "[one of]The mural covers the entire wall on the south side, a [field] with a [large tree], a [fox] and a [mouse].[or]You can see a very thin crack near the corner of the mural, going from the floor to just over your head.[or]The crack outlines what looks like a secret door.[stopping]". Understand "crack" or "south wall" as mural. Understand "crack" as mural. A field, a large tree, a fox and a mouse are undescribed, fixed in place things in Morgan's room.
 
-Morgan's secret door is an undescribed locked door.  It is inside of Morgan's room and outside of the Room of Requirement. The description of it is "[if Morgan's secret door is closed]You only see a crack in the mural.[otherwise]Such a clever mechanism![end if]".
+Morgan's secret door is an undescribed locked door.  It is inside of Morgan's room and outside of the Room of Requirement. The description is "[if Morgan's secret door is closed]You only see a crack in the mural.[otherwise]Such a clever mechanism![end if]".
 
 Check searching Morgan's secret door:
 	if Morgan's secret door is locked, try examining mural instead.
@@ -408,7 +408,7 @@ Volume 2 - The Map in the Box
 
 Book 1 - The box
 
-The wooden box is a closed, openable, opaque container in the Great Room. "The wooden box sits amidst the wrapping papers, [if box is closed]closed[otherwise]open[end if]." The description of it is "Smaller than a bread box, it is made of [dark brown wood], with [scrollwork] around its edges[if box is closed] and a [metal clasp] holding it closed[end if]." Instead of taking the wooden box, say "You won't need the box." The dark brown wood, the scrollwork and the metal clasp are part of the box.
+The wooden box is a closed, openable, opaque container in the Great Room. "The wooden box sits amidst the wrapping papers, [if box is closed]closed[otherwise]open[end if]." The description is "Smaller than a bread box, it is made of [dark brown wood], with [scrollwork] around its edges[if box is closed] and a [metal clasp] holding it closed[end if]." Instead of taking the wooden box, say "You won't need the box." The dark brown wood, the scrollwork and the metal clasp are part of the box.
 
 Understand "the present" as the wooden box. Understand "present" as the wooden box.
 Instead of opening metal clasp, try opening box.
@@ -457,7 +457,7 @@ The Western Snitch is a snitch. The wind direction of Western Snitch is W. The c
 
 Book 3 - The Map
 
-The Map is a thing in the wooden box. The description of it is "[state of map]".
+The Map is a thing in the wooden box. The description is "[state of map]".
 
 Instead of examining the map when the map is not held by the player, try taking the map.
 Instead of opening the map when the map is not held by the player, try taking the map.
@@ -563,7 +563,7 @@ For the fourth clue, Mrs. Weasely likes to listen to Celestina Warbeck for inspi
 
 Book 5 - The wind rose
 
-Some flaps are part of the map. The description of it is "[state of flaps]".
+Some flaps are part of the map. The description is "[state of flaps]".
 Some flaps have a page. The page of the flaps is usually first. Secret page is a page.
 
 Instead of opening the flaps when the page of the map is not last, try unfolding the map.
@@ -580,7 +580,7 @@ To say state of flaps:
 			say "The top flap has what looks like [a riddle] written on it, underneath the bottom flap is what appears to be some [advice].";
 
 The wind rose is an open, unopenable container.
-The wind rose is part of the map. The description of it is "[state of wind rose]".
+The wind rose is part of the map. The description is "[state of wind rose]".
 Understand "windrose" as the wind rose.
 
 To say snitches in words:
@@ -733,7 +733,7 @@ When Search for Illumination begins:
 	say "The search for illumination has begun!";
 	now the description of the floor to ceiling bookshelf is "The bookshelf is marked [bold type]The Restricted Section[roman type] on the map.".
 
-The Book of Illumination is a closed, openable container. The printed name of it is "brown book". The description is "The binding is brown wood with no title on the edge or front. The pages have an odd plastic feel." Understand "brown book" or "book" as the book of illumination.
+The Book of Illumination is a closed, openable container. The printed name is "brown book". The description is "The binding is brown wood with no title on the edge or front. The pages have an odd plastic feel." Understand "brown book" or "book" as the book of illumination.
 
 Instead of examining the book of illumination, try opening the book of illumination.
 Instead of examining the book of illumination when the book is open, try searching the book.
@@ -841,7 +841,7 @@ When Final Search begins:
 When Final Search ends:
 	end the story saying "Merry Christmas!".
 
-The iPhone is a closed, openable container. "[one of]On the bed is your final present, your very first iPhone![or]The iPhone is on the bed, waiting for you to pick it up.[stopping]". The description of it is "Still in the box[if iPhone is ringing] and ringing quite loudly[otherwise], now silent[end if].". The iPhone can be ringing or silent. The iPhone is silent. Understand "box" or "phone" as the iPhone. Instead of opening iPhone, try taking the iPhone.
+The iPhone is a closed, openable container. "[one of]On the bed is your final present, your very first iPhone![or]The iPhone is on the bed, waiting for you to pick it up.[stopping]". The description is "Still in the box[if iPhone is ringing] and ringing quite loudly[otherwise], now silent[end if].". The iPhone can be ringing or silent. The iPhone is silent. Understand "box" or "phone" as the iPhone. Instead of opening iPhone, try taking the iPhone.
 
 Instead of taking the iPhone:
 	say "As you open the box, you see it is even in your favorite color!";
