@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>IFBasicInformSettings</key>
+	<dict/>
 	<key>IFCompilerOptions</key>
 	<dict>
 		<key>IFSettingNaturalInform</key>
@@ -23,7 +25,7 @@
 		<key>IFSettingTestingTabHelpShown</key>
 		<false/>
 		<key>IFSettingTestingTabShownCount</key>
-		<integer>27</integer>
+		<integer>28</integer>
 	</dict>
 	<key>IFOutputSettings</key>
 	<dict/>

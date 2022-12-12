@@ -1,6 +1,6 @@
 ! Blurb file created by Inform build 6M62
 
-status "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/CblorbModel.html" "/Users/jgheithcock/git/marauders/Marauders.inform/Build/StatusCblorb.html"
+status "/Applications/Inform - 1.68.app/Contents/Resources/Internal/Miscellany/CblorbModel.html" "/Users/jgheithcock/git/marauders/Marauders.inform/Build/StatusCblorb.html"
 
 
 ! Identification
@@ -35,7 +35,7 @@ auxiliary "/Users/jgheithcock/git/marauders/Marauders.materials/Map" "The Map" "
 placeholder [ENCODEDSTORYFILE] = "The Last Christmas Present.gblorb.js"
 template path "/Users/jgheithcock/git/marauders/Marauders.materials/Templates"
 template path "/Users/jgheithcock/Library/Inform/Templates"
-template path "/Applications/Inform.app/Contents/Resources/Internal/Templates"
+template path "/Applications/Inform - 1.68.app/Contents/Resources/Internal/Templates"
 placeholder [INTERPRETERSCRIPTS] = " "
 interpreter "Quixe" "g"
 base64 "/Users/jgheithcock/git/marauders/Marauders.inform/Build/output.ulx" to "/Users/jgheithcock/git/marauders/Marauders.materials/Release/interpreter/The Last Christmas Present.gblorb.js"
@@ -44,7 +44,7 @@ base64 "/Users/jgheithcock/git/marauders/Marauders.inform/Build/output.ulx" to "
 
 template path "/Users/jgheithcock/git/marauders/Marauders.materials/Templates"
 template path "/Users/jgheithcock/Library/Inform/Templates"
-template path "/Applications/Inform.app/Contents/Resources/Internal/Templates"
+template path "/Applications/Inform - 1.68.app/Contents/Resources/Internal/Templates"
 css
 website "Standard"
 status instruction ||&nbsp;<a href="source:story.ni#line8"><img border=0 src=inform:/doc_images/Reveal.tif></a>||

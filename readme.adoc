@@ -1,6 +1,10 @@
-image:Marauders.materials/Cover.jpg[Cover Art,200,200,role=left]
+image:Marauders.materials/Cover.jpg[Cover Art,140,140,role=left]
 
 # The Last Christmas Present
+## A Scavenger Hunt in Words
 
+_There was one present left under the Christmas tree, a wooden box with a tag that said 'I open at the close'_
 
-This is a text adventure game of a scavenger hunt I made for my daughter for Christmas in 2013 made using link:http://inform7.com/[Inform 7]. You can play it online at http://44westwind.com.
+When my daughter turned thirteen, I made a scavenger hunt to her last Christmas present using a Marauder's Map of our house. Use the map to find the clues and discover how to piece them together to find her present.
+
+Created with link:http://inform7.com/[Inform 7]. You can play it online at http://44westwind.com.
