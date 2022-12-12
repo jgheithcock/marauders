@@ -3,7 +3,7 @@
 
 The story genre is "Mystery". The release number is 3. The story creation year is 2018. The story headline is "A scavenger hunt in words". The story description is "There was one present left under the Christmas tree, a wooden box with a tag that said 'I open at the close'.
 
-This was a scavenger hunt I made for my daughter for Christmas in 2013. Explore the map I made for her - a Marauder's Map of our house. Find the clues and discover how to piece them together to learn the location of her last Christmas present."
+When my daughter turned thirteen, I made a scavenger hunt for her last Christmas present using a Marauder's Map of our house. Use the map to find the clues and discover how to piece them together to find her present."
 
 Release along with cover art,
 	the source text,
@@ -481,9 +481,9 @@ to decide if (p1 - a Page) is after (p2 - a Page):
 	if p1 is before p2, decide no;
 	decide yes;
 
-The map has a page. The page of the map is usually first.
+The map has a page. The page of the map is usually first. Understand "pages" or "page" or "sides" as the map.
 
-Some folds are part of the map. Instead of examining the folds, try unfolding the map. Instead of opening folds, try unfolding the map.
+Some folds are part of the map. Instead of examining the folds, try unfolding the map. Instead of opening folds, try unfolding the map. Instead of unfolding folds, try unfolding the map.
 
 Instead of looking under the folds, try unfolding the map.
 
@@ -573,15 +573,18 @@ Instead of looking under the flaps when the page of the flaps are not the Secret
 To say state of flaps:
 	if the page is:
 		-- first:
-			say "The top says [bold type]Hogwarts School of[roman type], the bottom says [bold type]Witchcraft & Wizardry[roman type].";
+			say "The top flap says [bold type]Hogwarts School of[roman type], the bottom says [bold type]Witchcraft & Wizardry[roman type].";
 		-- last:
-			say "The top flap has what looks like [bold type][a riddle][roman type] written on it, the bottom has what appear to be [bold type][some clues][roman type], [one of]in the middle you see....[or]in the middle is a wind rose.[stopping][line break][state of wind rose]";
+			say "The top flap has what looks like [bold type][a riddle][roman type] written on it, the bottom has what appear to be [bold type][some clues][roman type], [one of]and in the middle you see....[or]and in the middle is a wind rose.[stopping][line break][state of wind rose]";
 		-- Secret page:
 			say "The top flap has what looks like [a riddle] written on it, underneath the bottom flap is what appears to be some [advice].";
 
 The wind rose is an open, unopenable container.
 The wind rose is part of the map. The description of it is "[state of wind rose]".
 Understand "windrose" as the wind rose.
+
+To say snitches in words:
+	say "[if number of snitches in wind rose > 1][number of snitches in wind rose in words] snitches[otherwise]a single snitch[end if]"
 
 To say state of wind rose:
 	say "[First time]Sixteen paper arrows form a ring looking very much like a [bold type][wind rose][roman type]. [only]";
@@ -597,9 +600,13 @@ To say state of wind rose:
 				repeat with counter running from 1 to the_count: 
 					if (character number counter in clue of item) is not " ",
 						replace character number counter in solution with character number counter in clue of item;
-		say "The wind rose has [if number of snitches in wind rose > 1][number of snitches in wind rose in words] snitches[otherwise]a single snitch[end if]. The text around the circle reads[paragraph break][italic type][solution][roman type][paragraph break]".
+		say "The wind rose has [snitches in words]. The text around the circle reads[paragraph break][italic type][solution][roman type][paragraph break]".
 
 The examine containers rule does nothing when examining the wind rose.
+
+Some arrows are part of the map. The description of the arrows is "Made of paper, [if the wind rose is empty]they look like the tabs in a photo album[otherwise]they are currently holding down the [snitches in words][end if]."
+
+An arrow is part of the map. The description of the arrow is "[if the wind rose is empty]It seems to be pointing north[otherwise]It is covered by the [snitches in words]."
 
 Instead of inserting a snitch into the map, try inserting the noun into the wind rose.
 Before dropping a snitch, try silently taking the noun.
@@ -621,7 +628,7 @@ Instead of inserting a snitch into the wind rose:
 Book 6 - Unfolding and folding the map and the wind rose
 
 A thing can be foldable or unfoldable. A thing is usually unfoldable.
-The map and some flaps are foldable.
+The map and some flaps are foldable. Understand "folds" as map.
 
 Understand "unfold [something]" as unfolding.
 Unfolding is an action applying to one thing.
@@ -746,8 +753,8 @@ Instead of examining the floor to ceiling bookshelf during the Search for Illumi
 
 Table of Restricted Books
 book
-"Ah, here are your Harry Potter books, seems obvious.....Hmm, nope, nothing."
-"Well, here are a bunch of books on how to build treehouses.... Sorry, nothing."
+"Ah, on the third shelf you find your Harry Potter books, seems obvious.....Hmm, nope, this doesn't seem to be it."
+"Well, here are a bunch of books on the fourth shelf on how to build treehouses.... Sorry, nothing."
 "The 'Art of Computer...' Nope!"
 
 To say search results:
