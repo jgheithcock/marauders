@@ -694,11 +694,16 @@ Book 7 - The Snitch Hunt
 
 Snitch Hunt is a scene. Snitch Hunt begins when riddle is read.
 
-When Snitch Hunt begins:
+To hide snitches:
 	now the Nor East Snitch is in the Room of Requirement;
 	now the Sou West Snitch is in the Pizza Oven;
 	now the Sou Sou East is in the iron vase;
 	now the Western Snitch is in the collection of pots;
+
+When play begins:
+	hide snitches;
+	
+When Snitch Hunt begins:
 	say "Let the snitch hunt begin!".
 	
 Report an actor opening (this is the replacing the reveal any newly visible interior rule):
