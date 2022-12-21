@@ -6,12 +6,11 @@ The story genre is "Mystery". The release number is 3. The story creation year i
 When my daughter turned thirteen, I made a scavenger hunt for her last Christmas present using a Marauder's Map of our house. Use the map to find the clues and discover how to piece them together to find her present."
 
 Release along with cover art,
-	the source text,
-	a website, 
-	a file of "The Map" called "Map",
+	source text,
+	a website,
 	an interpreter.
 
-Include Basic Help Menu by Emily Short [ For general Help ]
+Include Basic Help Menu by Emily Short
 
 When play begins:
 	choose row 1 in Table of Basic Help Options;
@@ -34,7 +33,9 @@ Understand "credits" as asking for help.
 Include Secret Doors by Andrew Owen
 
 When play begins:
-	say "There was one present left, a [wooden box] with a tag that said [italic type]I open at the close....[roman type][line break]";
+	say "There was one present left, a [wooden box] with a tag that said [italic type]I open at the close....[roman type][paragraph break]";
+	say "Your Papa says 'Good luck! You can always ask me for hints. My first one is to examine what is in the box very thoroughly! Remember, you don't usually find what you are looking for on your first glance!'[line break]";
+     pause the game.
 
 Rule for printing room description details: do nothing. [ Do not print (closed), (empty), etc. ]
 
@@ -106,7 +107,7 @@ Report closing the pizza oven:
 
 The recess is part of the Pizza Oven. The description is "Dark and dusty, with a bunch of [firewood] in it. Probably full of spiders."
 
-Some firewood is part of the Pizza Oven. The description is "A number of small to mid-sized [logs] amongst some kindling. Probably a home for spiders." Instead of taking firewood, say "That doesn't seem to be something you would really want." Some logs is a part of the firewood.
+Some firewood is part of the Pizza Oven. The description is "A number of small to mid-sized [logs] amongst some kindling. Probably a home for spiders." Instead of taking firewood, say "That doesn't seem to be something you would really want." Some logs are a part of the firewood.
 
 [Handle trying to go "up"]
 Instead of going up in the Kitchen, say "The stairs to the balcony are in the [great room]."
@@ -173,7 +174,8 @@ Instead of going north in Edge of the Water, say "[the out of bounds message][pa
 
 Instead of going west in Edge of the Water, say "Papa says 'I think you should stay out of the waterfall, eh?'"
 
-The waterfall is a backdrop in the Front Garden. "[one of]The water burbles cheerily over the large slate slabs.[or]The spray from the waterfall mists the plants around the garden.[or]The gurgle of water from the waterfall is occasionally overwhelmed by the croaking of some small frogs.[at random]". The printed name of the waterfall is "[one of]waterfall[or]magical waterfall[or]musical waterfall[or]waterfall[as decreasingly likely outcomes]". The sound of the waterfall is "[one of]water burbling cheerily over the large slate slabs[or]spray of the water misting the plants around the garden[or]croaking of some small frogs[at random]".
+The waterfall is a backdrop in the Front Garden. "[one of]The water burbles cheerily over the large slate slabs.[or]The spray from the waterfall mists the plants around the garden.[or]The gurgle of water from the waterfall is occasionally overwhelmed by the croaking of some [small frogs].[at random]". The printed name of the waterfall is "[one of]waterfall[or]magical waterfall[or]musical waterfall[or]waterfall[as decreasingly likely outcomes]". The sound of the waterfall is "[one of]water burbling cheerily over the large slate slabs[or]spray of the water misting the plants around the garden[or]croaking of some small frogs[at random]".
+Some small frogs are a part of the waterfall. The description is "You cannot see any, but you occasionally hear them croaking."
 
 The french doors is east of the Entrance to the Front Garden.
 
@@ -215,12 +217,13 @@ Chapter 7 - Morgan's Room
 
 Morgan's Room is west of Morgan's study. "Above you is a dark [violet ceiling] painted with stars. To the north is a [bedroom window] overlooking the [patio garden]. West is a [medium sized bed] and a small cabinet. In the southeast corner is a [tall mirror]. All along the southern side is a [mural] of an outdoor scene, with trees and animals.[if Morgan's secret door is closed and Morgan's secret door is unlocked] The secret door is closed.[else if Morgan's secret door is open] A secret door in the mural is open, leading to [room of requirement].[end if]". It is in the upstairs area.
 
-A violet ceiling is scenery in Morgan's room. "You can recognize many of the constellations. Your favorite is Pegasus." Understand "stars" as violet ceiling. Does the player mean examining violet ceiling: it is very likely.
+A violet ceiling is scenery in Morgan's room. "You can recognize many of the constellations. Your favorite is Pegasus." Understand "stars" as violet ceiling. Does the player mean examining violet ceiling: it is very likely. Instead of examining the ceiling in Morgan's room, try examining the violet ceiling.
 
 A bedroom window and a tall mirror are scenery in Morgan's room.
 A medium sized bed is a fixed in place enterable supporter in Morgan's room. A cabinet is an undescribed, fixed in place closed, openable container in Morgan's room.
 Instead of searching the tall mirror, try examining player. Instead of examining the tall mirror, try examining player.
-The patio garden is scenery in Morgan's room. "Below, there is a small patio with a table and two chairs, beyond, the hills of Briones rise up. [one of]You look for the white horse but do not see it.[or]A white horse grazes on the winter grass by the skyline.[purely at random]". The printed name of patio garden is "garden".
+The patio garden is scenery in Morgan's room. "Below, there is a small patio with a [filligree table] and two chairs, beyond, the [hills of Briones] rise up. [one of]You look for the [white horse] but do not see it.[or]A [white horse] grazes on the [winter grass] by the skyline.[purely at random]". The printed name of patio garden is "garden". The white horse and the winter grass are part of the patio garden. The filligree table and the two chairs are part of the patio garden. The hills of Briones are part of the patio garden.
+
 Instead of examining the bedroom window, try searching the bedroom window instead.
 Instead of searching the bedroom window, say "[description of patio garden]".
 Instead of facing outside, say description of patio garden.
@@ -284,7 +287,8 @@ The Guest Bathroom is north of the Guest Hall. "As Papa stays out in the Guest H
 	
 Section 1 - The Secret Bookshelf (The Restricted Section)
 
-The floor to ceiling bookshelf is an undescribed scenery supporter in the guest hall. "[one of]Filled with books and odds and ends.[or]There must be over a hundred books here..[or]I bet it is a secret door....[stopping]". Understand "bookshelf" or "bookshelves" as the floor to ceiling bookshelf. The printed name of the bookshelf is "bookshelf".
+The floor to ceiling bookshelf is an undescribed scenery supporter in the guest hall. "[one of]Filled with [books] and odds and ends.[or]There must be over a hundred books here..[or]I bet it is a secret door....[stopping]". Understand "bookshelf" or "bookshelves" or "book shelf" or "shelves" or "shelf" as the floor to ceiling bookshelf. The printed name of the bookshelf is "bookshelf". 
+Some books and some odds and ends are part of the floor to ceiling bookshelf.
 
 Papa's secret door is a locked secret door. It is east of the guest hall and west of Papa's Office.
 
@@ -408,7 +412,7 @@ Volume 2 - The Map in the Box
 
 Book 1 - The box
 
-The wooden box is a closed, openable, opaque container in the Great Room. "The wooden box sits amidst the wrapping papers, [if box is closed]closed[otherwise]open[end if]." The description is "Smaller than a bread box, it is made of [dark brown wood], with [scrollwork] around its edges[if box is closed] and a [metal clasp] holding it closed[end if]." Instead of taking the wooden box, say "You won't need the box." The dark brown wood, the scrollwork and the metal clasp are part of the box.
+The wooden box is a closed, openable, opaque container in the Great Room. "The wooden box sits amidst the wrapping papers, [if box is closed]closed[otherwise]open[end if]." The description is "Smaller than a bread box, it is made of [dark brown wood], with [scrollwork] around its edges[if box is closed] and a [metal clasp] holding it closed[end if]." Instead of taking the wooden box, say "Papa says 'You won't need the box, just what is inside!'" The dark brown wood, the scrollwork and the metal clasp are part of the box.
 
 Understand "the present" as the wooden box. Understand "present" as the wooden box.
 Instead of opening metal clasp, try opening box.
@@ -417,13 +421,10 @@ Book 2 - The snitches
 
 Wind direction is a kind of value. The wind directions are NNE, SW, SSE and W.
 
-A snitch is a kind of thing. A snitch has a wind direction. A snitch has a text called a clue. The description of a snitch is usually "A small piece of parchment paper, cut into a four-pointed star. It has been folded to look vaguely like a snitch. There are letters going around in a circle across the arms of the star, with a compass direction in its center labeled [wind direction].".
+A snitch is a kind of thing. A snitch has a wind direction. A snitch has a text called a clue. The description of a snitch is usually "A small piece of parchment paper, cut into a four-pointed star. It has been folded to look vaguely like a snitch. There are [letters] going around in a circle across the arms of the star, with a [compass direction] in its center labeled [wind direction].".  Understand "star" or "paper" or "parchment paper" as the snitch.
+Some letters and the compass direction are part of the snitch. 
 
 Rule for printing the name of a snitch that is not handled: say "snitch";
-
-[ (called target):
-	if target is handled, say the printed name of the target;
-	otherwise, say "snitch".]
 
 After examining a snitch:
 	let the named direction be the wind direction of the noun;
@@ -467,6 +468,10 @@ Report taking the map:
 	
 Instead of opening the map, try unfolding the map. Instead of closing the map, try folding the map.
 
+to say skipping map page:
+	try unfolding map;
+	try unfolding map;
+
 [Inform does not like for the pages to be the names of any of the rooms (or anything else)]
 Page is a kind of value. first, second, third, fourth, fifth, and last are pages.
 
@@ -502,10 +507,10 @@ To say state of map:
 	say "[paragraph break]";
 	if the page is:
 		-- first:
-			say "Folded up like an accordion, it looks like the Marauder's map, but instead of the castle of Hogwarts, you recognize your house. There is a tiny banner with [italic type]44 Westwind[roman type] on it. Where your tree house would be, there is a tree formed out of words like the whomping willow.";
+			say "Folded up like an accordion, it looks like the Marauder's map, but instead of the castle of Hogwarts, you recognize your house. There is a tiny banner with [italic type]44 Westwind[roman type] on it. Where your tree house would be, there is a tree formed out of words like the [whomping willow].";
 			say "[First time][line break]There are more folds underneath.[only]";
 		-- second:
-			say "The map shows what appears to be the grounds around the house. You can see a tiny version of the house, with its tiny banner, next to a miniature whomping willow.[paragraph break]Below the house are lines of words, flowing around a dark section labeled [bold type]The Dark Forest[roman type] - clearly the Briones Hills behind your house.";
+			say "The map shows what appears to be the grounds around the house. You can see a tiny version of the house, with its tiny banner, next to a miniature whomping willow.[paragraph break]Below the house are lines of words, flowing around a dark section labeled [bold type]The [Dark Forest][roman type] - clearly the Briones Hills behind your house.";
 			say "[First time][line break]There are more folds underneath.[only]";
 		-- third:
 			say "The lines are formed from words, some made up, some are the name of the object drawn. The center of the map has a drawing of the waterfall, with steps going up beside it. On the right side of the map is the edge of the house with the entrance to the garden and two alcoves, to the south and north. On the far left, to the east, is the archway that goes to the road. On the bottom, to the south, are the curved steps leading to the garage.";
@@ -528,6 +533,8 @@ To say state of map:
 			say "[if the location is Papa's office][line break]There is a tiny drawing of a snitch in the area marked [bold type]the Room of Secrets[roman type].[end if]";
 			say "[line break]";
 			say "The middle of the map is a square made of two flaps. [description of the flaps]";
+
+The whomping willow and the Dark Forest are part of the map.
 			
 Book 4 - Riddle, Clues and advice
 
@@ -556,7 +563,7 @@ Eight dragons guard your third, just south of southeast.[line break]
 The fourth escaped outside, following this house's namesake, the west wind.[line break][roman type]".
 
 The description of some advice is "[italic type]
-For the first clue, you might need to ask Neville's help, he really gets it.[line break]
+For the first clue, you might need Neville's help, he really gets it.[line break]
 For the second clue, Dobby would tell you to tickle a pear.[line break]
 For the third clue, Fred and George point to someone [']Pacing in his study['].[line break]
 For the fourth clue, Mrs. Weasely likes to listen to Celestina Warbeck for inspiration.[roman type]".
@@ -565,6 +572,7 @@ Book 5 - The wind rose
 
 Some flaps are part of the map. The description is "[state of flaps]".
 Some flaps have a page. The page of the flaps is usually first. Secret page is a page.
+Understand "flap" as flaps.
 
 Instead of opening the flaps when the page of the map is not last, try unfolding the map.
 Instead of opening the flaps, try unfolding the flaps. Instead of closing the flaps, try folding the flaps.
@@ -902,8 +910,8 @@ Volume 3 - Miscelanea
 
 Book 1 - Looking at rooms and at directions
 
+Understand "look out of [something]" and "look out [something]" as searching. [handle 'look out window']
 Understand "look [direction]" as facing.
-
 Facing is an action applying to one visible thing.
 
 Carry out facing:
@@ -914,6 +922,8 @@ Carry out facing:
 Instead of facing up:
 	if the map region of the location is Front Garden:
 		say "It is a clear sky for December, the branches of the trees are clear of leaves at this time of year.";
+	otherwise if the location is Morgan's Room:
+		try examining the ceiling;
 	otherwise:
 		say "High above you is the ceiling, painted to look like the walls, a kind of parchment yellow."
 
@@ -936,11 +946,11 @@ Carry out looking toward:
 	let heading be the best route from the location to the noun, using doors; [do not use even locked doors as they are secret]
 	if the noun is a door:
 		let the next room be other side of the noun;
-		say "The [next room] is that way.";
+		say "[The next room] is that way.";
 	otherwise if heading is not a direction:
-		say "The [noun] is that way.";
+		say "[The noun] is that way.";
 	otherwise:
-		say "The [noun] is to the [heading] of you.";
+		say "[The noun] is to the [heading] of you.";
 	if description of the noun is not "":
 		say "[line break][description of the noun][paragraph break]".
 	
@@ -1030,7 +1040,7 @@ Section 2 - Mama
 
 [ Mama and Papa are undescribed so that they are not added in the room descriptions (as part of the you-can-also-see rule) ]
 
-Mama is an undescribed woman. Mama is a faithful companion. Instead of doing something with Mama, say "[one of]Mama is not here[or]Mama is somewhere else in the house[or]Mama doesn't seem to be here now[or]Mama has gone[at random]."
+Mama is an undescribed woman. Mama is a faithful companion. Instead of doing something with Mama, say "[one of]Mama has already left[or]Mama is not here[or]Mama is somewhere else in the house[or]Mama doesn't seem to be here now[or]Mama has gone[at random]."
 
 To say Mama flits by:
 	say "[one of]Mama zips by and gives you a smile as she goes[or]Mama peeks in and offers you an encouraging smile and then leaves[or]Mama stops in for a moment to see how you are doing before dashing off[or]Mama looks in for a moment to see how things are going before continuing on[or]Mama gives you an encouraging look as she grabs something and leaves[or]Mama steps into view for a moment before leaving[or]Mama peeks in to see how you are doing and then steps out[or]Mama throws you a thumbs up as she walks in and out[purely at random]".
@@ -1094,7 +1104,12 @@ A hint is a kind of thing. Papa carries a hint. Some help is a kind of thing. Pa
 Instead of asking Papa for a hint, try asking for hints.
 Instead of asking Papa for some help, try asking for hints.
 
-Instead of doing something with Papa, say "Papa says 'Oh no, I'm only here in case you need a hint!'" 
+Instead of doing something with Papa:
+	say "Papa says 'Oh no, I'm only here in case you need a hint! Did you want a hint?'";
+	if the player consents:
+		try asking for hints;
+	otherwise:
+		say "Papa says 'Okay. You can also type HELP to find out more.'"
 
 Book 4 - Contextual Hints
 
@@ -1135,13 +1150,12 @@ Map	--	--	"solving SSE"	"[hint to go to a different region for Sou Sou East]"
 Map	--	--	"solving W"	"[hint to go to a different region for Western Snitch]"
 Map	--	--	"searching"	"[hint for seeking illumination]"
 Final Clue	--	--	"examining"	"[hint for examing final clue]"
-Final Clue	--	--	"calling"	"[hint for calling final clue]"
 Final Clue	--	--	"finding"	"[hint for finding kitchen phone]"
 Final Clue	--	--	"phoning"	"[hint for phoning number]"
 
 [ Note: We put the room first as both get cleared on examining, so prefer hints for finding when *in* the room over finding what room to go to. ]
 
-Section 2 - Debugging
+Section 2 - Debugging - Not for release
 
 Understand "debug [text]" as debugging. Debugging is an action applying to one topic. [c.f. §17.5. The text token]
 Carry out debugging:
@@ -1152,14 +1166,9 @@ Carry out debugging:
 	otherwise:
 		say "I do not know how to debug '[the topic understood]'.";
 	
-[
-Every turn:
-	try asking for hints;
-	try asking for hints;
-	try asking for hints;
-	try asking for hints;
-	try asking for hints;
-]
+Rule for printing a parser error:
+    say "Sorry, [latest parser error] happened.";
+    continue the activity.
 
 Section 3 - Programatic 'One of - stopping'
 
@@ -1239,7 +1248,6 @@ Before opening something:
 	
 Before examining something:
 	remove hint for the noun using "examining";
-	remove hint for the noun using "finding"; [ no longer needed ]
 	continue the action;
 	
 Before inserting something into:
@@ -1275,6 +1283,12 @@ Before inserting a snitch into the wind rose:
 	remove hint for the map using "solving [wind direction of the noun]";
 	
 Before examining book of illumination:
+	remove hint for the map using "searching";
+
+Before opening book of illumination:
+	remove hint for the map using "searching";
+	
+Before searching book of illumination:
 	remove hint for the map using "searching";
 
 Before taking kitchen phone:
@@ -1357,7 +1371,7 @@ to say clue for (snitch - a snitch):
 to say advice for (snitch - a snitch):
 	let advice be "";
 	if wind direction of snitch is NNE:
-		let advice be "you might need to ask Neville's help, he really gets it";
+		let advice be "you might need Neville's help, he really gets it";
 	otherwise if wind direction of snitch is SW:
 		let advice be "Dobby would tell you to tickle a pear";
 	otherwise if wind direction of snitch is SSE:
@@ -1396,13 +1410,19 @@ to decide which text is the direction to (snitch - a snitch):
 		decide on "UP";
 	otherwise:
 		decide on direction in upper case;
-	
+
+[ Alternatively, look at Emily Short's cleaner 'To say (way - a direction) abbreviation' ]
 to decide which text is the short direction to (something - a thing):
-	let short direction be character number 1 in direction to something;
+	let long direction be direction to something;
+	let short direction be character number 1 in long direction;
 	if short direction is "O":
 		decide on "OUT";
 	otherwise if short direction is "I":
 		decide on "IN";
+	otherwise if number of characters in long direction > 5:
+		[ Handle diagonal directinons like NORTHWEST]
+		let second direction be character number 6 in long direction; [ The 'E' from NORTHEAST ]
+		decide on "[short direction][second direction]";
 	otherwise:
 		decide on short direction;
 	
@@ -1505,7 +1525,7 @@ to say hint for inserting snitch:
 	if wind rose is empty:
 		say "[one of][']Cut into a four-pointed star?['] And with a compass direction? I wonder if that goes into the wind rose?[no line break][or]I suppose you could try putting it into the wind rose.[no line break][or]Try typing PUT SNITCH IN MAP[stopping]";
 	otherwise:
-		say "Have you put the snitch you just found in the map?[no line break]";
+		say "[one of]Have you put the snitch you just found in the map?[no line break][or]Try typing PUT SNITCH IN MAP[stopping]";
 
 To decide which list of texts is for going to a different region for (snitch - a thing) (this is go to a different region):
 	[ This handles the case where the player has inserted a snitch but hasn't moved on to the next region. ]
@@ -1546,15 +1566,29 @@ To decide which text is the hint for seeking illumination: [ hint for finding an
 To decide which text is the hint for examing final clue:
 	decide on "Seems like you should look at that final clue.";
 
-To decide which text is hint for calling final clue:
-	decide on "Seems like a good idea to call the number and see what happens.";
-
 To decide which text is hint for finding kitchen phone:
-	if location is not kitchen, decide on "[one of]Hmm, didn't we see a phone while we have been hunting these snitches?[or]Didn't I see a phone in the Kitchen?[or]I'm sure there is one in the Kitchen, and I know you know how to get there now.[or]You can just type GO TO KITCHEN[stopping]";
+	if location is not kitchen, decide on "[one of]Looks like you need a phone, eh?[or]Hmm, didn't we see a phone while we have been hunting these snitches?[or]Didn't I see a phone in the Kitchen?[or]I'm sure there is one in the Kitchen, and I know you know how to get there now.[or]You can just type GO TO KITCHEN[stopping]";
 	otherwise decide on "[one of]I think the answer is to keep looking around here.[or]In fact, you could probably just type TAKE PHONE[stopping]".
 
 To decide which text is hint for phoning number: [ This comes up after getting the final clue AND the kitchen phone]
 	decide on "[one of]Well, go ahead, call the number![or]You can do that by typing CALL NUMBER[stopping]";
+
+Section 9 - Routing mistakes to hints
+	
+Rule for printing a parser error when the latest parser error is the not a verb I recognise error:
+	say "Papa says, 'Sorry, I didn't understand that, did you want to ask me for a hint?'";
+	if the player consents:
+		try asking for hints;
+	otherwise:
+		say "Papa says 'Okay. You can also type HELP to find out more.'"
+Rule for printing a parser error when the latest parser error is the noun did not make sense in that context error:
+	if the player cannot see the noun, say "You cannot see any such thing." instead;
+	say "Papa says, 'Sorry, I didn't understand that, did you want to ask me for a hint?'";
+	if the player consents:
+		try asking for hints;
+	otherwise:
+		say "Papa says 'Okay. You can also type HELP to find out more.'"
+
 
 
 Book 4 - Exit listing
@@ -1663,7 +1697,7 @@ Test riddle with "go to great room / open box / take map / unfold map / g / g / 
 
 Test cheat with "open box / take map / unfold map / g / g /  g / g / unfold flaps / read riddle / close box / open box/ take snitches / put snitches in map"
 
-Test final with "test snitches / take final clue / down / search bookshelf / g/ g/ g / open book"
+Test final with "test snitches / up / shut secret door / search bookshelf / g/ g/ g / open book"
 
 Test morgan with "go to great room / up / n / w / search mural /x mural  / search door / x mural / x door / open door / push mural / l / go in"
 
