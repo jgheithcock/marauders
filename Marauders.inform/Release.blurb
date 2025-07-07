@@ -1,6 +1,6 @@
-! Blurb file created by Inform build 6M62
+! Blurb file created by Inform Inform 10.1.2 (build )
 
-status "/Applications/Inform v1.68.app/Contents/Resources/Internal/Miscellany/CblorbModel.html" "/Users/jgheithcock/git/marauders/Marauders.inform/Build/StatusCblorb.html"
+status "/Applications/Inform 1.82.app/Contents/Resources/Internal/HTML/CblorbModel.html" "/Users/jgheithcock/git/marauders/Marauders.inform/Build/StatusCblorb.html"
 
 
 ! Identification
@@ -33,8 +33,9 @@ source public
 
 placeholder [ENCODEDSTORYFILE] = "The Last Christmas Present.gblorb.js"
 template path "/Users/jgheithcock/git/marauders/Marauders.materials/Templates"
+template path "/Users/jgheithcock/git/marauders/Marauders.materials/Templates"
 template path "/Users/jgheithcock/Library/Inform/Templates"
-template path "/Applications/Inform v1.68.app/Contents/Resources/Internal/Templates"
+template path "/Applications/Inform 1.82.app/Contents/Resources/Internal/Templates"
 placeholder [INTERPRETERSCRIPTS] = " "
 interpreter "Quixe" "g"
 base64 "/Users/jgheithcock/git/marauders/Marauders.inform/Build/output.ulx" to "/Users/jgheithcock/git/marauders/Marauders.materials/Release/interpreter/The Last Christmas Present.gblorb.js"
@@ -42,13 +43,14 @@ base64 "/Users/jgheithcock/git/marauders/Marauders.inform/Build/output.ulx" to "
 ! Website instructions
 
 template path "/Users/jgheithcock/git/marauders/Marauders.materials/Templates"
+template path "/Users/jgheithcock/git/marauders/Marauders.materials/Templates"
 template path "/Users/jgheithcock/Library/Inform/Templates"
-template path "/Applications/Inform v1.68.app/Contents/Resources/Internal/Templates"
+template path "/Applications/Inform 1.82.app/Contents/Resources/Internal/Templates"
 css
 website "Standard"
-status instruction ||&nbsp;<a href="source:story.ni#line8"><img border=0 src=inform:/doc_images/Reveal.tif></a>||
-status alternative ||Using 'Release along with a file of "Such-and-Such" called "whatever.pdf"', perhaps to add a manual, or a welcoming note&nbsp;<a href=inform:/doc401.html><img border=0 src=inform:/doc_images/help.png></a>||
-status alternative ||Using 'Release along with a solution'&nbsp;<a href=inform:/doc411.html><img border=0 src=inform:/doc_images/help.png></a>||
-status alternative ||Using 'Release along with the library card'&nbsp;<a href=inform:/doc412.html><img border=0 src=inform:/doc_images/help.png></a>||
-status alternative ||Using 'Release along with the introductory booklet'&nbsp;<a href=inform:/doc404.html><img border=0 src=inform:/doc_images/help.png></a>||
-status alternative ||Using 'Release along with the introductory postcard'&nbsp;<a href=inform:/doc404.html><img border=0 src=inform:/doc_images/help.png></a>||
+status instruction ||&nbsp;<a href="source:story.ni#line8"><img border=0 src=inform:/doc_images/Reveal.png></a>||
+status alternative ||Using 'Release along with a file of "Such-and-Such" called "whatever.pdf"', perhaps to add a manual, or a welcoming note&nbsp;<a href=inform:/doc399.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with a solution'&nbsp;<a href=inform:/doc409.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with the library card'&nbsp;<a href=inform:/doc410.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with the introductory booklet'&nbsp;<a href=inform:/doc402.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with the introductory postcard'&nbsp;<a href=inform:/doc402.html><img border=0 src=inform:/doc_images/help.png></a>||

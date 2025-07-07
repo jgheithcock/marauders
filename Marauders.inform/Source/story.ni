@@ -59,7 +59,7 @@ A great fir tree is scenery in the Great Room. "You can still make out the scent
 
 Some ornaments are scenery in the Great Room. "There must be a hundred of them. You look for your favorites, the ones you put up yourself."
 Some twinkling lights are scenery in the Great Room. "They twinkle on and off, red, yellow, green and blue."
-The Wrapping paper is scenery in the Great Room. "Yards and yards. Most of it has been rolled back up for another year." Instead of taking wrapping paper, say "How thoughtful! But first you should finish your scavenger hunt."
+The Wrapping paper is scenery in the Great Room. "Yards and yards. Most of it has been rolled back up for another year." Instead of taking wrapping paper, say "How thoughtful! But first you should finish your scavenger hunt." Understand "wrapping" and "papers" as wrapping paper.
 Some presents is scenery in the Great Room. "[one of]So many![or]Well, first you should really finish this scavenger hunt.[stopping]". Instead of taking presents, say "Hmm, first you should finish your scavenger hunt."
 
 The archway is an open, unopenable door. The archway is east of the Great Room. "[if the location is the great room]An archway leads east down to the [guest hall].[otherwise]The archway leads back up into the great room to the west.[end if]". Instead of going down in the great room, try going east.
@@ -174,7 +174,7 @@ Instead of going north in Edge of the Water, say "[the out of bounds message][pa
 
 Instead of going west in Edge of the Water, say "Papa says 'I think you should stay out of the waterfall, eh?'"
 
-The waterfall is a backdrop in the Front Garden. "[one of]The water burbles cheerily over the large slate slabs.[or]The spray from the waterfall mists the plants around the garden.[or]The gurgle of water from the waterfall is occasionally overwhelmed by the croaking of some [small frogs].[at random]". The printed name of the waterfall is "[one of]waterfall[or]magical waterfall[or]musical waterfall[or]waterfall[as decreasingly likely outcomes]". The sound of the waterfall is "[one of]water burbling cheerily over the large slate slabs[or]spray of the water misting the plants around the garden[or]croaking of some small frogs[at random]".
+The waterfall is a backdrop in the Front Garden. "[one of]The water burbles cheerily over the large slate slabs.[or]The spray from the waterfall mists the plants around the garden.[or]The gurgle of water from the waterfall is occasionally overwhelmed by the croaking of some [small frogs].[at random]". The printed name of the waterfall is "[one of]waterfall[or]waterfall[or]musical waterfall[or]magical waterfall[as decreasingly likely outcomes]". The sound of the waterfall is "[one of]water burbling cheerily over the large slate slabs[or]spray of the water misting the plants around the garden[or]croaking of some small frogs[at random]".
 Some small frogs are a part of the waterfall. The description is "You cannot see any, but you occasionally hear them croaking."
 
 The french doors is east of the Entrance to the Front Garden.
@@ -377,6 +377,7 @@ Some shelves are scenery in Papa's Bar. "Nothing much to see here.".
 Coffee cups are scenery in Papa's Bar. "'Nothing hidden in any of these', says Papa".
 Bar chairs are scenery in Papa's Bar. "[First time]Dark wood, almost black with leather seats.  [only]Nothing much to see here.".
 An aquarium is scenery in Papa's Bar. "[First time]A lot of pirate-themed ornaments bubble along inside. [only]Not much to see here.". Understand "grindylow" as aquarium.
+Does the player mean examining the large wooden bar: it is very likely. 
 
 Section 1 - The dark stairwell to the Wine Cellar
 
@@ -412,7 +413,7 @@ Volume 2 - The Map in the Box
 
 Book 1 - The box
 
-The wooden box is a closed, openable, opaque container in the Great Room. "The wooden box sits amidst the wrapping papers, [if box is closed]closed[otherwise]open[end if]." The description is "Smaller than a bread box, it is made of [dark brown wood], with [scrollwork] around its edges[if box is closed] and a [metal clasp] holding it closed[end if]." Instead of taking the wooden box, say "Papa says 'You won't need the box, just what is inside!'" The dark brown wood, the scrollwork and the metal clasp are part of the box.
+A wooden box is a closed, openable, opaque container in the Great Room. "A wooden box sits amidst the wrapping papers, [if box is closed]closed[otherwise]open[end if]." The description is "Smaller than a bread box, it is made of [dark brown wood], with [scrollwork] around its edges[if box is closed] and a [metal clasp] holding it closed[end if]." Instead of taking the wooden box, say "Papa says 'You won't need the box, just what is inside!'" The dark brown wood, the scrollwork and the metal clasp are part of the box.
 
 Understand "the present" as the wooden box. Understand "present" as the wooden box.
 Instead of opening metal clasp, try opening box.
@@ -960,7 +961,9 @@ Rule for printing a parser error when the latest parser error is the noun did no
 		say "You do not see any thing like that.";
 	otherwise:
 		continue the action;
-
+[Fall back in case we refer to things that aren't in scope. This could either be something that is in a different room or something present but identified as a thing.]
+Rule for printing a parser error when the latest parser error is the referred to a determination of scope error:
+	say "I don't quite know what you mean." instead
 
 
 Book 2 - Listening Library
@@ -1167,7 +1170,7 @@ Carry out debugging:
 		say "I do not know how to debug '[the topic understood]'.";
 	
 Rule for printing a parser error:
-    say "Sorry, [latest parser error] happened.";
+    say "DEBUG ONLY: [latest parser error] happened.";
     continue the activity.
 
 Section 3 - Programatic 'One of - stopping'
