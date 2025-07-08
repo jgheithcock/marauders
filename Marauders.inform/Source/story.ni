@@ -226,7 +226,7 @@ The patio garden is scenery in Morgan's room. "Below, there is a small patio wit
 
 Instead of examining the bedroom window, try searching the bedroom window instead.
 Instead of searching the bedroom window, say "[description of patio garden]".
-Instead of facing outside, say description of patio garden.
+Instead of facing outside in Morgan's room, say description of patio garden.
 
 Section 1 - Morgan's Mural
 
