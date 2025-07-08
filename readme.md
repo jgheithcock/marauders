@@ -11,8 +11,8 @@ https://ifdb.org/viewgame?id=tq8wrqw823fafohp).
 About the Story
 ---------------
 
-"There was one present left under the Christmas tree, a wooden box with a tag
-that said 'I open at the close'"
+*There was one present left under the Christmas tree, a wooden box with a tag
+that said 'I open at the close.'*
 
 When my daughter turned thirteen, I made a scavenger hunt to her last Christmas
 present using a Marauder’s Map of our house. Use the map to find the clues and
@@ -28,7 +28,7 @@ the map at <https://www.44westwind.com/map/>. Or check out the photos at
 More Scavenger Hunts
 --------------------
 
-Ccheck out the background and 'making of' for this scavenger hunt at [2013 - 44
+Check out the background and 'making of' for this scavenger hunt at [2013 - 44
 Marauders Map](https://www.heithcock.com/scavengerhunts/2013-44-marauders) or
 read about the other scavenger hunts I've made on the main [Scavenger Hunts](
 https://www.heithcock.com/scavengerhunts) page.
