@@ -49,7 +49,7 @@ The main area is a region. The sound of the main area is "[one of]Christmas caro
 
 Chapter 1 - The Great Room
 
-The Great Room is a room in the main area. "A [great fir tree] stretches up to the [ceiling], covered in [ornaments] and illuminated with [lights]. [Wrapping paper] and [presents] are strewn about.[line break][line break][if the location is the great room]Behind you, to the south is the [kitchen]."
+The Great Room is a room in the main area. "A [great fir tree] stretches up to the [ceiling], covered in [ornaments] and illuminated with [lights]. [Wrapping paper] and [presents] are strewn about.[line break][line break][if the location is the great room]Behind you, to the south, is the [kitchen]."
 
 A ceiling is a backdrop. "High above you, painted to look like the walls, a kind of parchment yellow." The ceiling is everywhere.
 
@@ -465,7 +465,7 @@ Instead of examining the map when the map is not held by the player, try taking 
 Instead of opening the map when the map is not held by the player, try taking the map.
 
 Report taking the map:
-	say "[First time]As you take the map from the box, you see it is a single long sheet of paper, carefully folded on the left and right sides. [only]Each folded section seems to be part of an area of this house.[paragraph break][state of map]" instead.
+	say "[First time]As you take the map from the box, you see it is a single long sheet of paper, carefully folded on the left and right sides. [only]Each folded section shows an area of this house.[paragraph break][state of map]" instead.
 	
 Instead of opening the map, try unfolding the map. Instead of closing the map, try folding the map.
 
