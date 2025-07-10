@@ -278,7 +278,7 @@ The downstairs area is a region. The sound of the downstairs area is "[sound of 
 
 Chapter 1 - The Guest Hall
 
-The Guest Hall is a room in the downstairs area. "A short hallway with steps going back up to the [great room] to the west, a guest room to the south and a guest bathroom to the north. At the end of the hallway, to the east, [if Papa's secret door is open]are steps going down to [Papa's Office][otherwise]is a [floor to ceiling bookshelf][one of][or] that goes from floor to ceiling[one of][or], filled with hundreds and hundreds of books[stopping][stopping][end if].". The archway is above the Guest Hall. Instead of going west in the guest hall, try going up. Instead of going down in the guest hall, try going east.
+The Guest Hall is a room in the downstairs area. "A short hallway with steps going back up to the [great room] to the west, a guest room to the south and a guest bathroom to the north. At the end of the hallway, to the east, [if Papa's secret door is open]are steps going down to [Papa's Office], the [floor to ceiling bookshelf] rests against the wall.[otherwise]is a [floor to ceiling bookshelf][one of][or] that goes from floor to ceiling[one of][or], filled with hundreds and hundreds of books[stopping][stopping][end if].". The archway is above the Guest Hall. Instead of going west in the guest hall, try going up. Instead of going down in the guest hall when Papa's secret door is revealed, try going east.
 Understand "guest hallway" as guest hall.
 
 The Guest Room is south of the Guest Hall. "As Papa stays in the Guest Hall, it seems pretty clear there is not much to do in this room." It is in the downstairs area.
@@ -290,7 +290,7 @@ Section 1 - The Secret Bookshelf (The Restricted Section)
 The floor to ceiling bookshelf is an undescribed scenery supporter in the guest hall. "[one of]Filled with [books] and odds and ends.[or]There must be over a hundred books here..[or]I bet it is a secret door....[stopping]". Understand "bookshelf" or "bookshelves" or "book shelf" or "shelves" or "shelf" as the floor to ceiling bookshelf. The printed name of the bookshelf is "bookshelf". 
 Some books and some odds and ends are part of the floor to ceiling bookshelf.
 
-Papa's secret door is a locked secret door. It is east of the guest hall and west of Papa's Office.
+Papa's secret door is an undescribed, locked secret door. It is east of the guest hall and west of Papa's Office.
 
 Before facing east in the guest hall:
 	if Papa's secret door is unrevealed:
@@ -1106,9 +1106,10 @@ A hint is a kind of thing. Papa carries a hint. Some help is a kind of thing. Pa
 
 Instead of asking Papa for a hint, try asking for hints.
 Instead of asking Papa for some help, try asking for hints.
+Instead of examining Papa, say the description of Papa.
 
 Instead of doing something with Papa:
-	say "Papa says 'Oh no, I'm only here in case you need a hint! Did you want a hint?'";
+	say "Papa says '[First time]Oh no, I'm only here in case you need a hint! [only]Did you want a hint?'";
 	if the player consents:
 		try asking for hints;
 	otherwise:
